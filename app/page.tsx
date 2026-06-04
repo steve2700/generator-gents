@@ -6,7 +6,7 @@ import FAQSchema from '@/components/faq-schema'
 export const metadata: Metadata = {
   title: 'Generator Repair Services Gauteng | Expert Repairs, Servicing & Maintenance',
   description:
-    'Gauteng\'s trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Serving Johannesburg, Pretoria, Sandton, Centurion & all Gauteng areas. Call 060 316 0484.',
+    "Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Serving Johannesburg, Pretoria, Sandton, Centurion & all Gauteng areas. Call 060 316 0484.",
   keywords: [
     'generator repair Gauteng',
     'generator repairs Johannesburg',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Generator Repair Services',
     title: 'Generator Repair Services Gauteng | Expert Repairs & Servicing',
     description:
-      'Gauteng\'s trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Call 060 316 0484.',
+      "Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Call 060 316 0484.",
     images: [
       {
         url: '/og-image.jpg',
@@ -94,27 +94,65 @@ const areas = [
   { name: 'Vereeniging', slug: 'vereeniging' },
 ]
 
-// Trust pillars matching the OG image — text only, no Lucide icons
+// Inline SVGs matching the OG image icons exactly — no icon library
 const trustPillars = [
   {
     heading: 'Expert Technicians',
     body: 'Skilled. Certified. Reliable.',
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        {/* Shield with checkmark */}
+        <path d="M18 3L5 8.5V18C5 25.18 10.74 31.9 18 33C25.26 31.9 31 25.18 31 18V8.5L18 3Z" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
+        <path d="M12 18L16 22L24 14" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
   },
   {
     heading: 'Fast Response',
     body: 'We get you back up and running.',
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        {/* Gear / cog */}
+        <circle cx="18" cy="18" r="5" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
+        <path d="M18 4v4M18 28v4M4 18h4M28 18h4M7.76 7.76l2.83 2.83M25.41 25.41l2.83 2.83M7.76 28.24l2.83-2.83M25.41 10.59l2.83-2.83" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round"/>
+        <path d="M15 4.5h6v3l2 1 2.6-1.5 4.24 4.24-1.5 2.6 1 2h3v6h-3l-1 2 1.5 2.6-4.24 4.24-2.6-1.5-2 1v3h-6v-3l-2-1-2.6 1.5L4.16 21.34l1.5-2.6-1-2h-3v-6h3l1-2-1.5-2.6L8.4 5.9l2.6 1.5 2-1V4.5Z" stroke="#c8a84b" strokeWidth="1.5" fill="none"/>
+      </svg>
+    ),
   },
   {
     heading: 'All Generator Brands',
     body: 'Diesel · Petrol · Gas',
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        {/* Lightning bolt */}
+        <path d="M21 4L9 20H18L15 32L27 16H18L21 4Z" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      </svg>
+    ),
   },
   {
     heading: 'Quality Repairs',
     body: 'Done right. Built to last.',
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        {/* Wrench + screwdriver crossed */}
+        <path d="M8 28L20 16" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round"/>
+        <path d="M23 5C20.24 5 18 7.24 18 10C18 10.9 18.24 11.74 18.66 12.46L5 26.12L9.88 31L23.54 17.34C24.26 17.76 25.1 18 26 18C28.76 18 31 15.76 31 13C31 12.1 30.76 11.26 30.34 10.54L26.88 14L22 13.12L21.12 8.24L24.58 4.78C24 4.6 23.5 5 23 5Z" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        <path d="M7 22L14 15" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round"/>
+      </svg>
+    ),
   },
   {
     heading: 'Reliable Service',
     body: 'Honest. Professional. Dependable.',
+    icon: (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        {/* Handshake */}
+        <path d="M4 14H10L14 10H20L24 14H26" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        <path d="M32 14H26L20 20L16 18L12 22L16 26L20 24L26 28H32" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        <path d="M4 14V24H10V14H4Z" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
+        <path d="M26 14V28H32V14H26Z" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
+      </svg>
+    ),
   },
 ]
 
@@ -136,7 +174,6 @@ const homepageFAQs = [
   },
 ]
 
-// JSON-LD: LocalBusiness + WebSite + BreadcrumbList
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -179,8 +216,7 @@ const localBusinessSchema = {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate:
-            'https://www.generatorrepairservices.co.za/?s={search_term_string}',
+          urlTemplate: 'https://www.generatorrepairservices.co.za/?s={search_term_string}',
         },
         'query-input': 'required name=search_term_string',
       },
@@ -191,130 +227,115 @@ const localBusinessSchema = {
 export default function HomePage() {
   return (
     <>
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <FAQSchema faqs={homepageFAQs} />
 
-      {/* ─── HERO ─────────────────────────────────────────────────────────── */}
+      {/* ─── HERO — matches OG image exactly ──────────────────────────────── */}
       <section
-        className="relative overflow-hidden bg-[#0d0d0d]"
-        aria-label="Hero — Generator Repair Services Gauteng"
+        className="relative overflow-hidden bg-[#0a0a0a]"
+        aria-label="Generator Repair Services Gauteng"
       >
-        {/* Background: OG-style dark industrial photo */}
+        {/* Full-bleed dark industrial background photo */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero_generator_repair_services.png"
-            alt="Professional technician servicing an industrial diesel generator"
+            alt="Professional generator technician servicing an industrial diesel generator in Gauteng"
             fill
             priority
-            className="object-cover object-center opacity-40"
+            fetchPriority="high"
+            className="object-cover object-center"
             sizes="100vw"
+            quality={85}
           />
-          {/* Left-to-right gradient — content readable on left, photo visible on right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/75 to-[#0d0d0d]/20" />
-          {/* Subtle vignette bottom */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0d0d0d] to-transparent" />
+          {/* Dark overlay — heavier on left so text is readable, fades right to reveal technician */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-[#0a0a0a]/30" />
+          {/* Bottom fade */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-28 lg:py-36">
-          {/* Hexagon logo mark — SVG inline, no external icon library */}
-          <div className="mb-8 flex items-center gap-4">
-            <svg
-              width="56"
-              height="64"
-              viewBox="0 0 56 64"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              role="presentation"
-            >
-              {/* Hexagon outline */}
-              <path
-                d="M28 2L54 17V47L28 62L2 47V17L28 2Z"
-                stroke="#c8a84b"
-                strokeWidth="2.5"
-                fill="none"
-              />
-              {/* Inner hexagon fill */}
-              <path
-                d="M28 8L50 21V43L28 56L6 43V21L28 8Z"
-                fill="#c8a84b"
-                fillOpacity="0.12"
-              />
-              {/* Lightning bolt */}
-              <path
-                d="M32 14L20 33H28L24 50L38 28H30L32 14Z"
-                fill="#c8a84b"
-              />
-            </svg>
-            <div>
-              <span className="block text-[#c8a84b] text-xs font-semibold tracking-[0.25em] uppercase">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-10 pb-0">
+
+          {/* ── Logo block — top-left, matches OG ── */}
+          <div className="mb-10 flex items-center gap-3">
+            <Image
+              src="/logo_lite.png"
+              alt="Generator Repair Services logo"
+              width={52}
+              height={52}
+              priority
+              className="object-contain"
+            />
+            <div className="leading-none">
+              <span className="block text-white font-black text-base tracking-[0.15em] uppercase">
                 Generator
               </span>
-              <span className="block text-white text-sm font-bold tracking-[0.2em] uppercase leading-tight">
-                Repair Services
+              {/* Gold rule — matches OG image horizontal lines flanking "REPAIR SERVICES" */}
+              <span className="flex items-center gap-1.5 my-0.5">
+                <span className="flex-1 h-px bg-[#c8a84b]" />
+                <span className="text-[#c8a84b] font-bold text-[10px] tracking-[0.3em] uppercase whitespace-nowrap">
+                  Repair Services
+                </span>
+                <span className="flex-1 h-px bg-[#c8a84b]" />
               </span>
-              {/* Gold rule beneath name — matches OG image */}
-              <span className="block mt-1 w-full h-px bg-[#c8a84b] opacity-60" />
             </div>
           </div>
 
-          {/* H1 — matches OG headline style */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] text-white max-w-3xl mb-2">
-            Power When
-            <br />
-            You Need It.
-          </h1>
-          <p className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-[#c8a84b] mb-8">
-            Fixed Right.
-            <br />
-            The First Time.
-          </p>
+          {/* ── Main headline — exact OG copy & weight ── */}
+          <div className="max-w-xl">
+            <h1 className="font-black leading-[1.0] text-white mb-1" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)' }}>
+              Power When<br />You Need It.
+            </h1>
+            <p className="font-black leading-[1.0] text-[#c8a84b] mb-7" style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)' }}>
+              Fixed Right.<br />The First Time.
+            </p>
 
-          <p className="text-base md:text-lg text-white/75 max-w-lg mb-10 leading-relaxed">
-            Expert generator repair, maintenance and diagnostics across all of
-            Gauteng. Diesel, petrol and industrial systems — all brands, all sizes.
-          </p>
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10 max-w-sm">
+              Expert generator repair, maintenance and diagnostics you can rely on.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+            {/* ── Red CTA button — exact OG style ── */}
             <a
               href="tel:0603160484"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-bold text-lg tracking-wide hover:bg-red-800 transition-colors focus:outline-none focus:ring-2 focus:ring-[#b91c1c] focus:ring-offset-2 focus:ring-offset-[#0d0d0d]"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-[#b91c1c] text-white font-black text-xl md:text-2xl hover:bg-red-800 transition-colors focus:outline-none focus:ring-2 focus:ring-[#b91c1c] focus:ring-offset-2 focus:ring-offset-[#0a0a0a]"
               aria-label="Call Generator Repair Services on 060 316 0484"
             >
+              {/* Phone handset SVG — matches OG button icon */}
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+              </svg>
               +27 60 316 0484
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#c8a84b] text-[#c8a84b] font-bold text-lg hover:bg-[#c8a84b] hover:text-[#0d0d0d] transition-colors focus:outline-none focus:ring-2 focus:ring-[#c8a84b] focus:ring-offset-2 focus:ring-offset-[#0d0d0d]"
-            >
-              Get a Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* ─── TRUST PILLARS (matches OG image bottom strip) ───────────────── */}
-      <section
-        className="bg-[#111111] border-t border-[#c8a84b]/20"
-        aria-label="Why choose Generator Repair Services"
-      >
-        <div className="max-w-6xl mx-auto px-6 py-10">
-          <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-            {trustPillars.map((pillar) => (
-              <div key={pillar.heading} className="text-center">
-                {/* Gold top accent rule */}
-                <div className="w-8 h-0.5 bg-[#c8a84b] mx-auto mb-3" />
-                <dt className="text-white font-bold text-sm uppercase tracking-wider mb-1">
-                  {pillar.heading}
-                </dt>
-                <dd className="text-white/50 text-xs leading-relaxed">{pillar.body}</dd>
-              </div>
-            ))}
-          </dl>
+            <div className="mt-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 border border-[#c8a84b]/60 text-[#c8a84b] font-semibold text-base hover:bg-[#c8a84b] hover:text-[#0a0a0a] transition-colors"
+              >
+                Get a Free Quote
+              </Link>
+            </div>
+          </div>
+
+          {/* ── Trust pillars strip — bottom of hero, dark bg, matches OG ── */}
+          <div className="mt-14 -mx-6 bg-black/70 backdrop-blur-sm border-t border-[#c8a84b]/20">
+            <div className="max-w-6xl mx-auto px-6 py-7">
+              <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4">
+                {trustPillars.map((pillar) => (
+                  <div key={pillar.heading} className="flex flex-col items-center text-center gap-2">
+                    {/* Icon from OG image — inline SVG, no library */}
+                    <div className="mb-1">{pillar.icon}</div>
+                    <dt className="text-white font-bold text-xs uppercase tracking-wider leading-tight">
+                      {pillar.heading}
+                    </dt>
+                    <dd className="text-white/50 text-xs leading-snug">{pillar.body}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -330,18 +351,17 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
             <div>
               <p className="text-lg leading-relaxed text-[#1a1a1a]/75 mb-6">
-                Generator Repair Services is Gauteng&apos;s go-to team for
-                everything generator-related. From emergency repairs that get you
-                back online within hours, to scheduled maintenance that extends the
-                life of your equipment, our certified technicians cover every
-                scenario. We work with residential units, commercial standby systems
-                and large industrial generators across the province.
+                Generator Repair Services is Gauteng&apos;s go-to team for everything
+                generator-related. From emergency repairs that get you back online
+                within hours, to scheduled maintenance that extends the life of your
+                equipment, our certified technicians cover every scenario. We work with
+                residential units, commercial standby systems and large industrial
+                generators across the province.
               </p>
               <p className="text-lg leading-relaxed text-[#1a1a1a]/75 mb-8">
-                Our vehicles are stocked with common parts and diagnostic tools,
-                which means we resolve most faults on the first visit. No call-out
-                to assess, then another to fix — we arrive prepared and we get the
-                job done.
+                Our vehicles are stocked with common parts and diagnostic tools, which
+                means we resolve most faults on the first visit. No call-out to assess,
+                then another to fix — we arrive prepared and we get the job done.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                 {services.map((service) => (
@@ -364,7 +384,6 @@ export default function HomePage() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Gold accent border */}
               <div className="absolute inset-0 border border-[#c8a84b]/30 pointer-events-none" />
             </div>
           </div>
@@ -372,16 +391,13 @@ export default function HomePage() {
       </section>
 
       {/* ─── WHY CHOOSE US ───────────────────────────────────────────────── */}
-      <section
-        className="py-16 md:py-24 bg-white"
-        aria-labelledby="why-us-heading"
-      >
+      <section className="py-16 md:py-24 bg-white" aria-labelledby="why-us-heading">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-start">
             <div>
               <h2
                 id="why-us-heading"
-                className="text-3xl md:text-4xl font-bold text-[#1a1a1a] sticky top-8"
+                className="text-3xl md:text-4xl font-bold text-[#1a1a1a] md:sticky md:top-8"
               >
                 Why Gauteng
                 <br />
@@ -397,11 +413,10 @@ export default function HomePage() {
                   Experience &amp; Certification
                 </h3>
                 <p className="text-base leading-relaxed text-[#1a1a1a]/70">
-                  With over a decade in the generator repair industry, our
-                  technicians have worked on virtually every make and model available
-                  in South Africa. We hold certifications across major brands and
-                  continuously train on new systems so that your equipment is always
-                  in expert hands — not guesswork.
+                  With over a decade in the generator repair industry, our technicians
+                  have worked on virtually every make and model available in South Africa.
+                  We hold certifications across major brands and continuously train on new
+                  systems so that your equipment is always in expert hands — not guesswork.
                 </p>
               </div>
               <div>
@@ -409,10 +424,10 @@ export default function HomePage() {
                   Response Time &amp; Emergency Availability
                 </h3>
                 <p className="text-base leading-relaxed text-[#1a1a1a]/70">
-                  When your generator fails during loadshedding, waiting is not an
-                  option. Our technicians are deployed across Gauteng so that most
-                  callouts receive an on-site response within 2–4 hours. Same-day
-                  service is standard, not a premium add-on.
+                  When your generator fails during loadshedding, waiting is not an option.
+                  Our technicians are deployed across Gauteng so that most callouts receive
+                  an on-site response within 2–4 hours. Same-day service is standard, not
+                  a premium add-on.
                 </p>
               </div>
               <div>
@@ -421,9 +436,9 @@ export default function HomePage() {
                 </h3>
                 <p className="text-base leading-relaxed text-[#1a1a1a]/70">
                   You will receive a clear written assessment before a single bolt is
-                  turned. Our pricing is honest, our parts are quality-sourced, and
-                  every repair is backed by a workmanship guarantee. If something we
-                  fixed fails again, we come back and sort it out — no arguments.
+                  turned. Our pricing is honest, our parts are quality-sourced, and every
+                  repair is backed by a workmanship guarantee. If something we fixed fails
+                  again, we come back and sort it out — no arguments.
                 </p>
               </div>
             </div>
@@ -432,10 +447,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── AREAS WE SERVE ──────────────────────────────────────────────── */}
-      <section
-        className="py-16 md:py-24 bg-[#f5f4f0]"
-        aria-labelledby="areas-heading"
-      >
+      <section className="py-16 md:py-24 bg-[#f5f4f0]" aria-labelledby="areas-heading">
         <div className="max-w-6xl mx-auto px-6">
           <h2
             id="areas-heading"
@@ -466,10 +478,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── EMERGENCY CTA ───────────────────────────────────────────────── */}
-      <section
-        className="bg-[#b91c1c] text-white"
-        aria-label="Emergency generator repair callout"
-      >
+      <section className="bg-[#b91c1c] text-white" aria-label="Emergency generator repair callout">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div>
@@ -497,11 +506,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── GENERATOR REPAIR COST TEASER ────────────────────────────────── */}
-      <section
-        className="py-16 md:py-20 bg-white border-b border-[#1a1a1a]/10"
-        aria-labelledby="cost-heading"
-      >
+      {/* ─── COST TEASER ─────────────────────────────────────────────────── */}
+      <section className="py-16 md:py-20 bg-white border-b border-[#1a1a1a]/10" aria-labelledby="cost-heading">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <h2
@@ -511,11 +517,11 @@ export default function HomePage() {
               What Does Generator Repair Cost in Gauteng?
             </h2>
             <p className="text-base leading-relaxed text-[#1a1a1a]/70 mb-4">
-              Repair costs depend on the fault, the generator brand, its age and
-              whether parts need to be sourced. Minor faults such as a faulty AVR or
-              a blocked fuel filter are typically resolved at significantly lower
-              cost than a full engine overhaul or rewind. We provide honest written
-              quotes before starting — no surprises.
+              Repair costs depend on the fault, the generator brand, its age and whether
+              parts need to be sourced. Minor faults such as a faulty AVR or a blocked
+              fuel filter are typically resolved at significantly lower cost than a full
+              engine overhaul or rewind. We provide honest written quotes before
+              starting — no surprises.
             </p>
             <Link
               href="/generator-repair-cost"
@@ -528,10 +534,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── FAQ TEASER ──────────────────────────────────────────────────── */}
-      <section
-        className="py-16 md:py-24 bg-[#f5f4f0]"
-        aria-labelledby="faq-heading"
-      >
+      <section className="py-16 md:py-24 bg-[#f5f4f0]" aria-labelledby="faq-heading">
         <div className="max-w-6xl mx-auto px-6">
           <h2
             id="faq-heading"
@@ -541,16 +544,9 @@ export default function HomePage() {
           </h2>
           <div className="max-w-3xl space-y-8">
             {homepageFAQs.map((faq) => (
-              <div
-                key={faq.question}
-                className="border-b border-[#1a1a1a]/10 pb-8"
-              >
-                <h3 className="text-lg font-bold text-[#1a1a1a] mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-base leading-relaxed text-[#1a1a1a]/70">
-                  {faq.answer}
-                </p>
+              <div key={faq.question} className="border-b border-[#1a1a1a]/10 pb-8">
+                <h3 className="text-lg font-bold text-[#1a1a1a] mb-3">{faq.question}</h3>
+                <p className="text-base leading-relaxed text-[#1a1a1a]/70">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -565,7 +561,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Bottom spacer for mobile sticky bar */}
       <div className="h-14 md:hidden" aria-hidden="true" />
     </>
   )
