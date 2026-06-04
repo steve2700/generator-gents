@@ -206,7 +206,7 @@ export default function HomePage() {
         {/* Background: OG-style dark industrial photo */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-generator.png"
+            src="/images/hero_generator_repair_services.png"
             alt="Professional technician servicing an industrial diesel generator"
             fill
             priority
