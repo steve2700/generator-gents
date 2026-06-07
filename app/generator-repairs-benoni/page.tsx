@@ -56,7 +56,7 @@ const whyPoints = [
   {
     num: '01',
     title: 'Residential & commercial — all covered',
-    body: 'Benoni's mix of residential estates, shopping centres, and light industrial parks means generator requirements vary widely. We service everything from domestic standby units to large commercial installations.',
+    body: "Benoni's mix of residential estates, shopping centres, and light industrial parks means generator requirements vary widely. We service everything from domestic standby units to large commercial installations.",
   },
   {
     num: '02',
