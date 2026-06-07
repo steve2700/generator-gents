@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+const BASE_URL = 'https://www.generatorrepairservices.co.za'
+
 interface BreadcrumbItem {
   label: string
   href?: string
@@ -10,40 +12,70 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const schemaItems = items.map((item, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    name: item.label,
-    item: item.href ? `https://www.generatorrepairservices.co.za${item.href}` : undefined,
-  }))
+  if (!items || items.length === 0) return null
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: schemaItems,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      // Last item (current page) doesn't need an item URL per Google's guidelines
+      ...(item.href && index < items.length - 1
+        ? { item: `${BASE_URL}${item.href}` }
+        : {}),
+    })),
   }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <nav aria-label="Breadcrumb" className="py-4 text-sm">
-        <ol className="flex flex-wrap items-center gap-2">
-          {items.map((item, index) => (
-            <li key={item.label} className="flex items-center gap-2">
-              {index > 0 && <span className="text-muted-foreground">/</span>}
-              {item.href && index < items.length - 1 ? (
-                <Link
-                  href={item.href}
-                  className="text-muted-foreground hover:text-brand-gold transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <span className="text-foreground">{item.label}</span>
-              )}
-            </li>
-          ))}
+      <nav aria-label="Breadcrumb" className="py-3 text-sm">
+        <ol
+          className="flex flex-wrap items-center gap-1"
+          itemScope
+          itemType="https://schema.org/BreadcrumbList"
+        >
+          {items.map((item, index) => {
+            const isLast = index === items.length - 1
+            return (
+              <li
+                key={`${item.label}-${index}`}
+                className="flex items-center gap-1"
+                itemScope
+                itemType="https://schema.org/ListItem"
+                itemProp="itemListElement"
+              >
+                {index > 0 && (
+                  <span className="text-[#1a1a1a]/30 select-none" aria-hidden="true">
+                    /
+                  </span>
+                )}
+                {item.href && !isLast ? (
+                  <Link
+                    href={item.href}
+                    className="text-[#1a1a1a]/50 hover:text-[#c8a84b] transition-colors"
+                    itemProp="item"
+                  >
+                    <span itemProp="name">{item.label}</span>
+                  </Link>
+                ) : (
+                  <span
+                    className="text-[#1a1a1a] font-medium"
+                    aria-current="page"
+                    itemProp="name"
+                  >
+                    {item.label}
+                  </span>
+                )}
+                <meta itemProp="position" content={String(index + 1)} />
+              </li>
+            )
+          })}
         </ol>
       </nav>
     </>
