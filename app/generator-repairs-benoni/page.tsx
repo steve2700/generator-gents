@@ -66,7 +66,7 @@ const whyPoints = [
   {
     num: '03',
     title: 'Same-day emergency response',
-    body: 'Load shedding doesn't wait and neither do we. When your generator fails, we mobilise fast — getting you back on power as quickly as possible regardless of whether it's a commercial site or a home.',
+    body: "Load shedding doesn't wait and neither do we. When your generator fails, we mobilise fast — getting you back on power as quickly as possible regardless of whether it's a commercial site or a home.",
   },
   {
     num: '04',
