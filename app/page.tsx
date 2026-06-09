@@ -42,16 +42,16 @@ export const metadata: Metadata = {
 }
 
 const services = [
-  { href: '/generator-repairs', label: 'Generator Repairs' },
-  { href: '/generator-servicing', label: 'Generator Servicing' },
-  { href: '/generator-maintenance', label: 'Generator Maintenance' },
-  { href: '/emergency-generator-repair', label: 'Emergency Callouts' },
-  { href: '/generator-installation', label: 'Generator Installation' },
-  { href: '/load-bank-testing', label: 'Load Testing' },
-  { href: '/avr-repairs', label: 'AVR Repairs' },
-  { href: '/control-panel-repairs', label: 'Control Panel Repairs' },
-  { href: '/fuel-system-repairs', label: 'Fuel System Repairs' },
-  { href: '/generator-rewinding', label: 'Generator Rewinding' },
+  { href: '/generator-repairs', label: 'Generator Repairs', desc: 'All faults diagnosed & fixed' },
+  { href: '/generator-servicing', label: 'Generator Servicing', desc: 'Oil, filters, full inspection' },
+  { href: '/generator-maintenance', label: 'Maintenance Plans', desc: 'Scheduled service contracts' },
+  { href: '/emergency-generator-repair', label: 'Emergency Callouts', desc: 'Same-day, province-wide' },
+  { href: '/generator-installation', label: 'Generator Installation', desc: 'Full setup & commissioning' },
+  { href: '/load-bank-testing', label: 'Load Bank Testing', desc: 'Capacity verification' },
+  { href: '/avr-repairs', label: 'AVR Repairs', desc: 'Stable voltage output' },
+  { href: '/control-panel-repairs', label: 'Control Panel Repairs', desc: 'Controllers & relays' },
+  { href: '/fuel-system-repairs', label: 'Fuel System Repairs', desc: 'Injectors & fuel pumps' },
+  { href: '/generator-rewinding', label: 'Generator Rewinding', desc: 'Alternator rewinding' },
 ]
 
 const areas = [
@@ -144,6 +144,34 @@ const homepageFAQs = [
   },
 ]
 
+const whyReasons = [
+  {
+    num: '01',
+    title: 'Certified Across All Major Brands',
+    body: 'Factory certifications for Cummins, Perkins, Caterpillar, Deutz, Volvo and more. When we open your generator, we know it — no learning on your time and your budget.',
+  },
+  {
+    num: '02',
+    title: 'Same-Day Emergency Response',
+    body: 'Generator down during loadshedding? We deploy province-wide. Most Gauteng callouts receive an on-site technician within 2–4 hours. Same-day service is standard — not a premium.',
+  },
+  {
+    num: '03',
+    title: 'First-Visit Resolution',
+    body: 'Our vehicles carry diagnostic equipment and a comprehensive stock of common parts. We arrive prepared and we complete the work — no second appointment needed.',
+  },
+  {
+    num: '04',
+    title: 'Written Quote Before Any Work',
+    body: 'A clear written assessment of the fault and the cost to fix it before a single bolt is turned. No hidden fees, no scope creep, no surprises on the invoice.',
+  },
+  {
+    num: '05',
+    title: 'Workmanship Guarantee',
+    body: 'Every repair is backed by a workmanship guarantee. If something we fixed fails again within the warranty period, we return and resolve it — no arguments, no charge.',
+  },
+]
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -155,7 +183,7 @@ const localBusinessSchema = {
       url: 'https://www.generatorrepairservices.co.za',
       telephone: '+27603160484',
       email: 'info@generatorrepairservices.co.za',
-      foundingDate: '2010',
+      foundingDate: '2009',
       priceRange: '$$',
       currenciesAccepted: 'ZAR',
       paymentAccepted: 'Cash, EFT',
@@ -183,10 +211,13 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <FAQSchema faqs={homepageFAQs} />
 
-      {/* ─── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0a0a0a] min-h-[88vh] flex flex-col" aria-label="Generator Repair Services Gauteng">
-
-        {/* Background photo */}
+      {/* ═══════════════════════════════════════════════════════════════
+          HERO
+      ═══════════════════════════════════════════════════════════════ */}
+      <section
+        className="relative overflow-hidden bg-[#0a0a0a] min-h-[88vh] flex flex-col"
+        aria-label="Generator Repair Services Gauteng"
+      >
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero_generator_repair_services.png"
@@ -198,36 +229,26 @@ export default function HomePage() {
             sizes="100vw"
             quality={85}
           />
-          {/* Gradient: heavy left for text legibility, fades right to show technician */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/85 to-[#0a0a0a]/25" />
-          {/* Bottom fade into trust bar */}
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
         </div>
 
-        {/* Hero content */}
         <div className="relative z-10 flex-1 flex items-center">
           <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 w-full">
             <div className="max-w-2xl">
-
-              {/* Eyebrow label */}
               <p className="text-[#c8a84b] text-xs font-bold tracking-[0.35em] uppercase mb-6">
                 Gauteng&apos;s Generator Repair Specialists
               </p>
-
-              {/* Main headline */}
               <h1 className="font-black text-white leading-[1.0] mb-3" style={{ fontSize: 'clamp(2.6rem, 6.5vw, 5rem)' }}>
                 Power When<br />You Need It.
               </h1>
               <p className="font-black text-[#c8a84b] leading-[1.0] mb-8" style={{ fontSize: 'clamp(2.1rem, 5.5vw, 4.2rem)' }}>
                 Fixed Right.<br />The First Time.
               </p>
-
               <p className="text-white/65 text-base md:text-lg leading-relaxed mb-10 max-w-md">
                 Expert generator repair, maintenance and diagnostics you can rely on —
                 all brands, all sizes, across all of Gauteng.
               </p>
-
-              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="tel:0603160484"
@@ -250,16 +271,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Trust pillars — fused to bottom of hero */}
+        {/* Trust pillars */}
         <div className="relative z-10 border-t border-[#c8a84b]/15 bg-black/60 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-6 py-6 md:py-8">
             <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6">
               {trustPillars.map((pillar) => (
                 <div key={pillar.heading} className="flex flex-col items-center text-center gap-2.5">
                   <div>{pillar.icon}</div>
-                  <dt className="text-white font-bold text-[11px] uppercase tracking-widest leading-tight">
-                    {pillar.heading}
-                  </dt>
+                  <dt className="text-white font-bold text-[11px] uppercase tracking-widest leading-tight">{pillar.heading}</dt>
                   <dd className="text-white/45 text-[11px] leading-snug">{pillar.body}</dd>
                 </div>
               ))}
@@ -268,180 +287,462 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── SERVICES OVERVIEW ───────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-[#f5f4f0]" aria-labelledby="services-heading">
+      {/* ═══════════════════════════════════════════════════════════════
+          SERVICES — tile grid + image
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 bg-white" aria-labelledby="services-heading">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-10">
-            Our Generator Services
-          </h2>
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
-            <div>
-              <p className="text-lg leading-relaxed text-[#1a1a1a]/75 mb-6">
-                Generator Repair Services is Gauteng&apos;s go-to team for everything
-                generator-related. From emergency repairs that get you back online within
-                hours, to scheduled maintenance that extends the life of your equipment,
-                our certified technicians cover every scenario — residential, commercial
-                and industrial.
-              </p>
-              <p className="text-lg leading-relaxed text-[#1a1a1a]/75 mb-8">
-                Our vehicles are stocked with common parts and diagnostic tools, which
-                means we resolve most faults on the first visit. No call-out to assess,
-                then another to fix — we arrive prepared and we get the job done.
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-                {services.map((service) => (
-                  <li key={service.href} className="border-b border-[#1a1a1a]/10 pb-2">
-                    <Link href={service.href} className="text-[#1a1a1a] hover:text-[#c8a84b] transition-colors font-medium text-sm">
-                      {service.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative aspect-[4/3]">
-              <Image
-                src="/images/generator-repair-technician.png"
-                alt="Certified generator repair technician working on a diesel generator in Gauteng"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 border border-[#c8a84b]/25 pointer-events-none" />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ─── WHY CHOOSE US ───────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-white" aria-labelledby="why-us-heading">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-start">
+          {/* Header row */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
             <div>
-              <h2 id="why-us-heading" className="text-3xl md:text-4xl font-bold text-[#1a1a1a] md:sticky md:top-8">
-                Why Gauteng<br />Businesses<br />Trust Us
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-3">What We Do</p>
+              <h2 id="services-heading" className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1a1a1a] leading-tight">
+                Every Generator Service,<br />Under One Roof
               </h2>
-              <div className="mt-6 w-12 h-1 bg-[#c8a84b]" />
             </div>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-bold text-[#1a1a1a] mb-3">Experience &amp; Certification</h3>
-                <p className="text-base leading-relaxed text-[#1a1a1a]/70">
-                  With over a decade in the generator repair industry, our technicians have worked on
-                  virtually every make and model available in South Africa. We hold certifications across
-                  major brands and continuously train on new systems — your equipment is always in expert
-                  hands, not guesswork.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-[#1a1a1a] mb-3">Response Time &amp; Emergency Availability</h3>
-                <p className="text-base leading-relaxed text-[#1a1a1a]/70">
-                  When your generator fails during loadshedding, waiting is not an option. Our technicians
-                  are deployed across Gauteng so that most callouts receive an on-site response within
-                  2–4 hours. Same-day service is standard, not a premium add-on.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-[#1a1a1a] mb-3">Transparent Pricing &amp; Workmanship Guarantee</h3>
-                <p className="text-base leading-relaxed text-[#1a1a1a]/70">
-                  You will receive a clear written assessment before a single bolt is turned. Our pricing
-                  is honest, our parts are quality-sourced, and every repair is backed by a workmanship
-                  guarantee. If something we fixed fails again, we come back and sort it out — no arguments.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── AREAS WE SERVE ──────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-[#f5f4f0]" aria-labelledby="areas-heading">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 id="areas-heading" className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
-            Generator Repairs Across Gauteng
-          </h2>
-          <p className="text-lg leading-relaxed text-[#1a1a1a]/70 mb-10 max-w-3xl">
-            From the corporate parks of Sandton and Midrand to the farms outside Vereeniging, we cover
-            every part of Gauteng. Our mobile technicians travel to you — no drop-off required.
-          </p>
-          <nav aria-label="Service areas in Gauteng">
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-3">
-              {areas.map((area) => (
-                <li key={area.slug}>
-                  <Link href={`/generator-repairs-${area.slug}`} className="text-sm text-[#1a1a1a]/80 hover:text-[#c8a84b] transition-colors font-medium">
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </section>
-
-      {/* ─── EMERGENCY CTA ───────────────────────────────────────────────── */}
-      <section className="bg-[#b91c1c] text-white" aria-label="Emergency generator repair callout">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-black mb-3">
-                Generator Emergency?<br />We Respond Fast.
-              </h2>
-              <p className="text-white/80 text-lg max-w-xl">
-                Do not let a generator failure disrupt your operations or leave your property without power.
-                Our Gauteng-wide emergency team is ready to mobilise now.
-              </p>
-            </div>
-            <div className="flex-shrink-0">
-              <a
-                href="tel:0603160484"
-                className="inline-flex items-center justify-center px-10 py-5 bg-white text-[#b91c1c] font-black text-2xl hover:bg-[#f5f4f0] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#b91c1c]"
-                aria-label="Call our emergency line: 060 316 0484"
-              >
-                060 316 0484
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── COST TEASER ─────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-20 bg-white border-b border-[#1a1a1a]/10" aria-labelledby="cost-heading">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h2 id="cost-heading" className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-4">
-              What Does Generator Repair Cost in Gauteng?
-            </h2>
-            <p className="text-base leading-relaxed text-[#1a1a1a]/70 mb-4">
-              Repair costs depend on the fault, the generator brand, its age and whether parts need to be
-              sourced. Minor faults such as a faulty AVR or a blocked fuel filter are typically resolved at
-              significantly lower cost than a full engine overhaul or rewind. We provide honest written
-              quotes before starting — no surprises.
-            </p>
-            <Link href="/generator-repair-cost" className="text-[#c8a84b] hover:text-[#1a1a1a] font-semibold transition-colors text-sm tracking-wide uppercase">
-              Read our full generator repair cost guide
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1a1a1a]/45 hover:text-[#c8a84b] transition-colors shrink-0"
+            >
+              View all services
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
           </div>
+
+          {/* Two-column: grid left, image right */}
+          <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-12 items-start">
+
+            {/* Service tile grid */}
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-px bg-[#1a1a1a]/8">
+              {services.map((service, i) => (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  className="group bg-white hover:bg-[#0a0a0a] transition-colors duration-300 p-5 md:p-6 flex flex-col gap-3"
+                >
+                  <span className="text-[#c8a84b]/25 font-black text-xl leading-none group-hover:text-[#c8a84b]/50 transition-colors">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <p className="font-bold text-sm text-[#1a1a1a] group-hover:text-white transition-colors leading-snug mb-1">
+                      {service.label}
+                    </p>
+                    <p className="text-[11px] text-[#1a1a1a]/40 group-hover:text-white/40 transition-colors leading-snug">
+                      {service.desc}
+                    </p>
+                  </div>
+                  <svg
+                    width="12" height="12" viewBox="0 0 14 14" fill="none"
+                    className="mt-auto text-[#c8a84b] opacity-0 group-hover:opacity-100 transition-opacity"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              ))}
+            </div>
+
+            {/* Right: image + callout */}
+            <div className="flex flex-col gap-6 lg:sticky lg:top-28">
+              <div className="relative aspect-[3/4] overflow-hidden group">
+                <Image
+                  src="/images/generator-repair-technician.png"
+                  alt="Certified generator repair technician working on a diesel generator in Gauteng"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  sizes="(max-width: 1024px) 100vw, 380px"
+                />
+                {/* Gold corner accents */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#c8a84b]" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#c8a84b]" />
+                {/* Overlay label */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0a0a]/90 to-transparent px-5 py-6">
+                  <p className="text-white font-black text-lg leading-tight">Mobile Workshop.<br />We Come to You.</p>
+                  <p className="text-white/55 text-xs mt-1">On-site repairs — no drop-off required</p>
+                </div>
+              </div>
+
+              {/* Emergency callout card */}
+              <div className="bg-[#b91c1c] p-6">
+                <p className="text-white/60 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Emergency?</p>
+                <p className="text-white font-black text-xl leading-snug mb-4">Generator down?<br />Call now for same-day response.</p>
+                <a
+                  href="tel:0603160484"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-white text-[#b91c1c] font-black text-base hover:bg-[#f5f4f0] transition-colors"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                  </svg>
+                  060 316 0484
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ─── FAQ TEASER ──────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-[#f5f4f0]" aria-labelledby="faq-heading">
+      {/* ═══════════════════════════════════════════════════════════════
+          WHY CHOOSE US — dark, numbered reasons + image
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="bg-[#0a0a0a]" aria-labelledby="why-us-heading">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-10">
-            Frequently Asked Questions
-          </h2>
-          <div className="max-w-3xl space-y-8">
-            {homepageFAQs.map((faq) => (
-              <div key={faq.question} className="border-b border-[#1a1a1a]/10 pb-8">
-                <h3 className="text-lg font-bold text-[#1a1a1a] mb-3">{faq.question}</h3>
-                <p className="text-base leading-relaxed text-[#1a1a1a]/70">{faq.answer}</p>
+          <div className="grid lg:grid-cols-2 gap-0">
+
+            {/* Left: image — full height */}
+            <div className="relative min-h-[420px] lg:min-h-full overflow-hidden">
+              <Image
+                src="/images/generator-repairs.png"
+                alt="Generator Repair Services certified technician inspecting a diesel generator"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0a0a]/60" />
+              {/* Stats overlay bottom-left */}
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { value: '15+', label: 'Years Experience' },
+                    { value: '18', label: 'Gauteng Areas' },
+                    { value: '2–4hr', label: 'Emergency Response' },
+                    { value: '100%', label: 'Work Guaranteed' },
+                  ].map((s) => (
+                    <div key={s.label} className="bg-[#0a0a0a]/70 backdrop-blur-sm px-4 py-3 border-l-2 border-[#c8a84b]">
+                      <p className="text-[#c8a84b] font-black text-2xl leading-none">{s.value}</p>
+                      <p className="text-white/50 text-[10px] uppercase tracking-wider mt-1">{s.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right: reasons */}
+            <div className="py-16 md:py-20 px-8 md:px-12 lg:px-14">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-4">Why Choose Us</p>
+              <h2 id="why-us-heading" className="text-3xl md:text-4xl font-black text-white leading-tight mb-2">
+                Why Gauteng<br />Businesses Trust Us
+              </h2>
+              <div className="w-10 h-[3px] bg-[#c8a84b] mb-10" />
+
+              <div className="divide-y divide-white/[0.07]">
+                {whyReasons.map((item) => (
+                  <div key={item.num} className="py-6 flex gap-5 group">
+                    <span className="text-[#c8a84b]/25 font-black text-sm leading-none shrink-0 mt-0.5 group-hover:text-[#c8a84b]/60 transition-colors w-6">
+                      {item.num}
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-white text-sm mb-1.5 group-hover:text-[#c8a84b] transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/45 text-sm leading-relaxed">{item.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white/15 text-white text-sm font-semibold hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-[#c8a84b] text-[#0a0a0a] text-sm font-bold hover:bg-yellow-400 transition-colors"
+                >
+                  Get a Free Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          AREAS — region columns
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 bg-[#f5f4f0]" aria-labelledby="areas-heading">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <div>
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-3">Where We Work</p>
+              <h2 id="areas-heading" className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1a1a1a] leading-tight">
+                Generator Repairs<br />Across All of Gauteng
+              </h2>
+            </div>
+            <Link
+              href="/areas"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1a1a1a]/45 hover:text-[#c8a84b] transition-colors shrink-0"
+            >
+              View all areas
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
+          </div>
+
+          {/* Region columns */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#1a1a1a]/8 mb-10">
+            {[
+              {
+                region: 'Johannesburg & CBD',
+                areas: ['Johannesburg', 'Soweto', 'Randburg', 'Roodepoort', 'Krugersdorp', 'Fourways'],
+                slugs: ['johannesburg', 'soweto', 'randburg', 'roodepoort', 'krugersdorp', 'fourways'],
+              },
+              {
+                region: 'Pretoria & North',
+                areas: ['Pretoria', 'Centurion', 'Midrand', 'Sandton'],
+                slugs: ['pretoria', 'centurion', 'midrand', 'sandton'],
+              },
+              {
+                region: 'East Rand',
+                areas: ['Kempton Park', 'Boksburg', 'Benoni', 'Germiston', 'Alberton', 'Edenvale', 'Springs'],
+                slugs: ['kempton-park', 'boksburg', 'benoni', 'germiston', 'alberton', 'edenvale', 'springs'],
+              },
+              {
+                region: 'South Gauteng',
+                areas: ['Vereeniging'],
+                slugs: ['vereeniging'],
+              },
+            ].map((group) => (
+              <div key={group.region} className="bg-white p-6 md:p-7">
+                <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a84b] mb-5 pb-3 border-b border-[#1a1a1a]/8">
+                  {group.region}
+                </p>
+                <ul className="space-y-2.5">
+                  {group.areas.map((area, i) => (
+                    <li key={area}>
+                      <Link
+                        href={`/generator-repairs-${group.slugs[i]}`}
+                        className="flex items-center justify-between text-sm font-medium text-[#1a1a1a]/65 hover:text-[#c8a84b] transition-colors group/item"
+                      >
+                        {area}
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                          className="opacity-0 group-hover/item:opacity-100 transition-opacity text-[#c8a84b]"
+                          aria-hidden="true"
+                        >
+                          <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-          <div className="mt-10">
-            <Link href="/faq" className="text-sm font-semibold tracking-wide uppercase text-[#c8a84b] hover:text-[#1a1a1a] transition-colors">
-              View all frequently asked questions
-            </Link>
+
+          <p className="text-[#1a1a1a]/45 text-sm max-w-2xl leading-relaxed">
+            Our mobile technicians travel to your site across all of Gauteng —
+            no drop-off required. From Sandton corporate parks to Vereeniging
+            industrial zones and everywhere in between.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          EMERGENCY CTA — full-width red impact
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="relative bg-[#b91c1c] text-white overflow-hidden" aria-label="Emergency generator repair callout">
+        {/* Diagonal pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{ backgroundImage: 'repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%)', backgroundSize: '8px 8px' }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-6xl mx-auto px-6 py-16 md:py-20">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div className="max-w-xl">
+              <p className="text-white/55 text-[11px] font-bold tracking-[0.35em] uppercase mb-3">Emergency Service</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4">
+                Generator Down?<br />We Respond Fast.
+              </h2>
+              <p className="text-white/70 text-base md:text-lg leading-relaxed">
+                Same-day emergency callouts across all of Gauteng. Most areas receive
+                a technician within 2–4 hours — stocked vehicle, ready to repair.
+              </p>
+            </div>
+            <div className="flex flex-col items-start md:items-end gap-3 shrink-0">
+              <a
+                href="tel:0603160484"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-[#b91c1c] font-black text-2xl hover:bg-[#f5f4f0] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#b91c1c]"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                </svg>
+                060 316 0484
+              </a>
+              <Link
+                href="/emergency-generator-repair"
+                className="text-white/50 text-xs hover:text-white transition-colors underline underline-offset-4"
+              >
+                Learn about our emergency service
+              </Link>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          COST TEASER + STATS
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 bg-white" aria-labelledby="cost-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+            {/* Left: image */}
+            <div className="relative aspect-[4/3] overflow-hidden group order-2 md:order-1">
+              <Image
+                src="/images/generator-servicing.png"
+                alt="Generator servicing and repair cost guide — professional service across Gauteng"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#c8a84b]" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#c8a84b]" />
+            </div>
+
+            {/* Right: copy + stats grid */}
+            <div className="order-1 md:order-2">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-4">Pricing</p>
+              <h2 id="cost-heading" className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-5 leading-tight">
+                What Does Generator<br />Repair Cost in Gauteng?
+              </h2>
+              <div className="w-10 h-0.5 bg-[#c8a84b] mb-6" />
+              <p className="text-base leading-relaxed text-[#1a1a1a]/65 mb-4">
+                Repair costs vary depending on the fault, the brand, age and parts required.
+                Minor issues like fuel filters or battery swaps are a fraction of the cost
+                of a full engine overhaul or alternator rewind.
+              </p>
+              <p className="text-base leading-relaxed text-[#1a1a1a]/65 mb-8">
+                We provide honest written quotes before starting. A proper assessment,
+                a clear number, then you decide — no surprise charges when the invoice arrives.
+              </p>
+              <Link
+                href="/generator-repair-cost"
+                className="inline-flex items-center gap-2 text-sm font-bold tracking-wide uppercase text-[#c8a84b] hover:text-[#1a1a1a] transition-colors"
+              >
+                Read our full repair cost guide
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          FAQ — accordion + sticky left
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 bg-[#f5f4f0]" aria-labelledby="faq-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-[360px_1fr] gap-12 lg:gap-20 items-start">
+
+            {/* Left sticky */}
+            <div className="lg:sticky lg:top-28">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-4">FAQ</p>
+              <h2 id="faq-heading" className="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-tight mb-5">
+                Common Questions,<br />Straight Answers
+              </h2>
+              <div className="w-10 h-0.5 bg-[#c8a84b] mb-6" />
+              <p className="text-[#1a1a1a]/50 text-sm leading-relaxed mb-8 max-w-xs">
+                Everything you need to know about generator repairs, costs and maintenance
+                in Gauteng — answered by our technicians.
+              </p>
+              <Link
+                href="/faq"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white text-sm font-bold hover:bg-[#c8a84b] hover:text-[#0a0a0a] transition-colors"
+              >
+                View all FAQs
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            </div>
+
+            {/* Right: accordion */}
+            <div className="border-t border-[#1a1a1a]/10">
+              {homepageFAQs.map((faq) => (
+                <details key={faq.question} className="group border-b border-[#1a1a1a]/10">
+                  <summary className="flex items-start justify-between gap-4 py-5 cursor-pointer list-none select-none">
+                    <h3 className="text-base font-bold text-[#1a1a1a] leading-snug group-open:text-[#c8a84b] transition-colors pr-2">
+                      {faq.question}
+                    </h3>
+                    <span className="shrink-0 mt-0.5 w-5 h-5 flex items-center justify-center border border-[#1a1a1a]/20 group-open:border-[#c8a84b] group-open:bg-[#c8a84b] transition-colors">
+                      <svg width="9" height="9" viewBox="0 0 10 10" fill="none" className="group-open:hidden" aria-hidden="true">
+                        <path d="M5 1v8M1 5h8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+                      </svg>
+                      <svg width="9" height="9" viewBox="0 0 10 10" fill="none" className="hidden group-open:block text-white" aria-hidden="true">
+                        <path d="M1 5h8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="pb-5 pr-9">
+                    <p className="text-[#1a1a1a]/60 text-sm leading-relaxed">{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          FINAL CTA STRIP
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="bg-[#0a0a0a]" aria-label="Final call to action">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-10 border-b border-white/[0.07]">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-black text-white mb-2">
+                Ready to Get Your Generator Fixed?
+              </h2>
+              <p className="text-white/35 text-sm">
+                Emergency or planned — same-day callouts across all of Gauteng.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href="tel:0603160484"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                </svg>
+                060 316 0484
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/15 text-white font-semibold text-base hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
+              >
+                Request a Quote
+              </Link>
+            </div>
+          </div>
+
+          {/* Quick nav */}
+          <nav aria-label="Quick links" className="flex flex-wrap gap-x-6 gap-y-2 pt-8">
+            {[
+              { href: '/services', label: 'All Services' },
+              { href: '/areas', label: 'Service Areas' },
+              { href: '/generator-repair-cost', label: 'Repair Costs' },
+              { href: '/emergency-generator-repair', label: 'Emergency Callouts' },
+              { href: '/generator-maintenance', label: 'Maintenance Plans' },
+              { href: '/faq', label: 'FAQ' },
+              { href: '/about', label: 'About Us' },
+              { href: '/contact', label: 'Contact' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="text-white/25 hover:text-[#c8a84b] text-xs transition-colors">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
 
