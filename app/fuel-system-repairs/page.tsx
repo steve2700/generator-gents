@@ -132,7 +132,7 @@ export default function FuelSystemRepairsPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/fuel-system-repairs-hero.png"
+            src="/images/fuel-system.png"
             alt="Generator fuel system repair service including injectors and lift pumps in Gauteng"
             fill
             priority
@@ -251,7 +251,7 @@ export default function FuelSystemRepairsPage() {
               {/* Image 1 */}
               <div className="mt-10 relative aspect-[16/9] overflow-hidden">
                 <Image
-                  src="/images/fuel-system-repair-technician.png"
+                  src="/images/fuel-system.png"
                   alt="Generator Repair Services technician inspecting generator fuel injectors and pump during fuel system repair in Gauteng"
                   fill
                   className="object-cover object-center"
@@ -317,7 +317,7 @@ export default function FuelSystemRepairsPage() {
             {/* Image 2 */}
             <div className="relative aspect-[4/3] overflow-hidden order-2 md:order-1">
               <Image
-                src="/images/diesel-fuel-polishing-tank.png"
+                src="/images/compressed_Grip_7.5KVA_Petrol_Generator_Repair.jpg"
                 alt="Diesel fuel polishing and generator tank cleaning service for standby generators in Gauteng"
                 fill
                 className="object-cover object-center"
