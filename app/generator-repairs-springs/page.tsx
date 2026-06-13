@@ -104,7 +104,7 @@ export default function SpringsPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/areas/springs.png"
+            src="/images/generator-repair-technician-onsite-midrand.webp"
             alt="Generator repair and servicing across Springs — mobile technicians covering industrial, commercial and residential areas on the Far East Rand"
             fill
             priority
