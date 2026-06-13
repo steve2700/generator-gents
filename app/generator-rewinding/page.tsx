@@ -127,7 +127,7 @@ export default function GeneratorRewindingPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/generator-rewinding-hero.png"
+            src="/images/alternator-rewinding-workshop.png"
             alt="Generator alternator rewinding service in Gauteng — stator and rotor windings to factory specification"
             fill
             priority
@@ -311,7 +311,7 @@ export default function GeneratorRewindingPage() {
             {/* Image 2 */}
             <div className="relative aspect-[4/3] overflow-hidden order-2 md:order-1">
               <Image
-                src="/images/generator-alternator-testing.png"
+                src="/images/Generator-Rewinding-Repair-Services.webp"
                 alt="Rewound generator alternator undergoing insulation resistance and load testing before return to service in Gauteng"
                 fill
                 className="object-cover object-center"
