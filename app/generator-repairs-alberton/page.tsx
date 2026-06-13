@@ -104,7 +104,7 @@ export default function AlbertonPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/areas/alberton.png"
+            src="/images/generator-repair-technician-onsite-midrand.webp"
             alt="Generator repair and servicing across Alberton — mobile technicians covering residential, commercial and light industrial areas"
             fill
             priority
