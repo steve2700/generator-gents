@@ -116,7 +116,7 @@ export default function GeneratorMaintenancePage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/generator-maintenance.png"
+            src="/images/hero_generator_repair_services.png"
             alt="Planned maintenance schedule for standby generators across Gauteng businesses"
             fill
             priority
