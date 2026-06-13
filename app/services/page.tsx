@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/breadcrumbs'
+import HeroSlideshow from '@/components/hero-slideshow'
 
 export const metadata: Metadata = {
   title: 'Generator Services Gauteng | Repairs, Servicing, Maintenance & More',
@@ -9,56 +10,219 @@ export const metadata: Metadata = {
     'Full range of professional generator services across Gauteng. Expert repairs, scheduled servicing, emergency callouts, AVR repairs, load testing & installation. Call 060 316 0484.',
   keywords: [
     'generator services Gauteng',
-    'generator repair services Johannesburg',
+    'generator repair Johannesburg',
+    'generator repair Pretoria',
+    'generator repair Midrand',
+    'generator repair Centurion',
+    'generator repair Sandton',
     'generator servicing Gauteng',
     'emergency generator repair Gauteng',
     'generator maintenance Gauteng',
     'generator installation Gauteng',
     'AVR repair Gauteng',
     'load bank testing Gauteng',
-    'generator control panel repair',
+    'generator control panel repair Gauteng',
     'generator rewinding Gauteng',
   ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+  },
   alternates: {
     canonical: 'https://www.generatorrepairservices.co.za/services',
   },
   openGraph: {
     title: 'Generator Services Gauteng | Repairs, Servicing & Maintenance',
-    description: 'Full range of professional generator services across Gauteng. Emergency callouts, all brands. Call 060 316 0484.',
+    description:
+      'Full range of professional generator services across Gauteng. Emergency callouts, all brands. Call 060 316 0484.',
     url: 'https://www.generatorrepairservices.co.za/services',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.generatorrepairservices.co.za/images/Industrial_Generator_Repair_Team.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Generator Repair Services Gauteng — professional technician team',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Generator Services Gauteng | Repairs, Servicing & Maintenance',
+    description:
+      'Expert generator repairs, servicing, emergency callouts & maintenance across Gauteng. All brands. Call 060 316 0484.',
+    images: ['https://www.generatorrepairservices.co.za/images/Industrial_Generator_Repair_Team.webp'],
   },
 }
 
-const serviceSchema = {
+// ── Structured Data ────────────────────────────────────────────────────────────
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.generatorrepairservices.co.za/#business',
+  name: 'Generator Repair Services Gauteng',
+  description:
+    'Professional generator repair, servicing, maintenance, installation and emergency callout services across Gauteng. All brands, all sizes.',
+  url: 'https://www.generatorrepairservices.co.za',
+  telephone: '+27603160484',
+  email: 'info@generatorrepairservices.co.za',
+  areaServed: [
+    { '@type': 'City', name: 'Johannesburg' },
+    { '@type': 'City', name: 'Pretoria' },
+    { '@type': 'City', name: 'Midrand' },
+    { '@type': 'City', name: 'Centurion' },
+    { '@type': 'City', name: 'Sandton' },
+    { '@type': 'City', name: 'Randburg' },
+    { '@type': 'City', name: 'Roodepoort' },
+    { '@type': 'City', name: 'Germiston' },
+    { '@type': 'City', name: 'Boksburg' },
+    { '@type': 'AdministrativeArea', name: 'Gauteng' },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Gauteng',
+    addressCountry: 'ZA',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -26.2041,
+    longitude: 28.0473,
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '17:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '13:00' },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Generator Services',
+    itemListElement: [
+      'Generator Repairs',
+      'Generator Servicing',
+      'Generator Maintenance Plans',
+      'Emergency Generator Callouts',
+      'Generator Installation',
+      'Load Bank Testing',
+      'AVR & Voltage Regulator Repairs',
+      'Control Panel Repairs',
+      'Fuel System Repairs',
+      'Generator Rewinding',
+    ].map((name, i) => ({ '@type': 'Offer', position: i + 1, itemOffered: { '@type': 'Service', name } })),
+  },
+  image: 'https://www.generatorrepairservices.co.za/images/Industrial_Generator_Repair_Team.webp',
+  priceRange: '$$',
+}
+
+const serviceListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Generator Services — Generator Repair Services Gauteng',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Generator Repairs', url: 'https://www.generatorrepairservices.co.za/generator-repairs' },
-    { '@type': 'ListItem', position: 2, name: 'Generator Servicing', url: 'https://www.generatorrepairservices.co.za/generator-servicing' },
-    { '@type': 'ListItem', position: 3, name: 'Generator Maintenance Plans', url: 'https://www.generatorrepairservices.co.za/generator-maintenance' },
-    { '@type': 'ListItem', position: 4, name: 'Emergency Generator Callouts', url: 'https://www.generatorrepairservices.co.za/emergency-generator-repair' },
-    { '@type': 'ListItem', position: 5, name: 'Generator Installation', url: 'https://www.generatorrepairservices.co.za/generator-installation' },
-    { '@type': 'ListItem', position: 6, name: 'Load Bank Testing', url: 'https://www.generatorrepairservices.co.za/load-bank-testing' },
-    { '@type': 'ListItem', position: 7, name: 'AVR & Voltage Regulator Repairs', url: 'https://www.generatorrepairservices.co.za/avr-repairs' },
-    { '@type': 'ListItem', position: 8, name: 'Control Panel Repairs', url: 'https://www.generatorrepairservices.co.za/control-panel-repairs' },
-    { '@type': 'ListItem', position: 9, name: 'Fuel System Repairs', url: 'https://www.generatorrepairservices.co.za/fuel-system-repairs' },
-    { '@type': 'ListItem', position: 10, name: 'Generator Rewinding', url: 'https://www.generatorrepairservices.co.za/generator-rewinding' },
+    { '@type': 'ListItem', position: 1,  name: 'Generator Repairs',            url: 'https://www.generatorrepairservices.co.za/generator-repairs' },
+    { '@type': 'ListItem', position: 2,  name: 'Generator Servicing',          url: 'https://www.generatorrepairservices.co.za/generator-servicing' },
+    { '@type': 'ListItem', position: 3,  name: 'Generator Maintenance Plans',  url: 'https://www.generatorrepairservices.co.za/generator-maintenance' },
+    { '@type': 'ListItem', position: 4,  name: 'Emergency Generator Callouts', url: 'https://www.generatorrepairservices.co.za/emergency-generator-repair' },
+    { '@type': 'ListItem', position: 5,  name: 'Generator Installation',       url: 'https://www.generatorrepairservices.co.za/generator-installation' },
+    { '@type': 'ListItem', position: 6,  name: 'Load Bank Testing',            url: 'https://www.generatorrepairservices.co.za/load-bank-testing' },
+    { '@type': 'ListItem', position: 7,  name: 'AVR & Voltage Regulator Repairs', url: 'https://www.generatorrepairservices.co.za/avr-repairs' },
+    { '@type': 'ListItem', position: 8,  name: 'Control Panel Repairs',        url: 'https://www.generatorrepairservices.co.za/control-panel-repairs' },
+    { '@type': 'ListItem', position: 9,  name: 'Fuel System Repairs',          url: 'https://www.generatorrepairservices.co.za/fuel-system-repairs' },
+    { '@type': 'ListItem', position: 10, name: 'Generator Rewinding',          url: 'https://www.generatorrepairservices.co.za/generator-rewinding' },
   ],
 }
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What generator brands do you repair in Gauteng?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We repair all major generator brands including Cummins, Perkins, Caterpillar, Deutz, Volvo, FG Wilson, Kohler, Kipor, Ryobi, and more — both diesel and petrol, across all of Gauteng.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly can you respond to an emergency generator callout in Gauteng?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Our emergency response team typically arrives on-site within 2–4 hours of your call anywhere in Gauteng. Contracted maintenance clients receive priority dispatch.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer generator maintenance contracts for businesses in Gauteng?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We offer customised maintenance plans for businesses, property managers, and industrial clients across Gauteng. Plans include scheduled servicing, priority callouts, and full compliance documentation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What areas in Gauteng do you cover?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We cover all of Gauteng including Johannesburg, Pretoria, Midrand, Centurion, Sandton, Randburg, Roodepoort, Germiston, Boksburg, and surrounding areas.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you repair a generator that won\'t start automatically during loadshedding?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Automatic start failures are usually caused by a faulty AMF/ATS controller, battery issues, or a fuel system problem. Our technicians carry diagnostic tools and common parts to resolve most auto-start faults on the first visit.',
+      },
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',     item: 'https://www.generatorrepairservices.co.za' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.generatorrepairservices.co.za/services' },
+  ],
+}
+
+// Per-service schema — one Service node per entry
+const serviceNodes = [
+  { name: 'Generator Repairs Gauteng',            url: '/generator-repairs',        area: 'Gauteng' },
+  { name: 'Generator Servicing Gauteng',          url: '/generator-servicing',      area: 'Gauteng' },
+  { name: 'Generator Maintenance Plans Gauteng',  url: '/generator-maintenance',    area: 'Gauteng' },
+  { name: 'Emergency Generator Repair Gauteng',   url: '/emergency-generator-repair', area: 'Gauteng' },
+  { name: 'Generator Installation Gauteng',       url: '/generator-installation',   area: 'Gauteng' },
+  { name: 'Load Bank Testing Gauteng',            url: '/load-bank-testing',        area: 'Gauteng' },
+  { name: 'AVR & Voltage Regulator Repairs',      url: '/avr-repairs',              area: 'Gauteng' },
+  { name: 'Control Panel Repairs Gauteng',        url: '/control-panel-repairs',    area: 'Gauteng' },
+  { name: 'Fuel System Repairs Gauteng',          url: '/fuel-system-repairs',      area: 'Gauteng' },
+  { name: 'Generator Rewinding Gauteng',          url: '/generator-rewinding',      area: 'Gauteng' },
+].map((s) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: s.name,
+  url: `https://www.generatorrepairservices.co.za${s.url}`,
+  provider: { '@id': 'https://www.generatorrepairservices.co.za/#business' },
+  areaServed: { '@type': 'AdministrativeArea', name: s.area },
+  serviceType: 'Generator Repair and Maintenance',
+}))
+
+// ── Page data ──────────────────────────────────────────────────────────────────
 
 const services = [
   {
     href: '/generator-repairs',
     title: 'Generator Repairs',
     shortTitle: 'Repairs',
-    image: '/images/generator-repairs.png',
+    image: '/images/compressed_Diesel_Gen_Repair.webp',
     alt: 'Generator repair technician diagnosing a diesel generator fault in Gauteng',
     badge: 'Most Requested',
     badgeColor: 'bg-[#c8a84b] text-[#0a0a0a]',
     description:
-      'From minor electrical faults to major mechanical failures, our certified technicians diagnose and repair all generator types quickly and correctly. We carry common parts on every vehicle, meaning most repairs are completed on the first visit — no waiting for parts to arrive before work begins.',
+      'From minor electrical faults to major mechanical failures, our certified technicians diagnose and repair all generator types quickly and correctly across Johannesburg, Pretoria, Midrand and the wider Gauteng area. We carry common parts on every vehicle, meaning most repairs are completed on the first visit.',
     points: [
       'All brands: Cummins, Perkins, Caterpillar, Deutz, Volvo & more',
       'Diesel and petrol generators of all sizes',
@@ -70,12 +234,12 @@ const services = [
     href: '/generator-servicing',
     title: 'Generator Servicing',
     shortTitle: 'Servicing',
-    image: '/images/generator-servicing.png',
+    image: '/images/Technician_Servicing_Generator.webp',
     alt: 'Technician performing a full generator service including oil change and filter replacement',
     badge: null,
     badgeColor: '',
     description:
-      'Regular servicing is the single most effective way to extend your generator\'s lifespan and prevent unexpected breakdowns. Our comprehensive service includes oil and filter changes, coolant inspection, belt checks, battery testing, and a full load test to verify the generator performs to its rated output.',
+      'Regular servicing is the single most effective way to extend your generator\'s lifespan and prevent unexpected breakdowns. Our comprehensive service covers oil and filter changes, coolant inspection, belt checks, battery testing, and a full load test — available across all Gauteng regions.',
     points: [
       'Full oil and filter change with quality-spec lubricants',
       'Coolant system inspection and top-up',
@@ -87,12 +251,12 @@ const services = [
     href: '/generator-maintenance',
     title: 'Maintenance Plans',
     shortTitle: 'Maintenance',
-    image: '/images/generator-maintenance.png',
+    image: '/images/2026-06-11_Generator_Preventative_Maintenance.webp',
     alt: 'Planned maintenance schedule for standby generators across Gauteng businesses',
     badge: 'Popular for Business',
     badgeColor: 'bg-[#1a1a1a] text-white border border-white/20',
     description:
-      'A maintenance plan removes the guesswork entirely. We track your generator\'s service intervals, contact you when it\'s due, and handle everything from scheduling to paperwork. Businesses and property managers across Gauteng rely on our maintenance contracts to keep standby systems ready for loadshedding.',
+      'A maintenance plan removes the guesswork entirely. We track your generator\'s service intervals, contact you when it\'s due, and handle everything from scheduling to paperwork. Businesses and property managers across Gauteng rely on our contracts to keep standby systems ready for loadshedding.',
     points: [
       'Customised service schedules by hours run or calendar interval',
       'Priority callout response for contracted clients',
@@ -104,12 +268,12 @@ const services = [
     href: '/emergency-generator-repair',
     title: 'Emergency Callouts',
     shortTitle: 'Emergency',
-    image: '/images/emergency-generator-repair.png',
+    image: '/images/generator-repair-technician-onsite-midrand.webp',
     alt: 'Emergency generator repair technician responding to a breakdown in Johannesburg',
     badge: '2–4 Hour Response',
     badgeColor: 'bg-[#b91c1c] text-white',
     description:
-      'When your generator fails mid-loadshedding or during a critical power event, every minute counts. Our emergency response team is deployed across Gauteng, with most callouts receiving an on-site technician within 2–4 hours of your call. We prioritise essential services, hospitals, data centres, and commercial operations.',
+      'When your generator fails mid-loadshedding or during a critical power event, every minute counts. Our emergency response team is deployed across Gauteng — Johannesburg, Pretoria, Midrand, Centurion and beyond — with most callouts receiving an on-site technician within 2–4 hours.',
     points: [
       'Same-day emergency callouts across all of Gauteng',
       'Mobile workshops stocked with common failure parts',
@@ -143,7 +307,7 @@ const services = [
     badge: null,
     badgeColor: '',
     description:
-      'Standby generators that rarely run under full load accumulate wet stacking — unburned fuel deposits in the exhaust system — which reduces efficiency and can cause premature failure. Load bank testing applies a controlled electrical load to your generator, verifying it can deliver its rated output and clearing any wet stacking.',
+      'Standby generators that rarely run under full load accumulate wet stacking — unburned fuel deposits in the exhaust system — reducing efficiency and causing premature failure. Load bank testing applies a controlled electrical load, verifying rated output and clearing wet stacking. Compliance documentation provided.',
     points: [
       'Tests generator at 50%, 75% and 100% rated capacity',
       'Clears wet stacking in diesel generators',
@@ -155,12 +319,12 @@ const services = [
     href: '/avr-repairs',
     title: 'AVR & Voltage Regulator Repairs',
     shortTitle: 'AVR Repairs',
-    image: '/images/avr-repairs.png',
+    image: '/images/avr-repair.png',
     alt: 'Automatic voltage regulator repair and replacement for generators in Gauteng',
     badge: null,
     badgeColor: '',
     description:
-      'A faulty Automatic Voltage Regulator causes fluctuating or incorrect output voltage, which can damage connected equipment. Our technicians diagnose AVR faults, replace failed units with quality-matched components, and test voltage stability under load to confirm a clean, consistent power output.',
+      'A faulty Automatic Voltage Regulator causes fluctuating or incorrect output voltage, which can damage connected equipment. Our technicians diagnose AVR faults, replace failed units with quality-matched components, and test voltage stability under load to confirm clean, consistent power output.',
     points: [
       'Diagnosis of voltage fluctuation and instability faults',
       'AVR replacement with OEM-spec or quality aftermarket units',
@@ -172,12 +336,12 @@ const services = [
     href: '/control-panel-repairs',
     title: 'Control Panel Repairs',
     shortTitle: 'Control Panels',
-    image: '/images/control-panel-repairs.png',
+    image: '/images/control-panel.png',
     alt: 'Generator control panel repair and programming service in Gauteng',
     badge: null,
     badgeColor: '',
     description:
-      'Modern generators rely on digital control panels and AMF (Automatic Main Failure) controllers to manage automatic starting and load transfer. When these systems fault, your generator may fail to start automatically when power is lost. We repair, reprogram and replace control panels across all major controller brands.',
+      'Modern generators rely on digital control panels and AMF (Automatic Main Failure) controllers to manage automatic starting and load transfer. When these systems fault, your generator may fail to start during loadshedding. We repair, reprogram and replace control panels across all major controller brands.',
     points: [
       'AMF and ATS controller diagnosis and repair',
       'DSE, ComAp, Deepsea and SmartGen controller support',
@@ -189,12 +353,12 @@ const services = [
     href: '/fuel-system-repairs',
     title: 'Fuel System Repairs',
     shortTitle: 'Fuel Systems',
-    image: '/images/fuel-system-repairs.png',
+    image: '/images/fuel-system.png',
     alt: 'Generator fuel system repair including injector cleaning and fuel pump replacement',
     badge: null,
     badgeColor: '',
     description:
-      'Diesel degradation, water contamination, and blocked injectors are among the most common causes of generator failure in South Africa. Our fuel system service covers fuel polishing, injector cleaning and replacement, lift pump and injection pump repairs, and fuel tank cleaning to restore proper fuel delivery.',
+      'Diesel degradation, water contamination, and blocked injectors are among the most common causes of generator failure in South Africa. Our fuel system service covers fuel polishing, injector cleaning and replacement, lift pump and injection pump repairs, and fuel tank cleaning.',
     points: [
       'Fuel polishing and contamination removal',
       'Injector cleaning, testing and replacement',
@@ -206,12 +370,12 @@ const services = [
     href: '/generator-rewinding',
     title: 'Generator Rewinding',
     shortTitle: 'Rewinding',
-    image: '/images/generator-rewinding.png',
+    image: '/images/expert_generator_maintanance.webp',
     alt: 'Generator alternator rewinding service at our Gauteng workshop',
     badge: 'Workshop Service',
     badgeColor: 'bg-[#1a1a1a] text-white border border-white/20',
     description:
-      'When a generator alternator suffers winding failure — usually from insulation breakdown, overloading, or moisture ingress — rewinding is often the most cost-effective solution compared to replacing the entire alternator. Our workshop rewinds stators and rotors to factory specifications, with full testing before return.',
+      'When a generator alternator suffers winding failure — from insulation breakdown, overloading, or moisture ingress — rewinding is often the most cost-effective solution. Our workshop rewinds stators and rotors to factory specifications with full insulation resistance testing before return.',
     points: [
       'Stator and rotor rewinding to OEM specifications',
       'Insulation resistance testing before and after rewind',
@@ -221,13 +385,43 @@ const services = [
   },
 ]
 
+// ── FAQ data (visible on page + matches FAQPage schema) ───────────────────────
+const faqs = [
+  {
+    q: 'What generator brands do you repair in Gauteng?',
+    a: 'We repair all major brands including Cummins, Perkins, Caterpillar, Deutz, Volvo, FG Wilson, Kohler, Kipor, Ryobi, and more — both diesel and petrol, all sizes.',
+  },
+  {
+    q: 'How quickly can you respond to an emergency callout?',
+    a: 'Our emergency team typically arrives within 2–4 hours anywhere in Gauteng. Contracted maintenance clients receive priority dispatch.',
+  },
+  {
+    q: 'Do you offer maintenance contracts for businesses?',
+    a: 'Yes — customised plans for businesses, property managers, and industrial clients. Includes scheduled servicing, priority callouts, and compliance documentation.',
+  },
+  {
+    q: 'Which areas in Gauteng do you cover?',
+    a: 'All of Gauteng: Johannesburg, Pretoria, Midrand, Centurion, Sandton, Randburg, Roodepoort, Germiston, Boksburg and surrounding areas.',
+  },
+  {
+    q: "Can you fix a generator that won't auto-start during loadshedding?",
+    a: 'Yes. Auto-start failures are usually a faulty AMF/ATS controller, battery, or fuel issue. Most are resolved on the first visit with parts carried on our vehicles.',
+  },
+]
+
+// ── Component ─────────────────────────────────────────────────────────────────
+
 export default function ServicesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
+      {/* ── Structured data ── */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {serviceNodes.map((node, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(node) }} />
+      ))}
 
       {/* ── Breadcrumb ── */}
       <div className="bg-[#f5f4f0] border-b border-[#1a1a1a]/8">
@@ -236,18 +430,10 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* ── Page hero ── */}
+      {/* ── Hero — rotating real job photos ── */}
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero_generator_repair_services.png"
-            alt="Generator repair services across Gauteng"
-            fill
-            priority
-            className="object-cover object-center opacity-25"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]/60" />
+          <HeroSlideshow />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-14 md:py-20">
           <p className="text-[#c8a84b] text-xs font-bold tracking-[0.35em] uppercase mb-4">
@@ -256,16 +442,19 @@ export default function ServicesPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-5 max-w-3xl">
             Professional Generator Services Across Gauteng
           </h1>
-          <p className="text-white/65 text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
+          <p className="text-white/65 text-lg md:text-xl leading-relaxed max-w-2xl mb-3">
             From emergency repairs during loadshedding to long-term maintenance contracts,
             our certified technicians handle every aspect of generator care — all brands,
-            all sizes, across all of Gauteng.
+            all sizes, across Johannesburg, Pretoria, Midrand, Centurion and all of Gauteng.
+          </p>
+          <p className="text-white/40 text-sm mb-8">
+            Serving Gauteng businesses and homeowners since 2010 · Workmanship guaranteed
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="tel:0603160484"
               className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#b91c1c] text-white font-bold text-base hover:bg-red-800 transition-colors"
-              aria-label="Call 060 316 0484"
+              aria-label="Call Generator Repair Services on 060 316 0484"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
@@ -283,7 +472,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Quick-nav chips ── */}
-      <section className="bg-white border-b border-[#1a1a1a]/8 overflow-x-auto" aria-label="Jump to service">
+      <nav className="bg-white border-b border-[#1a1a1a]/8 overflow-x-auto" aria-label="Jump to service section">
         <div className="max-w-6xl mx-auto px-6">
           <ul className="flex items-center gap-1 py-3 min-w-max">
             {services.map((s) => (
@@ -298,10 +487,10 @@ export default function ServicesPage() {
             ))}
           </ul>
         </div>
-      </section>
+      </nav>
 
       {/* ── Service entries ── */}
-      <div>
+      <main>
         {services.map((service, index) => {
           const isEven = index % 2 === 0
           return (
@@ -309,7 +498,7 @@ export default function ServicesPage() {
               key={service.href}
               id={service.href.replace('/', '')}
               className={`py-16 md:py-20 ${isEven ? 'bg-[#f5f4f0]' : 'bg-white'}`}
-              aria-labelledby={`service-${index}`}
+              aria-labelledby={`service-heading-${index}`}
             >
               <div className="max-w-6xl mx-auto px-6">
                 <div className={`grid md:grid-cols-2 gap-10 md:gap-16 items-center ${!isEven ? 'md:[&>*:first-child]:order-2' : ''}`}>
@@ -323,10 +512,8 @@ export default function ServicesPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    {/* Gold corner accent */}
                     <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#c8a84b]" />
                     <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#c8a84b]" />
-                    {/* Badge */}
                     {service.badge && (
                       <div className={`absolute top-4 right-4 px-3 py-1 text-[11px] font-bold tracking-wider uppercase ${service.badgeColor}`}>
                         {service.badge}
@@ -336,7 +523,7 @@ export default function ServicesPage() {
 
                   {/* Content */}
                   <div>
-                    <h2 id={`service-${index}`} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a1a1a] mb-4 leading-tight">
+                    <h2 id={`service-heading-${index}`} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a1a1a] mb-4 leading-tight">
                       <Link href={service.href} className="hover:text-[#c8a84b] transition-colors">
                         {service.title}
                       </Link>
@@ -349,7 +536,6 @@ export default function ServicesPage() {
                       {service.points.map((point) => (
                         <li key={point} className="flex items-start gap-3 text-sm text-[#1a1a1a]/75">
                           <span className="mt-1 w-4 h-4 shrink-0 flex items-center justify-center">
-                            {/* Gold checkmark */}
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                               <circle cx="7" cy="7" r="6.5" stroke="#c8a84b" strokeWidth="1"/>
                               <path d="M4 7l2 2 4-4" stroke="#c8a84b" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
@@ -374,34 +560,60 @@ export default function ServicesPage() {
                       </a>
                     </div>
                   </div>
+
                 </div>
               </div>
             </section>
           )
         })}
-      </div>
+      </main>
 
-      {/* ── Internal linking — related pages ── */}
+      {/* ── FAQ section (matches FAQPage schema) ── */}
+      <section className="py-16 md:py-20 bg-[#0a0a0a]" aria-labelledby="faq-heading">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-[#c8a84b] text-xs font-bold tracking-[0.35em] uppercase mb-3">Common Questions</p>
+          <h2 id="faq-heading" className="text-2xl md:text-3xl font-black text-white mb-10">
+            Frequently Asked Questions
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="border border-white/8 p-6">
+                <h3 className="text-white font-bold text-base mb-3 leading-snug">{faq.q}</h3>
+                <p className="text-white/55 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-white/30 text-sm">
+            More questions?{' '}
+            <Link href="/faq" className="text-[#c8a84b] hover:underline">
+              Visit our full FAQ page
+            </Link>{' '}
+            or{' '}
+            <a href="tel:0603160484" className="text-[#c8a84b] hover:underline">
+              call us directly
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* ── Internal linking ── */}
       <section className="py-14 bg-[#f5f4f0] border-t border-[#1a1a1a]/8" aria-labelledby="related-heading">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 id="related-heading" className="text-xl font-bold text-[#1a1a1a] mb-6">
-            Explore More
-          </h2>
+          <h2 id="related-heading" className="text-xl font-bold text-[#1a1a1a] mb-6">Explore More</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { href: '/areas', label: 'Service Areas', sub: 'All Gauteng locations' },
-              { href: '/generator-repair-cost', label: 'Repair Costs', sub: 'Honest pricing guide' },
-              { href: '/faq', label: 'FAQ', sub: 'Common questions answered' },
-              { href: '/contact', label: 'Get a Quote', sub: 'Free assessment' },
+              { href: '/areas',                 label: 'Service Areas', sub: 'All Gauteng locations' },
+              { href: '/generator-repair-cost', label: 'Repair Costs',  sub: 'Honest pricing guide' },
+              { href: '/gallery',               label: 'Photo Gallery', sub: 'See our real work' },
+              { href: '/contact',               label: 'Get a Quote',   sub: 'Free assessment' },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="group p-4 bg-white border border-[#1a1a1a]/8 hover:border-[#c8a84b]/40 transition-colors"
               >
-                <p className="font-bold text-sm text-[#1a1a1a] group-hover:text-[#c8a84b] transition-colors mb-1">
-                  {item.label}
-                </p>
+                <p className="font-bold text-sm text-[#1a1a1a] group-hover:text-[#c8a84b] transition-colors mb-1">{item.label}</p>
                 <p className="text-xs text-[#1a1a1a]/50">{item.sub}</p>
               </Link>
             ))}
@@ -410,13 +622,11 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Emergency CTA ── */}
-      <section className="bg-[#0a0a0a] text-white" aria-label="Emergency callout CTA">
-        <div className="max-w-6xl mx-auto px-6 py-14 md:py-18">
+      <section className="bg-[#0a0a0a] text-white" aria-label="Emergency callout call to action">
+        <div className="max-w-6xl mx-auto px-6 py-14">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="max-w-xl">
-              <h2 className="text-2xl md:text-3xl font-black mb-3">
-                Need Generator Service Today?
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-black mb-3">Need Generator Service Today?</h2>
               <p className="text-white/60 text-base leading-relaxed">
                 Emergency or planned, we cover all of Gauteng. Call now for a same-day
                 callout or to schedule a service appointment at a time that suits you.
@@ -426,6 +636,7 @@ export default function ServicesPage() {
               <a
                 href="tel:0603160484"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
+                aria-label="Call 060 316 0484 for generator services"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
