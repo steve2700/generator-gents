@@ -132,7 +132,7 @@ export default function ControlPanelRepairsPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/control-panel-repairs-hero.png"
+            src="/images/generator-controller-programming.png"
             alt="Generator control panel and AMF controller repair service in Gauteng"
             fill
             priority
