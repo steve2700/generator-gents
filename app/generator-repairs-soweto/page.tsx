@@ -115,7 +115,7 @@ export default function SowetoPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/areas/soweto.png"
+            src="/images/generator-repair-services-technicians.webp"
             alt="Generator repair and servicing across Soweto — mobile technicians covering all Soweto suburbs"
             fill
             priority
