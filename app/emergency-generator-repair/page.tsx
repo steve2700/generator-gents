@@ -147,7 +147,7 @@ export default function EmergencyGeneratorRepairPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/emergency-generator-repair.png"
+            src="/images/compressed_Diesel_Gen_Repair.webp"
             alt="Emergency generator repair technician diagnosing a failed generator on-site in Gauteng"
             fill
             priority
@@ -262,7 +262,7 @@ export default function EmergencyGeneratorRepairPage() {
               {/* Image 1 */}
               <div className="mt-10 relative aspect-[16/9] overflow-hidden">
                 <Image
-                  src="/images/emergency-generator-callout.png"
+                  src="/images/compressed_Diesel_Gen_Repair.webp"
                   alt="Generator Repair Services technician on emergency callout diagnosing a failed standby generator at a commercial property in Gauteng"
                   fill
                   className="object-cover object-center"
@@ -326,7 +326,7 @@ export default function EmergencyGeneratorRepairPage() {
             {/* Image 2 */}
             <div className="relative aspect-[4/3] overflow-hidden order-2 md:order-1">
               <Image
-                src="/images/generator-repair-on-site.png"
+                src="/images/emergency-repair.png"
                 alt="Generator Repair Services technician testing a commercial generator after emergency repair in Johannesburg"
                 fill
                 className="object-cover object-center"
