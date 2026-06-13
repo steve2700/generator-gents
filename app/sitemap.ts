@@ -1,21 +1,20 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://generatorrepairservices.co.za'
+  const baseUrl = 'https://www.generatorrepairservices.co.za'
   const currentDate = new Date().toISOString()
 
-  // Main pages
   const mainPages = [
-    { url: baseUrl, priority: 1.0, changeFrequency: 'weekly' as const },
-    { url: `${baseUrl}/services`, priority: 0.9, changeFrequency: 'weekly' as const },
-    { url: `${baseUrl}/areas`, priority: 0.9, changeFrequency: 'weekly' as const },
-    { url: `${baseUrl}/about`, priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: `${baseUrl}/contact`, priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: `${baseUrl}/faq`, priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: `${baseUrl}/generator-repair-cost`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: baseUrl,                                    priority: 1.0, changeFrequency: 'weekly'  as const },
+    { url: `${baseUrl}/services`,                      priority: 0.9, changeFrequency: 'weekly'  as const },
+    { url: `${baseUrl}/areas`,                         priority: 0.9, changeFrequency: 'weekly'  as const },
+    { url: `${baseUrl}/generator-repair-cost`,         priority: 0.9, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/contact`,                       priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/gallery`,                       priority: 0.8, changeFrequency: 'weekly'  as const },
+    { url: `${baseUrl}/faq`,                           priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/about`,                         priority: 0.7, changeFrequency: 'monthly' as const },
   ]
 
-  // Service pages
   const servicePages = [
     'generator-repairs',
     'generator-servicing',
@@ -33,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
   }))
 
-  // Area pages
   const areaPages = [
     'johannesburg',
     'pretoria',
@@ -59,11 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
   }))
 
-  return [
-    ...mainPages,
-    ...servicePages,
-    ...areaPages,
-  ].map((page) => ({
+  return [...mainPages, ...servicePages, ...areaPages].map((page) => ({
     url: page.url,
     lastModified: currentDate,
     changeFrequency: page.changeFrequency,
