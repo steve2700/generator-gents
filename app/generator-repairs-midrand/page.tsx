@@ -104,7 +104,7 @@ export default function MidrandPage() {
       <section className="relative bg-[#0a0a0a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/areas/midrand.png"
+            src="/images/generator-repair-services-technicians.webp"
             alt="Generator repair and servicing across Midrand — mobile technicians covering commercial, industrial and residential areas"
             fill
             priority
