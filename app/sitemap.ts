@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/gallery`,                       priority: 0.8, changeFrequency: 'weekly'  as const },
     { url: `${baseUrl}/faq`,                           priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/about`,                         priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/privacy-policy`,                priority: 0.5, changeFrequency: 'yearly'  as const },
+    { url: `${baseUrl}/terms`,                         priority: 0.5, changeFrequency: 'yearly'  as const },
   ]
 
   const servicePages = [
