@@ -1,4 +1,4 @@
-const BASE_URL = 'https://www.generatorrepairservices.co.za'
+const BASE_URL = 'https://www.generatorgents.co.za'
 
 const GAUTENG_CITIES = [
   'Johannesburg', 'Pretoria', 'Sandton', 'Midrand', 'Centurion',
@@ -27,13 +27,14 @@ export default function OrganizationSchema() {
       {
         '@type': 'LocalBusiness',
         '@id': `${BASE_URL}/#business`,
-        name: 'Generator Repair Services',
-        legalName: 'Generator Repair Services',
+        name: 'Generator Gents',
+        legalName: 'Generator Gents',
+        slogan: 'Power. Precision. Professionalism.',
         description:
-          'Professional generator repair, servicing and maintenance across Gauteng. Emergency callouts available for all brands of diesel and petrol generators.',
+          'Generator Gents — expert generator repair, servicing and maintenance across Gauteng. Same-day emergency callouts available for all brands of diesel and petrol generators.',
         url: BASE_URL,
-        telephone: '+27603160484',
-        email: 'info@generatorrepairservices.co.za',
+        telephone: '+27763473736',
+        email: 'info@generatorgents.co.za',
         foundingDate: '2009',
         priceRange: '$$',
         currenciesAccepted: 'ZAR',
@@ -67,15 +68,14 @@ export default function OrganizationSchema() {
         contactPoint: [
           {
             '@type': 'ContactPoint',
-            telephone: '+27603160484',
+            telephone: '+27763473736',
             contactType: 'customer service',
-            contactOption: 'TollFree',
             areaServed: 'ZA',
             availableLanguage: 'English',
           },
           {
             '@type': 'ContactPoint',
-            telephone: '+27603160484',
+            telephone: '+27763473736',
             contactType: 'emergency',
             areaServed: 'ZA',
             availableLanguage: 'English',
@@ -115,8 +115,8 @@ export default function OrganizationSchema() {
         '@type': 'WebSite',
         '@id': `${BASE_URL}/#website`,
         url: BASE_URL,
-        name: 'Generator Repair Services',
-        description: 'Professional generator repair, servicing and maintenance across Gauteng.',
+        name: 'Generator Gents',
+        description: 'Generator Gents — expert generator repair, servicing and maintenance across Gauteng.',
         publisher: { '@id': `${BASE_URL}/#business` },
         inLanguage: 'en-ZA',
         potentialAction: {

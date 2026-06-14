@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Benoni | Same-Day Service, Commercial & Industrial',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Benoni. Northmead, Rynfield, Farrarmere, Lakefield, Petit — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Benoni. Northmead, Rynfield, Farrarmere, Lakefield, Petit — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Benoni',
     'generator repair Benoni',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'industrial generator repair Benoni',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-benoni',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-benoni',
   },
   openGraph: {
     title: 'Generator Repairs Benoni | Same-Day Service, Commercial & Industrial',
     description:
-      'Expert generator repairs and emergency callouts across Benoni. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-benoni',
+      'Expert generator repairs and emergency callouts across Benoni. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-benoni',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function BenoniPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -195,7 +195,7 @@ export default function BenoniPage() {
                   industrial operations, and a growing number of commercial office
                   parks. Across all of these, the demand for reliable backup power
                   has increased significantly alongside Gauteng's ongoing load
-                  shedding pressures. Generator Repair Services provides comprehensive
+                  shedding pressures. Generator Gents provides comprehensive
                   generator repair, servicing, and maintenance throughout Benoni,
                   with mobile technicians equipped to resolve most faults on-site.
                 </p>
@@ -262,10 +262,10 @@ export default function BenoniPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Benoni?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Benoni areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -307,10 +307,10 @@ export default function BenoniPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

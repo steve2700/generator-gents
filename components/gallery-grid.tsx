@@ -61,7 +61,7 @@ const items: GalleryItem[] = [
   },
   {
     src: '/images/generator-repair-services-technicians.webp',
-    alt: 'Generator Repair Services technicians ready to deploy',
+    alt: 'Generator Gents technicians ready to deploy',
     caption: 'Our Technician Team',
     category: 'Repairs',
   },

@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/breadcrumbs'
 export const metadata: Metadata = {
   title: 'Generator Repair Service Areas Gauteng | All Towns & Suburbs',
   description:
-    'Generator repairs and servicing across all of Gauteng — Johannesburg, Pretoria, Sandton, Midrand, Centurion, East Rand, West Rand & more. Mobile technicians come to you. Call 060 316 0484.',
+    'Generator repairs and servicing across all of Gauteng — Johannesburg, Pretoria, Sandton, Midrand, Centurion, East Rand, West Rand & more. Mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Gauteng',
     'generator repair near me Gauteng',
@@ -21,25 +21,25 @@ export const metadata: Metadata = {
     'mobile generator repair Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/areas',
+    canonical: 'https://www.generatorgents.co.za/areas',
   },
   openGraph: {
     title: 'Generator Repair Service Areas Gauteng | All Towns & Suburbs',
     description:
-      'Mobile generator repair technicians covering all of Gauteng. Same-day emergency callouts. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/areas',
+      'Mobile generator repair technicians covering all of Gauteng. Same-day emergency callouts. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/areas',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Generator Repair Services — Gauteng service areas' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Generator Gents — Gauteng service areas' }],
   },
 }
 
 const areaSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.generatorrepairservices.co.za/#business',
-  name: 'Generator Repair Services',
-  telephone: '+27603160484',
-  url: 'https://www.generatorrepairservices.co.za',
+  '@id': 'https://www.generatorgents.co.za/#business',
+  name: 'Generator Gents',
+  telephone: '+27763473736',
+  url: 'https://www.generatorgents.co.za',
   areaServed: [
     'Johannesburg', 'Pretoria', 'Sandton', 'Midrand', 'Centurion',
     'Randburg', 'Roodepoort', 'Kempton Park', 'Boksburg', 'Benoni',
@@ -185,13 +185,13 @@ export default function AreasPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#b91c1c] text-white font-bold text-base hover:bg-red-800 transition-colors"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
               </svg>
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -369,13 +369,13 @@ export default function AreasPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                 </svg>
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

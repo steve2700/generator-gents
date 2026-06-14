@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'Control Panel Repairs Gauteng | Generator Controller & AMF Repair',
   description:
-    'Generator control panel repairs across Gauteng. Failed relays, fault codes, AMF and ATS controller faults, Deep Sea and ComAp programming. Expert diagnosis and repair. Call 060 316 0484.',
+    'Generator control panel repairs across Gauteng. Failed relays, fault codes, AMF and ATS controller faults, Deep Sea and ComAp programming. Expert diagnosis and repair. Call 076 347 3736.',
   keywords: [
     'generator control panel repairs Gauteng',
     'generator controller repair Johannesburg',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'generator panel repair Johannesburg',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/control-panel-repairs',
+    canonical: 'https://www.generatorgents.co.za/control-panel-repairs',
   },
   openGraph: {
     title: 'Control Panel Repairs Gauteng | Generator Controller & AMF Repair',
     description:
-      'Generator control panel and controller repairs across Gauteng. AMF, ATS, Deep Sea, ComAp, relay failures and fault codes. Expert diagnosis. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/control-panel-repairs',
+      'Generator control panel and controller repairs across Gauteng. AMF, ATS, Deep Sea, ComAp, relay failures and fault codes. Expert diagnosis. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/control-panel-repairs',
     type: 'website',
   },
 }
@@ -172,10 +172,10 @@ export default function ControlPanelRepairsPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -251,7 +251,7 @@ export default function ControlPanelRepairsPage() {
               <div className="mt-10 relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/control-panel-repair-technician.png"
-                  alt="Generator Repair Services technician diagnosing a Deep Sea AMF control panel fault on a standby generator in Gauteng"
+                  alt="Generator Gents technician diagnosing a Deep Sea AMF control panel fault on a standby generator in Gauteng"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 55vw"
@@ -297,10 +297,10 @@ export default function ControlPanelRepairsPage() {
                 <p className="text-white font-bold mb-1">Control panel fault on your generator?</p>
                 <p className="text-white/50 text-sm mb-4">Call for expert diagnosis and repair across Gauteng.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -413,10 +413,10 @@ export default function ControlPanelRepairsPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

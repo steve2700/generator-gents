@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Fourways | Same-Day Service, Northern Suburbs',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Fourways. Lonehill, Dainfern, Broadacres, Douglasdale — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Fourways. Lonehill, Dainfern, Broadacres, Douglasdale — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Fourways',
     'generator repair Fourways',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'generator maintenance Fourways',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-fourways',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-fourways',
   },
   openGraph: {
     title: 'Generator Repairs Fourways | Same-Day Service, Northern Suburbs',
     description:
-      'Expert generator repairs and emergency callouts across Fourways and northern suburbs. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-fourways',
+      'Expert generator repairs and emergency callouts across Fourways and northern suburbs. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-fourways',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function FourwaysPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -194,7 +194,7 @@ export default function FourwaysPage() {
                   nodes. Major shopping centres, corporate office parks, and some of the city's
                   most sought-after residential estates have made this area a hub that operates
                   around the clock — and cannot afford generator downtime during loadshedding.
-                  Generator Repair Services provides professional, reliable generator repair
+                  Generator Gents provides professional, reliable generator repair
                   and servicing throughout Fourways and the surrounding northern suburbs.
                 </p>
                 <p>
@@ -258,10 +258,10 @@ export default function FourwaysPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Fourways?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across the northern suburbs.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -303,10 +303,10 @@ export default function FourwaysPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

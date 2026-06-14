@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'Generator Rewinding Gauteng | Alternator & Stator Rewinding Service',
   description:
-    'Generator alternator rewinding services across Gauteng. Insulation breakdown, overheating damage, voltage faults — professional rewinding to factory specification. Call 060 316 0484.',
+    'Generator alternator rewinding services across Gauteng. Insulation breakdown, overheating damage, voltage faults — professional rewinding to factory specification. Call 076 347 3736.',
   keywords: [
     'generator rewinding Gauteng',
     'alternator rewinding Gauteng',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'generator alternator overhaul Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-rewinding',
+    canonical: 'https://www.generatorgents.co.za/generator-rewinding',
   },
   openGraph: {
     title: 'Generator Rewinding Gauteng | Alternator & Stator Rewinding Service',
     description:
-      'Generator alternator rewinding across Gauteng. Insulation breakdown, thermal damage, winding faults — rewound to factory spec at a fraction of replacement cost. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-rewinding',
+      'Generator alternator rewinding across Gauteng. Insulation breakdown, thermal damage, winding faults — rewound to factory spec at a fraction of replacement cost. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-rewinding',
     type: 'website',
   },
 }
@@ -167,10 +167,10 @@ export default function GeneratorRewindingPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -225,7 +225,7 @@ export default function GeneratorRewindingPage() {
                   alternator to full factory specification at a fraction of that cost.
                 </p>
                 <p>
-                  Generator Repair Services provides alternator rewinding services across Gauteng,
+                  Generator Gents provides alternator rewinding services across Gauteng,
                   covering stator windings, rotor windings, and excitation windings across all
                   major alternator brands — Stamford, Leroy Somer, Mecc Alte, Marathon, and
                   others. Before any rewinding work is undertaken, we assess the unit thoroughly
@@ -292,10 +292,10 @@ export default function GeneratorRewindingPage() {
                 <p className="text-white font-bold mb-1">Winding failure on your generator?</p>
                 <p className="text-white/50 text-sm mb-4">Call to discuss rewinding options and get an assessment.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -409,10 +409,10 @@ export default function GeneratorRewindingPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

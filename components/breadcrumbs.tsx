@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const BASE_URL = 'https://www.generatorrepairservices.co.za'
+const BASE_URL = 'https://www.generatorgents.co.za'
 
 interface BreadcrumbItem {
   label: string

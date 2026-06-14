@@ -3,19 +3,19 @@ import Link from 'next/link'
 import Breadcrumbs from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Generator Repair Services Gauteng',
+  title: 'Terms & Conditions | Generator Gents Gauteng',
   description:
-    'Terms and conditions for Generator Repair Services Gauteng. Read our service terms, payment conditions, warranties and liability policy.',
+    'Terms and conditions for Generator Gents Gauteng. Read our service terms, payment conditions, warranties and liability policy.',
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/terms',
+    canonical: 'https://www.generatorgents.co.za/terms',
   },
 }
 
 const sections = [
   {
     heading: '1. About These Terms',
-    body: `These terms and conditions govern the relationship between Generator Repair Services Gauteng ("we", "us", "our") and any person or business ("you", "the client") who requests or receives services from us.
+    body: `These terms and conditions govern the relationship between Generator Gents Gauteng ("we", "us", "our") and any person or business ("you", "the client") who requests or receives services from us.
 
 By requesting a quote, booking a service, or allowing us to carry out work on your generator, you agree to these terms. If you do not agree, please do not use our services.`,
   },
@@ -126,7 +126,7 @@ export default function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-white/50 text-sm">
-            Last updated: June 2026 · Applicable to all services provided by Generator Repair Services Gauteng
+            Last updated: June 2026 · Applicable to all services provided by Generator Gents Gauteng
           </p>
         </div>
       </section>
@@ -160,16 +160,16 @@ export default function TermsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#b91c1c] text-white font-semibold text-sm hover:bg-red-800 transition-colors"
               >
-                Call 060 316 0484
+                Call 076 347 3736
               </a>
               <a
-                href="mailto:info@generatorrepairservices.co.za"
+                href="mailto:info@generatorgents.co.za"
                 className="inline-flex items-center justify-center px-5 py-2.5 border border-[#1a1a1a]/15 text-[#1a1a1a] font-semibold text-sm hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
               >
-                info@generatorrepairservices.co.za
+                info@generatorgents.co.za
               </a>
             </div>
           </div>

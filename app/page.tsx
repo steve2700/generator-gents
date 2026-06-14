@@ -4,10 +4,11 @@ import Image from 'next/image'
 import FAQSchema from '@/components/faq-schema'
 
 export const metadata: Metadata = {
-  title: 'Generator Repair Services Gauteng | Expert Repairs, Servicing & Maintenance',
+  title: 'Generator Gents Gauteng | Generator Repairs, Servicing & Maintenance',
   description:
-    "Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Serving Johannesburg, Pretoria, Sandton, Centurion & all Gauteng areas. Call 060 316 0484.",
+    "Generator Gents — Power. Precision. Professionalism. Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Serving Johannesburg, Pretoria, Sandton, Centurion & all Gauteng areas. Call 076 347 3736.",
   keywords: [
+    'Generator Gents',
     'generator repair Gauteng',
     'generator repairs Johannesburg',
     'generator servicing Pretoria',
@@ -19,20 +20,20 @@ export const metadata: Metadata = {
     'industrial generator repairs Gauteng',
     'generator repairs Sandton',
   ],
-  alternates: { canonical: 'https://www.generatorrepairservices.co.za' },
+  alternates: { canonical: 'https://www.generatorgents.co.za' },
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
-    url: 'https://www.generatorrepairservices.co.za',
-    siteName: 'Generator Repair Services',
-    title: 'Generator Repair Services Gauteng | Expert Repairs & Servicing',
-    description: "Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Call 060 316 0484.",
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Generator Repair Services Gauteng', type: 'image/jpeg' }],
+    url: 'https://www.generatorgents.co.za',
+    siteName: 'Generator Gents',
+    title: 'Generator Gents Gauteng | Power. Precision. Professionalism.',
+    description: "Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Call 076 347 3736.",
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Generator Gents Gauteng', type: 'image/jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Generator Repair Services Gauteng | Expert Repairs & Servicing',
-    description: 'Same-day emergency callouts. All brands. Diesel & petrol generators. Serving all of Gauteng. Call 060 316 0484.',
+    title: 'Generator Gents Gauteng | Power. Precision. Professionalism.',
+    description: 'Same-day emergency callouts. All brands. Diesel & petrol generators. Serving all of Gauteng. Call 076 347 3736.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -40,6 +41,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
 }
+
+const PHONE_DISPLAY = '076 347 3736'
+const PHONE_TEL = '+27763473736'
 
 const services = [
   { href: '/generator-repairs', label: 'Generator Repairs', desc: 'All faults diagnosed & fixed' },
@@ -76,57 +80,11 @@ const areas = [
 ]
 
 const trustPillars = [
-  {
-    heading: 'Expert Technicians',
-    body: 'Skilled. Certified. Reliable.',
-    icon: (
-      <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M18 3L5 8.5V18C5 25.18 10.74 31.9 18 33C25.26 31.9 31 25.18 31 18V8.5L18 3Z" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
-        <path d="M12 18L16 22L24 14" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-  },
-  {
-    heading: 'Fast Response',
-    body: 'We get you back up and running.',
-    icon: (
-      <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="18" cy="18" r="5" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
-        <path d="M15 4.5h6v3l2 1 2.6-1.5 4.24 4.24-1.5 2.6 1 2h3v6h-3l-1 2 1.5 2.6-4.24 4.24-2.6-1.5-2 1v3h-6v-3l-2-1-2.6 1.5L4.16 21.34l1.5-2.6-1-2h-3v-6h3l1-2-1.5-2.6L8.4 5.9l2.6 1.5 2-1V4.5Z" stroke="#c8a84b" strokeWidth="1.5" fill="none"/>
-      </svg>
-    ),
-  },
-  {
-    heading: 'All Generator Brands',
-    body: 'Diesel · Petrol · Gas',
-    icon: (
-      <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M21 4L9 20H18L15 32L27 16H18L21 4Z" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-      </svg>
-    ),
-  },
-  {
-    heading: 'Quality Repairs',
-    body: 'Done right. Built to last.',
-    icon: (
-      <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M23 5C20.24 5 18 7.24 18 10C18 10.9 18.24 11.74 18.66 12.46L5 26.12L9.88 31L23.54 17.34C24.26 17.76 25.1 18 26 18C28.76 18 31 15.76 31 13C31 12.1 30.76 11.26 30.34 10.54L26.88 14L22 13.12L21.12 8.24L24.58 4.78C24 4.6 23.5 5 23 5Z" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        <path d="M8 28L14 22" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round"/>
-      </svg>
-    ),
-  },
-  {
-    heading: 'Reliable Service',
-    body: 'Honest. Professional. Dependable.',
-    icon: (
-      <svg width="38" height="38" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M4 14H10L14 10H20L24 14H26" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        <path d="M32 14H26L20 20L16 18L12 22L16 26L20 24L26 28H32" stroke="#c8a84b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        <path d="M4 14V24H10V14H4Z" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
-        <path d="M26 14V28H32V14H26Z" stroke="#c8a84b" strokeWidth="1.8" fill="none"/>
-      </svg>
-    ),
-  },
+  { heading: 'Expert Technicians', body: 'Skilled. Certified. Reliable.' },
+  { heading: 'Fast Response', body: 'Up and running, sooner.' },
+  { heading: 'All Generator Brands', body: 'Diesel · Petrol · Gas' },
+  { heading: 'Quality Repairs', body: 'Done right. Built to last.' },
+  { heading: 'Honest Service', body: 'Clear quotes. No surprises.' },
 ]
 
 const homepageFAQs = [
@@ -177,12 +135,13 @@ const localBusinessSchema = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://www.generatorrepairservices.co.za/#business',
-      name: 'Generator Repair Services',
-      description: 'Professional generator repair, servicing and maintenance across Gauteng.',
-      url: 'https://www.generatorrepairservices.co.za',
-      telephone: '+27603160484',
-      email: 'info@generatorrepairservices.co.za',
+      '@id': 'https://www.generatorgents.co.za/#business',
+      name: 'Generator Gents',
+      slogan: 'Power. Precision. Professionalism.',
+      description: 'Generator Gents — expert generator repair, servicing and maintenance across Gauteng.',
+      url: 'https://www.generatorgents.co.za',
+      telephone: '+27763473736',
+      email: 'info@generatorgents.co.za',
       foundingDate: '2009',
       priceRange: '$$',
       currenciesAccepted: 'ZAR',
@@ -193,14 +152,14 @@ const localBusinessSchema = {
         name: 'Generator Services',
         itemListElement: services.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.label } })),
       },
-      image: 'https://www.generatorrepairservices.co.za/og-image.jpg',
+      image: 'https://www.generatorgents.co.za/og-image.jpg',
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://www.generatorrepairservices.co.za/#website',
-      url: 'https://www.generatorrepairservices.co.za',
-      name: 'Generator Repair Services',
-      publisher: { '@id': 'https://www.generatorrepairservices.co.za/#business' },
+      '@id': 'https://www.generatorgents.co.za/#website',
+      url: 'https://www.generatorgents.co.za',
+      name: 'Generator Gents',
+      publisher: { '@id': 'https://www.generatorgents.co.za/#business' },
     },
   ],
 }
@@ -212,16 +171,16 @@ export default function HomePage() {
       <FAQSchema faqs={homepageFAQs} />
 
       {/* ═══════════════════════════════════════════════════════════════
-          HERO
+          HERO — editorial, dark, heavy type
       ═══════════════════════════════════════════════════════════════ */}
       <section
-        className="relative overflow-hidden bg-[#0a0a0a] min-h-[88vh] flex flex-col"
-        aria-label="Generator Repair Services Gauteng"
+        className="relative overflow-hidden bg-[#0a0a0a] min-h-[92vh] flex flex-col"
+        aria-label="Generator Gents — generator repair specialists in Gauteng"
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero_generator_repair_services.png"
-            alt="Professional generator technician servicing an industrial diesel generator in Gauteng"
+            src="/images/generator-gents-hero.png"
+            alt="Industrial diesel generator in a Generator Gents workshop, Gauteng"
             fill
             priority
             fetchPriority="high"
@@ -229,57 +188,56 @@ export default function HomePage() {
             sizes="100vw"
             quality={85}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/85 to-[#0a0a0a]/25" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]/40" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
         </div>
 
         <div className="relative z-10 flex-1 flex items-center">
-          <div className="max-w-6xl mx-auto px-6 py-20 md:py-28 w-full">
-            <div className="max-w-2xl">
-              <p className="text-[#c8a84b] text-xs font-bold tracking-[0.35em] uppercase mb-6">
-                Gauteng&apos;s Generator Repair Specialists
+          <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 w-full">
+            <div className="max-w-3xl">
+              <p className="text-[#c8a84b] text-xs font-bold tracking-[0.45em] uppercase mb-8">
+                Generator Gents — Gauteng
               </p>
-              <h1 className="font-black text-white leading-[1.0] mb-3" style={{ fontSize: 'clamp(2.6rem, 6.5vw, 5rem)' }}>
-                Power When<br />You Need It.
+              <div className="w-16 h-[3px] bg-[#c8a84b] mb-8" />
+              <h1
+                className="font-black text-white tracking-tight leading-[0.95] mb-8"
+                style={{ fontSize: 'clamp(2.8rem, 7vw, 5.6rem)' }}
+              >
+                Power.<br />
+                <span className="text-[#c8a84b]">Precision.</span><br />
+                Professionalism.
               </h1>
-              <p className="font-black text-[#c8a84b] leading-[1.0] mb-8" style={{ fontSize: 'clamp(2.1rem, 5.5vw, 4.2rem)' }}>
-                Fixed Right.<br />The First Time.
-              </p>
-              <p className="text-white/65 text-base md:text-lg leading-relaxed mb-10 max-w-md">
-                Expert generator repair, maintenance and diagnostics you can rely on —
-                all brands, all sizes, across all of Gauteng.
+              <p className="text-white/65 text-lg md:text-xl leading-relaxed mb-10 max-w-xl text-pretty">
+                Expert generator repair, maintenance and diagnostics across Gauteng —
+                all brands, all sizes, fixed right the first time.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="tel:0603160484"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors focus:outline-none focus:ring-2 focus:ring-[#b91c1c] focus:ring-offset-2 focus:ring-offset-[#0a0a0a]"
-                  aria-label="Call Generator Repair Services on 060 316 0484"
+                  href={`tel:${PHONE_TEL}`}
+                  className="inline-flex items-center justify-center px-9 py-4 bg-[#b91c1c] text-white font-black text-lg tracking-wide hover:bg-red-800 transition-colors focus:outline-none focus:ring-2 focus:ring-[#b91c1c] focus:ring-offset-2 focus:ring-offset-[#0a0a0a]"
+                  aria-label={`Call Generator Gents on ${PHONE_DISPLAY}`}
                 >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-                  </svg>
-                  Call 060 316 0484
+                  Call {PHONE_DISPLAY}
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-[#c8a84b]/50 text-[#c8a84b] font-semibold text-base hover:bg-[#c8a84b] hover:text-[#0a0a0a] transition-colors"
+                  className="inline-flex items-center justify-center px-9 py-4 border border-[#c8a84b]/50 text-[#c8a84b] font-semibold text-base hover:bg-[#c8a84b] hover:text-[#0a0a0a] transition-colors"
                 >
-                  Get a Free Quote
+                  Request a Free Quote
                 </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Trust pillars */}
+        {/* Trust pillars — text only */}
         <div className="relative z-10 border-t border-[#c8a84b]/15 bg-black/60 backdrop-blur-sm">
-          <div className="max-w-6xl mx-auto px-6 py-6 md:py-8">
-            <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6">
+          <div className="max-w-6xl mx-auto px-6 py-7 md:py-9">
+            <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
               {trustPillars.map((pillar) => (
-                <div key={pillar.heading} className="flex flex-col items-center text-center gap-2.5">
-                  <div>{pillar.icon}</div>
-                  <dt className="text-white font-bold text-[11px] uppercase tracking-widest leading-tight">{pillar.heading}</dt>
-                  <dd className="text-white/45 text-[11px] leading-snug">{pillar.body}</dd>
+                <div key={pillar.heading} className="border-l-2 border-[#c8a84b]/40 pl-4">
+                  <dt className="text-white font-bold text-[12px] uppercase tracking-widest leading-tight mb-1">{pillar.heading}</dt>
+                  <dd className="text-white/45 text-[12px] leading-snug">{pillar.body}</dd>
                 </div>
               ))}
             </dl>
@@ -288,98 +246,48 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          SERVICES — tile grid + image
+          SERVICES — clean text-only grid
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-white" aria-labelledby="services-heading">
+      <section className="py-24 md:py-32 bg-white" aria-labelledby="services-heading">
         <div className="max-w-6xl mx-auto px-6">
 
           {/* Header row */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
-            <div>
-              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-3">What We Do</p>
-              <h2 id="services-heading" className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1a1a1a] leading-tight">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div className="max-w-2xl">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">What We Do</p>
+              <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1a1a1a] tracking-tight leading-[0.95] text-balance">
                 Every Generator Service,<br />Under One Roof
               </h2>
             </div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1a1a1a]/45 hover:text-[#c8a84b] transition-colors shrink-0"
+              className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-[#1a1a1a]/45 hover:text-[#c8a84b] transition-colors shrink-0"
             >
               View all services
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
             </Link>
           </div>
 
-          {/* Two-column: grid left, image right */}
-          <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-12 items-start">
-
-            {/* Service tile grid */}
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-px bg-[#1a1a1a]/8">
-              {services.map((service, i) => (
-                <Link
-                  key={service.href}
-                  href={service.href}
-                  className="group bg-white hover:bg-[#0a0a0a] transition-colors duration-300 p-5 md:p-6 flex flex-col gap-3"
-                >
-                  <span className="text-[#c8a84b]/25 font-black text-xl leading-none group-hover:text-[#c8a84b]/50 transition-colors">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div>
-                    <p className="font-bold text-sm text-[#1a1a1a] group-hover:text-white transition-colors leading-snug mb-1">
-                      {service.label}
-                    </p>
-                    <p className="text-[11px] text-[#1a1a1a]/40 group-hover:text-white/40 transition-colors leading-snug">
-                      {service.desc}
-                    </p>
-                  </div>
-                  <svg
-                    width="12" height="12" viewBox="0 0 14 14" fill="none"
-                    className="mt-auto text-[#c8a84b] opacity-0 group-hover:opacity-100 transition-opacity"
-                    aria-hidden="true"
-                  >
-                    <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
-              ))}
-            </div>
-
-            {/* Right: image + callout */}
-            <div className="flex flex-col gap-6 lg:sticky lg:top-28">
-              <div className="relative aspect-[3/4] overflow-hidden group">
-                <Image
-                  src="/images/generator-repair-technician-onsite-midrand.webp"
-                  alt="Certified generator repair technician working on a diesel generator in Gauteng"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  sizes="(max-width: 1024px) 100vw, 380px"
-                />
-                {/* Gold corner accents */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#c8a84b]" />
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#c8a84b]" />
-                {/* Overlay label */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0a0a]/90 to-transparent px-5 py-6">
-                  <p className="text-white font-black text-lg leading-tight">Mobile Workshop.<br />We Come to You.</p>
-                  <p className="text-white/55 text-xs mt-1">On-site repairs — no drop-off required</p>
+          {/* Service tile grid — text only */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-px bg-[#1a1a1a]/10">
+            {services.map((service, i) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group bg-white hover:bg-[#0a0a0a] transition-colors duration-300 p-7 md:p-8 flex items-start gap-5"
+              >
+                <span className="text-[#c8a84b]/35 font-black text-2xl leading-none group-hover:text-[#c8a84b] transition-colors shrink-0 w-10">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <p className="font-black text-lg text-[#1a1a1a] group-hover:text-white transition-colors leading-snug mb-1">
+                    {service.label}
+                  </p>
+                  <p className="text-sm text-[#1a1a1a]/45 group-hover:text-white/45 transition-colors leading-snug">
+                    {service.desc}
+                  </p>
                 </div>
-              </div>
-
-              {/* Emergency callout card */}
-              <div className="bg-[#b91c1c] p-6">
-                <p className="text-white/60 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Emergency?</p>
-                <p className="text-white font-black text-xl leading-snug mb-4">Generator down?<br />Call now for same-day response.</p>
-                <a
-                  href="tel:0603160484"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-white text-[#b91c1c] font-black text-base hover:bg-[#f5f4f0] transition-colors"
-                >
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-                  </svg>
-                  060 316 0484
-                </a>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -391,17 +299,17 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-0">
 
-            {/* Left: image — full height */}
-            <div className="relative min-h-[420px] lg:min-h-full overflow-hidden">
+            {/* Left: image — full height (image 2 of 2) */}
+            <div className="relative min-h-[460px] lg:min-h-full overflow-hidden">
               <Image
-                src="/images/generator-repair-services-technicians.webp"
-                alt="Generator Repair Services certified technician inspecting a diesel generator"
+                src="/images/generator-gents-technician.png"
+                alt="Generator Gents certified technician servicing a diesel generator in Gauteng"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0a0a]/60" />
-              {/* Stats overlay bottom-left */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0a0a]/70" />
+              {/* Stats overlay — text only */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="grid grid-cols-2 gap-4">
                   {[
@@ -420,21 +328,21 @@ export default function HomePage() {
             </div>
 
             {/* Right: reasons */}
-            <div className="py-16 md:py-20 px-8 md:px-12 lg:px-14">
-              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-4">Why Choose Us</p>
-              <h2 id="why-us-heading" className="text-3xl md:text-4xl font-black text-white leading-tight mb-2">
+            <div className="py-16 md:py-24 px-8 md:px-12 lg:px-16">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.4em] uppercase mb-5">Why Choose Us</p>
+              <h2 id="why-us-heading" className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-3 text-balance">
                 Why Gauteng<br />Businesses Trust Us
               </h2>
-              <div className="w-10 h-[3px] bg-[#c8a84b] mb-10" />
+              <div className="w-12 h-[3px] bg-[#c8a84b] mb-10" />
 
               <div className="divide-y divide-white/[0.07]">
                 {whyReasons.map((item) => (
-                  <div key={item.num} className="py-6 flex gap-5 group">
-                    <span className="text-[#c8a84b]/25 font-black text-sm leading-none shrink-0 mt-0.5 group-hover:text-[#c8a84b]/60 transition-colors w-6">
+                  <div key={item.num} className="py-6 flex gap-6 group">
+                    <span className="text-[#c8a84b]/30 font-black text-sm leading-none shrink-0 mt-1 group-hover:text-[#c8a84b] transition-colors w-7">
                       {item.num}
                     </span>
                     <div>
-                      <h3 className="font-bold text-white text-sm mb-1.5 group-hover:text-[#c8a84b] transition-colors">
+                      <h3 className="font-bold text-white text-base mb-1.5 group-hover:text-[#c8a84b] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-white/45 text-sm leading-relaxed">{item.body}</p>
@@ -443,16 +351,16 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <div className="mt-10 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-white/15 text-white text-sm font-semibold hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
+                  className="inline-flex items-center justify-center px-7 py-3 border border-white/15 text-white text-sm font-semibold hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
                 >
-                  About Us
+                  About Generator Gents
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-[#c8a84b] text-[#0a0a0a] text-sm font-bold hover:bg-yellow-400 transition-colors"
+                  className="inline-flex items-center justify-center px-7 py-3 bg-[#c8a84b] text-[#0a0a0a] text-sm font-bold hover:bg-yellow-400 transition-colors"
                 >
                   Get a Free Quote
                 </Link>
@@ -463,31 +371,28 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          AREAS — region columns
+          AREAS — region columns, text only
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-[#f5f4f0]" aria-labelledby="areas-heading">
+      <section className="py-24 md:py-32 bg-[#f5f4f0]" aria-labelledby="areas-heading">
         <div className="max-w-6xl mx-auto px-6">
 
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
-            <div>
-              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-3">Where We Work</p>
-              <h2 id="areas-heading" className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1a1a1a] leading-tight">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div className="max-w-2xl">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">Where We Work</p>
+              <h2 id="areas-heading" className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1a1a1a] tracking-tight leading-[0.95] text-balance">
                 Generator Repairs<br />Across All of Gauteng
               </h2>
             </div>
             <Link
               href="/areas"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1a1a1a]/45 hover:text-[#c8a84b] transition-colors shrink-0"
+              className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-[#1a1a1a]/45 hover:text-[#c8a84b] transition-colors shrink-0"
             >
               View all areas
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
             </Link>
           </div>
 
           {/* Region columns */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#1a1a1a]/8 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1a1a1a]/10 mb-10">
             {[
               {
                 region: 'Johannesburg & CBD',
@@ -510,24 +415,18 @@ export default function HomePage() {
                 slugs: ['vereeniging'],
               },
             ].map((group) => (
-              <div key={group.region} className="bg-white p-6 md:p-7">
+              <div key={group.region} className="bg-white p-7 md:p-8">
                 <p className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#c8a84b] mb-5 pb-3 border-b border-[#1a1a1a]/8">
                   {group.region}
                 </p>
-                <ul className="space-y-2.5">
+                <ul className="flex flex-col gap-3">
                   {group.areas.map((area, i) => (
                     <li key={area}>
                       <Link
                         href={`/generator-repairs-${group.slugs[i]}`}
-                        className="flex items-center justify-between text-sm font-medium text-[#1a1a1a]/65 hover:text-[#c8a84b] transition-colors group/item"
+                        className="block text-sm font-medium text-[#1a1a1a]/65 hover:text-[#c8a84b] transition-colors"
                       >
                         {area}
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                          className="opacity-0 group-hover/item:opacity-100 transition-opacity text-[#c8a84b]"
-                          aria-hidden="true"
-                        >
-                          <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
                       </Link>
                     </li>
                   ))}
@@ -536,7 +435,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <p className="text-[#1a1a1a]/45 text-sm max-w-2xl leading-relaxed">
+          <p className="text-[#1a1a1a]/45 text-base max-w-2xl leading-relaxed">
             Our mobile technicians travel to your site across all of Gauteng —
             no drop-off required. From Sandton corporate parks to Vereeniging
             industrial zones and everywhere in between.
@@ -548,37 +447,33 @@ export default function HomePage() {
           EMERGENCY CTA — full-width red impact
       ═══════════════════════════════════════════════════════════════ */}
       <section className="relative bg-[#b91c1c] text-white overflow-hidden" aria-label="Emergency generator repair callout">
-        {/* Diagonal pattern overlay */}
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{ backgroundImage: 'repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%)', backgroundSize: '8px 8px' }}
           aria-hidden="true"
         />
-        <div className="relative max-w-6xl mx-auto px-6 py-16 md:py-20">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
             <div className="max-w-xl">
-              <p className="text-white/55 text-[11px] font-bold tracking-[0.35em] uppercase mb-3">Emergency Service</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4">
+              <p className="text-white/55 text-[11px] font-bold tracking-[0.4em] uppercase mb-4">Emergency Service</p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[0.95] mb-5 text-balance">
                 Generator Down?<br />We Respond Fast.
               </h2>
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">
+              <p className="text-white/75 text-lg leading-relaxed">
                 Same-day emergency callouts across all of Gauteng. Most areas receive
                 a technician within 2–4 hours — stocked vehicle, ready to repair.
               </p>
             </div>
             <div className="flex flex-col items-start md:items-end gap-3 shrink-0">
               <a
-                href="tel:0603160484"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-[#b91c1c] font-black text-2xl hover:bg-[#f5f4f0] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#b91c1c]"
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center justify-center px-10 py-5 bg-white text-[#b91c1c] font-black text-2xl tracking-wide hover:bg-[#f5f4f0] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#b91c1c]"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-                </svg>
-                060 316 0484
+                {PHONE_DISPLAY}
               </a>
               <Link
                 href="/emergency-generator-repair"
-                className="text-white/50 text-xs hover:text-white transition-colors underline underline-offset-4"
+                className="text-white/55 text-xs hover:text-white transition-colors underline underline-offset-4"
               >
                 Learn about our emergency service
               </Link>
@@ -588,49 +483,33 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          COST TEASER + STATS
+          COST TEASER — text only
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-white" aria-labelledby="cost-heading">
+      <section className="py-24 md:py-32 bg-white" aria-labelledby="cost-heading">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-
-            {/* Left: image */}
-            <div className="relative aspect-[4/3] overflow-hidden group order-2 md:order-1">
-              <Image
-                src="/images/generator-repair-services-technicians.webp"
-                alt="Generator servicing and repair cost guide — professional service across Gauteng"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#c8a84b]" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#c8a84b]" />
-            </div>
-
-            {/* Right: copy + stats grid */}
-            <div className="order-1 md:order-2">
-              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-4">Pricing</p>
-              <h2 id="cost-heading" className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-5 leading-tight">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">Pricing</p>
+              <h2 id="cost-heading" className="text-3xl md:text-4xl lg:text-5xl font-black text-[#1a1a1a] tracking-tight leading-[0.97] mb-6 text-balance">
                 What Does Generator<br />Repair Cost in Gauteng?
               </h2>
-              <div className="w-10 h-0.5 bg-[#c8a84b] mb-6" />
-              <p className="text-base leading-relaxed text-[#1a1a1a]/65 mb-4">
+              <div className="w-12 h-[3px] bg-[#c8a84b]" />
+            </div>
+            <div>
+              <p className="text-lg leading-relaxed text-[#1a1a1a]/65 mb-5">
                 Repair costs vary depending on the fault, the brand, age and parts required.
                 Minor issues like fuel filters or battery swaps are a fraction of the cost
                 of a full engine overhaul or alternator rewind.
               </p>
-              <p className="text-base leading-relaxed text-[#1a1a1a]/65 mb-8">
+              <p className="text-lg leading-relaxed text-[#1a1a1a]/65 mb-8">
                 We provide honest written quotes before starting. A proper assessment,
                 a clear number, then you decide — no surprise charges when the invoice arrives.
               </p>
               <Link
                 href="/generator-repair-cost"
-                className="inline-flex items-center gap-2 text-sm font-bold tracking-wide uppercase text-[#c8a84b] hover:text-[#1a1a1a] transition-colors"
+                className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-[#c8a84b] hover:text-[#1a1a1a] transition-colors"
               >
                 Read our full repair cost guide
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
               </Link>
             </div>
           </div>
@@ -640,29 +519,26 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════
           FAQ — accordion + sticky left
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-28 bg-[#f5f4f0]" aria-labelledby="faq-heading">
+      <section className="py-24 md:py-32 bg-[#f5f4f0]" aria-labelledby="faq-heading">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-[360px_1fr] gap-12 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-[380px_1fr] gap-12 lg:gap-20 items-start">
 
             {/* Left sticky */}
             <div className="lg:sticky lg:top-28">
-              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.35em] uppercase mb-4">FAQ</p>
-              <h2 id="faq-heading" className="text-3xl md:text-4xl font-black text-[#1a1a1a] leading-tight mb-5">
+              <p className="text-[#c8a84b] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">FAQ</p>
+              <h2 id="faq-heading" className="text-3xl md:text-4xl font-black text-[#1a1a1a] tracking-tight leading-tight mb-5 text-balance">
                 Common Questions,<br />Straight Answers
               </h2>
-              <div className="w-10 h-0.5 bg-[#c8a84b] mb-6" />
-              <p className="text-[#1a1a1a]/50 text-sm leading-relaxed mb-8 max-w-xs">
+              <div className="w-12 h-[3px] bg-[#c8a84b] mb-6" />
+              <p className="text-[#1a1a1a]/50 text-base leading-relaxed mb-8 max-w-xs">
                 Everything you need to know about generator repairs, costs and maintenance
                 in Gauteng — answered by our technicians.
               </p>
               <Link
                 href="/faq"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#1a1a1a] text-white text-sm font-bold hover:bg-[#c8a84b] hover:text-[#0a0a0a] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#1a1a1a] text-white text-sm font-bold hover:bg-[#c8a84b] hover:text-[#0a0a0a] transition-colors"
               >
                 View all FAQs
-                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
               </Link>
             </div>
 
@@ -670,21 +546,16 @@ export default function HomePage() {
             <div className="border-t border-[#1a1a1a]/10">
               {homepageFAQs.map((faq) => (
                 <details key={faq.question} className="group border-b border-[#1a1a1a]/10">
-                  <summary className="flex items-start justify-between gap-4 py-5 cursor-pointer list-none select-none">
-                    <h3 className="text-base font-bold text-[#1a1a1a] leading-snug group-open:text-[#c8a84b] transition-colors pr-2">
+                  <summary className="flex items-start justify-between gap-4 py-6 cursor-pointer list-none select-none">
+                    <h3 className="text-lg font-bold text-[#1a1a1a] leading-snug group-open:text-[#c8a84b] transition-colors pr-2">
                       {faq.question}
                     </h3>
-                    <span className="shrink-0 mt-0.5 w-5 h-5 flex items-center justify-center border border-[#1a1a1a]/20 group-open:border-[#c8a84b] group-open:bg-[#c8a84b] transition-colors">
-                      <svg width="9" height="9" viewBox="0 0 10 10" fill="none" className="group-open:hidden" aria-hidden="true">
-                        <path d="M5 1v8M1 5h8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-                      </svg>
-                      <svg width="9" height="9" viewBox="0 0 10 10" fill="none" className="hidden group-open:block text-white" aria-hidden="true">
-                        <path d="M1 5h8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-                      </svg>
+                    <span className="shrink-0 mt-1 text-[#c8a84b] font-black text-xl leading-none transition-transform duration-200 group-open:rotate-45" aria-hidden="true">
+                      +
                     </span>
                   </summary>
-                  <div className="pb-5 pr-9">
-                    <p className="text-[#1a1a1a]/60 text-sm leading-relaxed">{faq.answer}</p>
+                  <div className="pb-6 pr-9">
+                    <p className="text-[#1a1a1a]/60 text-base leading-relaxed">{faq.answer}</p>
                   </div>
                 </details>
               ))}
@@ -697,29 +568,26 @@ export default function HomePage() {
           FINAL CTA STRIP
       ═══════════════════════════════════════════════════════════════ */}
       <section className="bg-[#0a0a0a]" aria-label="Final call to action">
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-10 border-b border-white/[0.07]">
             <div>
-              <h2 className="text-2xl md:text-3xl font-black text-white mb-2">
+              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-3 text-balance">
                 Ready to Get Your Generator Fixed?
               </h2>
-              <p className="text-white/35 text-sm">
+              <p className="text-white/40 text-base">
                 Emergency or planned — same-day callouts across all of Gauteng.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-base tracking-wide hover:bg-red-800 transition-colors"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
-                </svg>
-                060 316 0484
+                Call {PHONE_DISPLAY}
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 border border-white/15 text-white font-semibold text-base hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border border-white/15 text-white font-semibold text-base hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
               >
                 Request a Quote
               </Link>

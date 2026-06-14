@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Contact Generator Repair Services Gauteng | Free Quote & Emergency Callouts',
+  title: 'Contact Generator Gents Gauteng | Free Quote & Emergency Callouts',
   description:
-    'Contact Generator Repair Services for expert generator repairs across Gauteng. Call 060 316 0484 for same-day emergency callouts or request a free quote online.',
+    'Contact Generator Gents for expert generator repairs across Gauteng. Call 076 347 3736 for same-day emergency callouts or request a free quote online.',
   keywords: [
     'contact generator repair Gauteng',
     'generator repair quote Johannesburg',
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'free generator repair quote South Africa',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/contact',
+    canonical: 'https://www.generatorgents.co.za/contact',
   },
   openGraph: {
-    title: 'Contact Generator Repair Services | Free Quote & Emergency Callouts',
-    description: 'Call 060 316 0484 or request a free quote online. Same-day emergency callouts across all of Gauteng.',
-    url: 'https://www.generatorrepairservices.co.za/contact',
+    title: 'Contact Generator Gents | Free Quote & Emergency Callouts',
+    description: 'Call 076 347 3736 or request a free quote online. Same-day emergency callouts across all of Gauteng.',
+    url: 'https://www.generatorgents.co.za/contact',
     type: 'website',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  '@id': 'https://www.generatorrepairservices.co.za/contact',
-  name: 'Contact Generator Repair Services',
-  url: 'https://www.generatorrepairservices.co.za/contact',
+  '@id': 'https://www.generatorgents.co.za/contact',
+  name: 'Contact Generator Gents',
+  url: 'https://www.generatorgents.co.za/contact',
   mainEntity: {
     '@type': 'LocalBusiness',
-    '@id': 'https://www.generatorrepairservices.co.za/#business',
-    name: 'Generator Repair Services',
-    telephone: '+27603160484',
-    email: 'info@generatorrepairservices.co.za',
-    url: 'https://www.generatorrepairservices.co.za',
+    '@id': 'https://www.generatorgents.co.za/#business',
+    name: 'Generator Gents',
+    telephone: '+27763473736',
+    email: 'info@generatorgents.co.za',
+    url: 'https://www.generatorgents.co.za',
     areaServed: { '@type': 'State', name: 'Gauteng' },
     openingHoursSpecification: [
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '07:00', closes: '18:00' },
@@ -89,7 +89,7 @@ export default function ContactPage() {
             Get In Touch
           </p>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4 max-w-2xl">
-            Contact Generator Repair Services
+            Contact Generator Gents
           </h1>
           <p className="text-white/55 text-lg max-w-xl leading-relaxed">
             For emergency callouts, free quotes or general enquiries — we are ready
@@ -103,16 +103,16 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-6 py-5">
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="flex items-center justify-center gap-2.5 px-6 py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors flex-1 sm:flex-none"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
               </svg>
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <a
-              href="https://wa.me/27603160484?text=Hi%2C%20I%20need%20help%20with%20generator%20repairs."
+              href="https://wa.me/27763473736?text=Hi%2C%20I%20need%20help%20with%20generator%20repairs."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2.5 px-6 py-3 bg-[#1a1a1a] border border-white/10 text-white font-bold text-sm hover:border-[#c8a84b]/40 hover:text-[#c8a84b] transition-colors flex-1 sm:flex-none"
@@ -124,7 +124,7 @@ export default function ContactPage() {
               WhatsApp Us
             </a>
             <a
-              href="mailto:info@generatorrepairservices.co.za"
+              href="mailto:info@generatorgents.co.za"
               className="flex items-center justify-center gap-2.5 px-6 py-3 bg-[#1a1a1a] border border-white/10 text-white font-bold text-sm hover:border-[#c8a84b]/40 hover:text-[#c8a84b] transition-colors flex-1 sm:flex-none"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -161,8 +161,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#1a1a1a]/40 mb-1">Phone</p>
-                      <a href="tel:0603160484" className="text-[#1a1a1a] font-bold text-xl hover:text-[#c8a84b] transition-colors">
-                        060 316 0484
+                      <a href="tel:+27763473736" className="text-[#1a1a1a] font-bold text-xl hover:text-[#c8a84b] transition-colors">
+                        076 347 3736
                       </a>
                       <p className="text-[#1a1a1a]/50 text-sm mt-0.5">Available for emergencies at any hour</p>
                     </div>
@@ -178,12 +178,12 @@ export default function ContactPage() {
                     <div>
                       <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#1a1a1a]/40 mb-1">WhatsApp</p>
                       <a
-                        href="https://wa.me/27603160484?text=Hi%2C%20I%20need%20help%20with%20generator%20repairs."
+                        href="https://wa.me/27763473736?text=Hi%2C%20I%20need%20help%20with%20generator%20repairs."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#1a1a1a] font-bold text-xl hover:text-[#c8a84b] transition-colors"
                       >
-                        060 316 0484
+                        076 347 3736
                       </a>
                       <p className="text-[#1a1a1a]/50 text-sm mt-0.5">Quick responses via WhatsApp</p>
                     </div>
@@ -200,10 +200,10 @@ export default function ContactPage() {
                     <div>
                       <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#1a1a1a]/40 mb-1">Email</p>
                       <a
-                        href="mailto:info@generatorrepairservices.co.za"
+                        href="mailto:info@generatorgents.co.za"
                         className="text-[#1a1a1a] font-bold text-base hover:text-[#c8a84b] transition-colors break-all"
                       >
-                        info@generatorrepairservices.co.za
+                        info@generatorgents.co.za
                       </a>
                       <p className="text-[#1a1a1a]/50 text-sm mt-0.5">We respond within 24 hours</p>
                     </div>
@@ -420,8 +420,8 @@ export default function ContactPage() {
 
                   <p className="text-center text-xs text-[#1a1a1a]/40">
                     Or call us directly:{' '}
-                    <a href="tel:0603160484" className="text-[#c8a84b] font-semibold hover:text-[#1a1a1a] transition-colors">
-                      060 316 0484
+                    <a href="tel:+27763473736" className="text-[#c8a84b] font-semibold hover:text-[#1a1a1a] transition-colors">
+                      076 347 3736
                     </a>
                   </p>
                 </form>
@@ -442,14 +442,14 @@ export default function ContactPage() {
               </p>
             </div>
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-10 py-4 bg-white text-[#b91c1c] font-black text-xl hover:bg-[#f5f4f0] transition-colors shrink-0"
-              aria-label="Call our emergency line: 060 316 0484"
+              aria-label="Call our emergency line: 076 347 3736"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
               </svg>
-              060 316 0484
+              076 347 3736
             </a>
           </div>
         </div>

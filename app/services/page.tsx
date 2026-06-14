@@ -7,7 +7,7 @@ import HeroSlideshow from '@/components/hero-slideshow'
 export const metadata: Metadata = {
   title: 'Generator Services Gauteng | Repairs, Servicing, Maintenance & More',
   description:
-    'Full range of professional generator services across Gauteng. Expert repairs, scheduled servicing, emergency callouts, AVR repairs, load testing & installation. Call 060 316 0484.',
+    'Full range of professional generator services across Gauteng. Expert repairs, scheduled servicing, emergency callouts, AVR repairs, load testing & installation. Call 076 347 3736.',
   keywords: [
     'generator services Gauteng',
     'generator repair Johannesburg',
@@ -30,20 +30,20 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/services',
+    canonical: 'https://www.generatorgents.co.za/services',
   },
   openGraph: {
     title: 'Generator Services Gauteng | Repairs, Servicing & Maintenance',
     description:
-      'Full range of professional generator services across Gauteng. Emergency callouts, all brands. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/services',
+      'Full range of professional generator services across Gauteng. Emergency callouts, all brands. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/services',
     type: 'website',
     images: [
       {
-        url: 'https://www.generatorrepairservices.co.za/images/Industrial_Generator_Repair_Team.webp',
+        url: 'https://www.generatorgents.co.za/images/Industrial_Generator_Repair_Team.webp',
         width: 1200,
         height: 630,
-        alt: 'Generator Repair Services Gauteng — professional technician team',
+        alt: 'Generator Gents Gauteng — professional technician team',
       },
     ],
   },
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Generator Services Gauteng | Repairs, Servicing & Maintenance',
     description:
-      'Expert generator repairs, servicing, emergency callouts & maintenance across Gauteng. All brands. Call 060 316 0484.',
-    images: ['https://www.generatorrepairservices.co.za/images/Industrial_Generator_Repair_Team.webp'],
+      'Expert generator repairs, servicing, emergency callouts & maintenance across Gauteng. All brands. Call 076 347 3736.',
+    images: ['https://www.generatorgents.co.za/images/Industrial_Generator_Repair_Team.webp'],
   },
 }
 
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.generatorrepairservices.co.za/#business',
-  name: 'Generator Repair Services Gauteng',
+  '@id': 'https://www.generatorgents.co.za/#business',
+  name: 'Generator Gents Gauteng',
   description:
     'Professional generator repair, servicing, maintenance, installation and emergency callout services across Gauteng. All brands, all sizes.',
-  url: 'https://www.generatorrepairservices.co.za',
-  telephone: '+27603160484',
-  email: 'info@generatorrepairservices.co.za',
+  url: 'https://www.generatorgents.co.za',
+  telephone: '+27763473736',
+  email: 'info@generatorgents.co.za',
   areaServed: [
     { '@type': 'City', name: 'Johannesburg' },
     { '@type': 'City', name: 'Pretoria' },
@@ -110,25 +110,25 @@ const localBusinessSchema = {
       'Generator Rewinding',
     ].map((name, i) => ({ '@type': 'Offer', position: i + 1, itemOffered: { '@type': 'Service', name } })),
   },
-  image: 'https://www.generatorrepairservices.co.za/images/Industrial_Generator_Repair_Team.webp',
+  image: 'https://www.generatorgents.co.za/images/Industrial_Generator_Repair_Team.webp',
   priceRange: '$$',
 }
 
 const serviceListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Generator Services — Generator Repair Services Gauteng',
+  name: 'Generator Services — Generator Gents Gauteng',
   itemListElement: [
-    { '@type': 'ListItem', position: 1,  name: 'Generator Repairs',            url: 'https://www.generatorrepairservices.co.za/generator-repairs' },
-    { '@type': 'ListItem', position: 2,  name: 'Generator Servicing',          url: 'https://www.generatorrepairservices.co.za/generator-servicing' },
-    { '@type': 'ListItem', position: 3,  name: 'Generator Maintenance Plans',  url: 'https://www.generatorrepairservices.co.za/generator-maintenance' },
-    { '@type': 'ListItem', position: 4,  name: 'Emergency Generator Callouts', url: 'https://www.generatorrepairservices.co.za/emergency-generator-repair' },
-    { '@type': 'ListItem', position: 5,  name: 'Generator Installation',       url: 'https://www.generatorrepairservices.co.za/generator-installation' },
-    { '@type': 'ListItem', position: 6,  name: 'Load Bank Testing',            url: 'https://www.generatorrepairservices.co.za/load-bank-testing' },
-    { '@type': 'ListItem', position: 7,  name: 'AVR & Voltage Regulator Repairs', url: 'https://www.generatorrepairservices.co.za/avr-repairs' },
-    { '@type': 'ListItem', position: 8,  name: 'Control Panel Repairs',        url: 'https://www.generatorrepairservices.co.za/control-panel-repairs' },
-    { '@type': 'ListItem', position: 9,  name: 'Fuel System Repairs',          url: 'https://www.generatorrepairservices.co.za/fuel-system-repairs' },
-    { '@type': 'ListItem', position: 10, name: 'Generator Rewinding',          url: 'https://www.generatorrepairservices.co.za/generator-rewinding' },
+    { '@type': 'ListItem', position: 1,  name: 'Generator Repairs',            url: 'https://www.generatorgents.co.za/generator-repairs' },
+    { '@type': 'ListItem', position: 2,  name: 'Generator Servicing',          url: 'https://www.generatorgents.co.za/generator-servicing' },
+    { '@type': 'ListItem', position: 3,  name: 'Generator Maintenance Plans',  url: 'https://www.generatorgents.co.za/generator-maintenance' },
+    { '@type': 'ListItem', position: 4,  name: 'Emergency Generator Callouts', url: 'https://www.generatorgents.co.za/emergency-generator-repair' },
+    { '@type': 'ListItem', position: 5,  name: 'Generator Installation',       url: 'https://www.generatorgents.co.za/generator-installation' },
+    { '@type': 'ListItem', position: 6,  name: 'Load Bank Testing',            url: 'https://www.generatorgents.co.za/load-bank-testing' },
+    { '@type': 'ListItem', position: 7,  name: 'AVR & Voltage Regulator Repairs', url: 'https://www.generatorgents.co.za/avr-repairs' },
+    { '@type': 'ListItem', position: 8,  name: 'Control Panel Repairs',        url: 'https://www.generatorgents.co.za/control-panel-repairs' },
+    { '@type': 'ListItem', position: 9,  name: 'Fuel System Repairs',          url: 'https://www.generatorgents.co.za/fuel-system-repairs' },
+    { '@type': 'ListItem', position: 10, name: 'Generator Rewinding',          url: 'https://www.generatorgents.co.za/generator-rewinding' },
   ],
 }
 
@@ -183,8 +183,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home',     item: 'https://www.generatorrepairservices.co.za' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.generatorrepairservices.co.za/services' },
+    { '@type': 'ListItem', position: 1, name: 'Home',     item: 'https://www.generatorgents.co.za' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.generatorgents.co.za/services' },
   ],
 }
 
@@ -204,8 +204,8 @@ const serviceNodes = [
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: s.name,
-  url: `https://www.generatorrepairservices.co.za${s.url}`,
-  provider: { '@id': 'https://www.generatorrepairservices.co.za/#business' },
+  url: `https://www.generatorgents.co.za${s.url}`,
+  provider: { '@id': 'https://www.generatorgents.co.za/#business' },
   areaServed: { '@type': 'AdministrativeArea', name: s.area },
   serviceType: 'Generator Repair and Maintenance',
 }))
@@ -452,14 +452,14 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#b91c1c] text-white font-bold text-base hover:bg-red-800 transition-colors"
-              aria-label="Call Generator Repair Services on 060 316 0484"
+              aria-label="Call Generator Gents on 076 347 3736"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
               </svg>
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -553,7 +553,7 @@ export default function ServicesPage() {
                         Learn more
                       </Link>
                       <a
-                        href="tel:0603160484"
+                        href="tel:+27763473736"
                         className="inline-flex items-center justify-center px-6 py-3 border border-[#1a1a1a]/20 text-[#1a1a1a] font-semibold text-sm hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
                       >
                         Book this service
@@ -589,7 +589,7 @@ export default function ServicesPage() {
               Visit our full FAQ page
             </Link>{' '}
             or{' '}
-            <a href="tel:0603160484" className="text-[#c8a84b] hover:underline">
+            <a href="tel:+27763473736" className="text-[#c8a84b] hover:underline">
               call us directly
             </a>
             .
@@ -634,14 +634,14 @@ export default function ServicesPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
-                aria-label="Call 060 316 0484 for generator services"
+                aria-label="Call 076 347 3736 for generator services"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                 </svg>
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

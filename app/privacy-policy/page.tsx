@@ -3,23 +3,23 @@ import Link from 'next/link'
 import Breadcrumbs from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Generator Repair Services Gauteng',
+  title: 'Privacy Policy | Generator Gents Gauteng',
   description:
-    'Privacy policy for Generator Repair Services Gauteng. Learn how we collect, use and protect your personal information.',
+    'Privacy policy for Generator Gents Gauteng. Learn how we collect, use and protect your personal information.',
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/privacy-policy',
+    canonical: 'https://www.generatorgents.co.za/privacy-policy',
   },
 }
 
 const sections = [
   {
     heading: '1. Who We Are',
-    body: `Generator Repair Services Gauteng ("we", "us", "our") is a generator repair, servicing and maintenance business operating across Gauteng, South Africa. Our contact details are:
+    body: `Generator Gents Gauteng ("we", "us", "our") is a generator repair, servicing and maintenance business operating across Gauteng, South Africa. Our contact details are:
 
-Phone: 060 316 0484
-Email: info@generatorrepairservices.co.za
-Website: www.generatorrepairservices.co.za`,
+Phone: 076 347 3736
+Email: info@generatorgents.co.za
+Website: www.generatorgents.co.za`,
   },
   {
     heading: '2. Information We Collect',
@@ -79,7 +79,7 @@ You can disable cookies in your browser settings at any time. Doing so will not 
 — Object to the processing of your personal information
 — Lodge a complaint with the Information Regulator of South Africa
 
-To exercise any of these rights, contact us at info@generatorrepairservices.co.za or call 060 316 0484.`,
+To exercise any of these rights, contact us at info@generatorgents.co.za or call 076 347 3736.`,
   },
   {
     heading: '9. Contact the Information Regulator',
@@ -121,7 +121,7 @@ export default function PrivacyPolicyPage() {
       <section className="py-14 md:py-20 bg-[#f5f4f0]">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-[#1a1a1a]/70 text-base leading-relaxed mb-10 pb-10 border-b border-[#1a1a1a]/10">
-            At Generator Repair Services Gauteng, we respect your privacy and are committed to
+            At Generator Gents Gauteng, we respect your privacy and are committed to
             protecting the personal information you share with us. This policy explains what
             information we collect, how we use it, and what rights you have under South African law.
           </p>
@@ -146,16 +146,16 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#b91c1c] text-white font-semibold text-sm hover:bg-red-800 transition-colors"
               >
-                Call 060 316 0484
+                Call 076 347 3736
               </a>
               <a
-                href="mailto:info@generatorrepairservices.co.za"
+                href="mailto:info@generatorgents.co.za"
                 className="inline-flex items-center justify-center px-5 py-2.5 border border-[#1a1a1a]/15 text-[#1a1a1a] font-semibold text-sm hover:border-[#c8a84b] hover:text-[#c8a84b] transition-colors"
               >
-                info@generatorrepairservices.co.za
+                info@generatorgents.co.za
               </a>
             </div>
           </div>

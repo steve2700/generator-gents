@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'AVR Repairs Gauteng | Automatic Voltage Regulator Repair & Replacement',
   description:
-    'AVR and automatic voltage regulator repairs across Gauteng. Voltage fluctuations, low output, no power from a running generator — we diagnose and restore stable power. Call 060 316 0484.',
+    'AVR and automatic voltage regulator repairs across Gauteng. Voltage fluctuations, low output, no power from a running generator — we diagnose and restore stable power. Call 076 347 3736.',
   keywords: [
     'AVR repair Gauteng',
     'automatic voltage regulator repair Gauteng',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'AVR fault diagnosis Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/avr-repairs',
+    canonical: 'https://www.generatorgents.co.za/avr-repairs',
   },
   openGraph: {
     title: 'AVR Repairs Gauteng | Automatic Voltage Regulator Repair & Replacement',
     description:
-      'AVR and automatic voltage regulator repairs across Gauteng. Voltage fluctuations, low output, complete power loss from a running generator — expert diagnosis and repair. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/avr-repairs',
+      'AVR and automatic voltage regulator repairs across Gauteng. Voltage fluctuations, low output, complete power loss from a running generator — expert diagnosis and repair. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/avr-repairs',
     type: 'website',
   },
 }
@@ -162,10 +162,10 @@ export default function AVRRepairsPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -215,7 +215,7 @@ export default function AVRRepairsPage() {
                   The Automatic Voltage Regulator is the component responsible for maintaining
                   stable output voltage regardless of load changes. When it fails, the symptoms
                   range from complete loss of output voltage to fluctuating power that damages
-                  connected equipment. Generator Repair Services diagnoses and repairs AVR faults
+                  connected equipment. Generator Gents diagnoses and repairs AVR faults
                   across all generator makes and models throughout Gauteng.
                 </p>
                 <p>
@@ -241,7 +241,7 @@ export default function AVRRepairsPage() {
               <div className="mt-10 relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/avr-repair-technician.png"
-                  alt="Generator Repair Services technician testing an AVR automatic voltage regulator during generator repair in Gauteng"
+                  alt="Generator Gents technician testing an AVR automatic voltage regulator during generator repair in Gauteng"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 55vw"
@@ -284,10 +284,10 @@ export default function AVRRepairsPage() {
                 <p className="text-white font-bold mb-1">Voltage problem with your generator?</p>
                 <p className="text-white/50 text-sm mb-4">Call for expert AVR diagnosis and repair across Gauteng.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -400,10 +400,10 @@ export default function AVRRepairsPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

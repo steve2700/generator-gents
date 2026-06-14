@@ -10,7 +10,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Soweto | Same-Day Service, All Soweto Areas',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Soweto. Diepkloof, Meadowlands, Orlando, Pimville, Protea Glen — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Soweto. Diepkloof, Meadowlands, Orlando, Pimville, Protea Glen — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Soweto',
     'generator repair Soweto',
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'generator maintenance Soweto',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-soweto',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-soweto',
   },
   openGraph: {
     title: 'Generator Repairs Soweto | Same-Day Service, All Soweto Areas',
     description:
-      'Expert generator repairs and emergency callouts across Soweto. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-soweto',
+      'Expert generator repairs and emergency callouts across Soweto. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-soweto',
     type: 'website',
   },
 }
@@ -155,10 +155,10 @@ export default function SowetoPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -209,7 +209,7 @@ export default function SowetoPage() {
                   retail centres, schools, clinics, and an entrepreneurial community that
                   cannot afford downtime. With loadshedding continuing to disrupt operations
                   across Gauteng, reliable backup power is no longer a luxury — it is a
-                  necessity. Generator Repair Services provides professional, affordable
+                  necessity. Generator Gents provides professional, affordable
                   generator repair and servicing throughout Soweto and surrounding areas.
                 </p>
                 <p>
@@ -275,10 +275,10 @@ export default function SowetoPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Soweto?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Soweto areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -322,10 +322,10 @@ export default function SowetoPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"
