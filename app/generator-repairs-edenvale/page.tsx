@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Edenvale | Same-Day Service, Commercial & Industrial',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Edenvale. Greenstone, Meadowdale, Elandsfontein, Isando — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Edenvale. Greenstone, Meadowdale, Elandsfontein, Isando — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Edenvale',
     'generator repair Edenvale',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'commercial generator repair Edenvale',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-edenvale',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-edenvale',
   },
   openGraph: {
     title: 'Generator Repairs Edenvale | Same-Day Service, Commercial & Industrial',
     description:
-      'Expert generator repairs and emergency callouts across Edenvale. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-edenvale',
+      'Expert generator repairs and emergency callouts across Edenvale. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-edenvale',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function EdenvalePage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -195,7 +195,7 @@ export default function EdenvalePage() {
                   Airport and home to Greenstone, one of the East Rand&apos;s major retail and
                   office destinations. Businesses here operate against a backdrop of high
                   client expectations and tight operational schedules, making reliable backup
-                  power a non-negotiable. Generator Repair Services provides comprehensive
+                  power a non-negotiable. Generator Gents provides comprehensive
                   generator repair, servicing, and maintenance throughout Edenvale.
                 </p>
                 <p>
@@ -263,10 +263,10 @@ export default function EdenvalePage() {
                 <p className="text-white font-bold mb-1">Generator problem in Edenvale?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Edenvale areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -308,10 +308,10 @@ export default function EdenvalePage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

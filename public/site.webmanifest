@@ -1,7 +1,7 @@
 {
-  "name": "Generator Repair Services",
+  "name": "Generator Gents",
   "short_name": "Gen Repairs",
-  "description": "Professional generator repair, servicing and maintenance across Gauteng. Emergency callouts available. Call 060 316 0484.",
+  "description": "Professional generator repair, servicing and maintenance across Gauteng. Emergency callouts available. Call 076 347 3736.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
@@ -44,8 +44,8 @@
     {
       "name": "Call Now",
       "short_name": "Call",
-      "description": "Call Generator Repair Services directly",
-      "url": "tel:0603160484",
+      "description": "Call Generator Gents directly",
+      "url": "tel:+27763473736",
       "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
     },
     {
@@ -68,7 +68,7 @@
       "src": "/og-image.jpg",
       "sizes": "1200x630",
       "type": "image/jpeg",
-      "label": "Generator Repair Services Homepage"
+      "label": "Generator Gents Homepage"
     }
   ]
 }

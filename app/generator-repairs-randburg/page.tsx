@@ -10,7 +10,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Randburg | Same-Day Service, All Randburg Areas',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Randburg. Ferndale, Bordeaux, Blairgowrie, Northcliff — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Randburg. Ferndale, Bordeaux, Blairgowrie, Northcliff — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Randburg',
     'generator repair Randburg',
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'generator maintenance Randburg',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-randburg',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-randburg',
   },
   openGraph: {
     title: 'Generator Repairs Randburg | Same-Day Service, All Randburg Areas',
     description:
-      'Expert generator repairs and emergency callouts across Randburg. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-randburg',
+      'Expert generator repairs and emergency callouts across Randburg. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-randburg',
     type: 'website',
   },
 }
@@ -155,10 +155,10 @@ export default function RandburgPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -209,7 +209,7 @@ export default function RandburgPage() {
                   from industrial parks and retail centres to upmarket estates and professional
                   office complexes. With loadshedding continuing to disrupt business operations,
                   generator reliability is critical across the full spectrum of Randburg's property
-                  landscape. Generator Repair Services provides tailored generator repair, servicing,
+                  landscape. Generator Gents provides tailored generator repair, servicing,
                   and maintenance solutions for Randburg and all surrounding suburbs.
                 </p>
                 <p>
@@ -274,10 +274,10 @@ export default function RandburgPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Randburg?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Randburg areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -321,10 +321,10 @@ export default function RandburgPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Pretoria | Same-Day Service, All PTA Areas',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Pretoria. Hatfield, Menlyn, Brooklyn, Waterkloof, Lynnwood — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Pretoria. Hatfield, Menlyn, Brooklyn, Waterkloof, Lynnwood — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Pretoria',
     'generator repair Pretoria',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'generator maintenance Pretoria',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-pretoria',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-pretoria',
   },
   openGraph: {
     title: 'Generator Repairs Pretoria | Same-Day Service, All PTA Areas',
     description:
-      'Expert generator repairs and emergency callouts across Pretoria. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-pretoria',
+      'Expert generator repairs and emergency callouts across Pretoria. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-pretoria',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function PretoriaPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -193,7 +193,7 @@ export default function PretoriaPage() {
                   As South Africa's administrative capital, Pretoria hosts government departments,
                   foreign embassies, major corporate headquarters, and some of the country's most
                   critical institutions — none of which can tolerate extended power disruptions.
-                  Generator Repair Services provides comprehensive generator repair, servicing,
+                  Generator Gents provides comprehensive generator repair, servicing,
                   and maintenance across all of Pretoria, with the response speed and technical
                   depth the city demands.
                 </p>
@@ -257,10 +257,10 @@ export default function PretoriaPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Pretoria?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all PTA areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -302,10 +302,10 @@ export default function PretoriaPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'Fuel System Repairs Gauteng | Injector, Pump & Contamination Service',
   description:
-    'Generator fuel system repairs across Gauteng. Contaminated diesel, clogged injectors, failed lift pumps, blocked fuel lines — expert diagnosis and repair. Call 060 316 0484.',
+    'Generator fuel system repairs across Gauteng. Contaminated diesel, clogged injectors, failed lift pumps, blocked fuel lines — expert diagnosis and repair. Call 076 347 3736.',
   keywords: [
     'generator fuel system repairs Gauteng',
     'generator injector repair Gauteng',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'generator rough running repair Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/fuel-system-repairs',
+    canonical: 'https://www.generatorgents.co.za/fuel-system-repairs',
   },
   openGraph: {
     title: 'Fuel System Repairs Gauteng | Injector, Pump & Contamination Service',
     description:
-      'Generator fuel system repairs across Gauteng. Contaminated diesel, clogged injectors, failed lift pumps, blocked fuel lines. Expert diagnosis. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/fuel-system-repairs',
+      'Generator fuel system repairs across Gauteng. Contaminated diesel, clogged injectors, failed lift pumps, blocked fuel lines. Expert diagnosis. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/fuel-system-repairs',
     type: 'website',
   },
 }
@@ -172,10 +172,10 @@ export default function FuelSystemRepairsPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -231,7 +231,7 @@ export default function FuelSystemRepairsPage() {
                   fully loaded.
                 </p>
                 <p>
-                  Generator Repair Services diagnoses and repairs fuel system problems across all
+                  Generator Gents diagnoses and repairs fuel system problems across all
                   diesel generator types throughout Gauteng. We begin with a fuel quality assessment
                   before moving to component testing — because the condition of the fuel itself
                   determines what repairs are actually needed. Replacing injectors into a system
@@ -252,7 +252,7 @@ export default function FuelSystemRepairsPage() {
               <div className="mt-10 relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/fuel-system.png"
-                  alt="Generator Repair Services technician inspecting generator fuel injectors and pump during fuel system repair in Gauteng"
+                  alt="Generator Gents technician inspecting generator fuel injectors and pump during fuel system repair in Gauteng"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 55vw"
@@ -298,10 +298,10 @@ export default function FuelSystemRepairsPage() {
                 <p className="text-white font-bold mb-1">Fuel problem with your generator?</p>
                 <p className="text-white/50 text-sm mb-4">Call for expert fuel system diagnosis and repair across Gauteng.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -413,10 +413,10 @@ export default function FuelSystemRepairsPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

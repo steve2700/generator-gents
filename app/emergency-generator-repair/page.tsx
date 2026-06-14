@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'Emergency Generator Repair Gauteng | Same-Day Callouts 24/7',
   description:
-    'Emergency generator repair and same-day callouts across Gauteng. Generator down during loadshedding? Technicians dispatched fast with parts on board. SANS compliant. Call 060 316 0484 now.',
+    'Emergency generator repair and same-day callouts across Gauteng. Generator down during loadshedding? Technicians dispatched fast with parts on board. SANS compliant. Call 076 347 3736 now.',
   keywords: [
     'emergency generator repair Gauteng',
     'emergency generator repair Johannesburg',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'standby generator failure Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/emergency-generator-repair',
+    canonical: 'https://www.generatorgents.co.za/emergency-generator-repair',
   },
   openGraph: {
     title: 'Emergency Generator Repair Gauteng | Same-Day Callouts 24/7',
     description:
-      'Generator down during loadshedding? Emergency callouts across all of Gauteng. Technicians dispatched fast with diagnostic equipment and parts on board. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/emergency-generator-repair',
+      'Generator down during loadshedding? Emergency callouts across all of Gauteng. Technicians dispatched fast with diagnostic equipment and parts on board. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/emergency-generator-repair',
     type: 'website',
   },
 }
@@ -44,7 +44,7 @@ const responseSteps = [
   {
     step: '01',
     title: 'Call Our Emergency Line',
-    desc: 'Reach us on 060 316 0484. We take your details, assess the urgency of your situation, and confirm a technician is on the way.',
+    desc: 'Reach us on 076 347 3736. We take your details, assess the urgency of your situation, and confirm a technician is on the way.',
   },
   {
     step: '02',
@@ -135,10 +135,10 @@ export default function EmergencyGeneratorRepairPage() {
             Generator emergency? Technicians are on standby —
           </p>
           <a
-            href="tel:0603160484"
+            href="tel:+27763473736"
             className="text-sm md:text-base font-black underline underline-offset-2 hover:no-underline"
           >
-            Call 060 316 0484 now
+            Call 076 347 3736 now
           </a>
         </div>
       </div>
@@ -187,10 +187,10 @@ export default function EmergencyGeneratorRepairPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -238,7 +238,7 @@ export default function EmergencyGeneratorRepairPage() {
               <div className="space-y-5 text-base md:text-lg leading-relaxed text-[#1a1a1a]/70">
                 <p>
                   A generator failure during loadshedding or a critical power outage is not a
-                  scheduled problem. Generator Repair Services provides emergency callout response
+                  scheduled problem. Generator Gents provides emergency callout response
                   across all of Gauteng, with technicians available to respond the same day in most
                   cases. We understand that downtime is not just an inconvenience — for businesses,
                   it carries a direct financial cost with every minute that passes.
@@ -263,7 +263,7 @@ export default function EmergencyGeneratorRepairPage() {
               <div className="mt-10 relative aspect-[16/9] overflow-hidden">
                 <Image
                   src="/images/compressed_Diesel_Gen_Repair.webp"
-                  alt="Generator Repair Services technician on emergency callout diagnosing a failed standby generator at a commercial property in Gauteng"
+                  alt="Generator Gents technician on emergency callout diagnosing a failed standby generator at a commercial property in Gauteng"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 55vw"
@@ -307,10 +307,10 @@ export default function EmergencyGeneratorRepairPage() {
                 <p className="text-white font-bold mb-1">Generator down right now?</p>
                 <p className="text-white/50 text-sm mb-4">Call our emergency line for same-day response.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function EmergencyGeneratorRepairPage() {
             <div className="relative aspect-[4/3] overflow-hidden order-2 md:order-1">
               <Image
                 src="/images/emergency-repair.png"
-                alt="Generator Repair Services technician testing a commercial generator after emergency repair in Johannesburg"
+                alt="Generator Gents technician testing a commercial generator after emergency repair in Johannesburg"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -427,10 +427,10 @@ export default function EmergencyGeneratorRepairPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

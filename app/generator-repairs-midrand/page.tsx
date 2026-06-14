@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Midrand | Same-Day Service, Commercial & Industrial',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Midrand. Carlswald, Halfway House, Kyalami, Grand Central — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Midrand. Carlswald, Halfway House, Kyalami, Grand Central — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Midrand',
     'generator repair Midrand',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'industrial generator repair Midrand',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-midrand',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-midrand',
   },
   openGraph: {
     title: 'Generator Repairs Midrand | Same-Day Service, Commercial & Industrial',
     description:
-      'Expert generator repairs and emergency callouts across Midrand. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-midrand',
+      'Expert generator repairs and emergency callouts across Midrand. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-midrand',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function MidrandPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -194,7 +194,7 @@ export default function MidrandPage() {
                   grown into one of Gauteng's most significant commercial and industrial
                   hubs. Large corporate parks, distribution centres, data centres, and
                   manufacturing facilities along the N1 and N14 corridors all require
-                  backup power that performs without fail. Generator Repair Services
+                  backup power that performs without fail. Generator Gents
                   provides comprehensive generator repair, servicing, and maintenance
                   across all of Midrand — with the response speed and technical depth
                   this environment demands.
@@ -261,10 +261,10 @@ export default function MidrandPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Midrand?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Midrand areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -306,10 +306,10 @@ export default function MidrandPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

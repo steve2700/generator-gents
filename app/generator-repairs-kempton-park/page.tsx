@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Kempton Park | Same-Day Service, Commercial & Industrial',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Kempton Park. OR Tambo Airport corridor, Glen Marais, Birch Acres, Aston Manor — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Kempton Park. OR Tambo Airport corridor, Glen Marais, Birch Acres, Aston Manor — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Kempton Park',
     'generator repair Kempton Park',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'industrial generator repair Kempton Park',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-kempton-park',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-kempton-park',
   },
   openGraph: {
     title: 'Generator Repairs Kempton Park | Same-Day Service, Commercial & Industrial',
     description:
-      'Expert generator repairs and emergency callouts across Kempton Park. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-kempton-park',
+      'Expert generator repairs and emergency callouts across Kempton Park. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-kempton-park',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function KemptonParkPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -194,7 +194,7 @@ export default function KemptonParkPage() {
                   it one of Gauteng's most operationally demanding areas. Freight forwarders,
                   cold storage operators, logistics hubs, and aviation-support businesses run
                   around the clock — and power interruptions have immediate, measurable
-                  consequences. Generator Repair Services provides comprehensive generator
+                  consequences. Generator Gents provides comprehensive generator
                   repair, servicing, and maintenance across all of Kempton Park, with the
                   response speed these operations require.
                 </p>
@@ -261,10 +261,10 @@ export default function KemptonParkPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Kempton Park?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Kempton Park areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -306,10 +306,10 @@ export default function KemptonParkPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

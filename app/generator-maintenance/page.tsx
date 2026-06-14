@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'Generator Maintenance Plans Gauteng | Scheduled Service Contracts',
   description:
-    'Generator maintenance contracts and scheduled service plans across Gauteng. We track service intervals, contact you when due, and handle everything. Priority response for contract clients. Call 060 316 0484.',
+    'Generator maintenance contracts and scheduled service plans across Gauteng. We track service intervals, contact you when due, and handle everything. Priority response for contract clients. Call 076 347 3736.',
   keywords: [
     'generator maintenance plan Gauteng',
     'generator service contract Gauteng',
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'generator compliance maintenance Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-maintenance',
+    canonical: 'https://www.generatorgents.co.za/generator-maintenance',
   },
   openGraph: {
     title: 'Generator Maintenance Plans Gauteng | Scheduled Service Contracts',
     description:
-      'Generator maintenance contracts across Gauteng. We track service intervals and handle everything. Priority callout response for contract clients. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-maintenance',
+      'Generator maintenance contracts across Gauteng. We track service intervals and handle everything. Priority callout response for contract clients. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-maintenance',
     type: 'website',
   },
 }
@@ -159,7 +159,7 @@ export default function GeneratorMaintenancePage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -211,7 +211,7 @@ export default function GeneratorMaintenancePage() {
               <div className="space-y-5 text-base md:text-lg leading-relaxed text-[#1a1a1a]/70">
                 <p>
                   For businesses and homeowners who rely on generator backup power, maintenance
-                  contracts offer peace of mind and cost predictability. Generator Repair Services
+                  contracts offer peace of mind and cost predictability. Generator Gents
                   provides tailored maintenance plans that ensure your generator receives proper
                   care on schedule — without you having to remember service dates or chase down
                   technicians.
@@ -260,13 +260,13 @@ export default function GeneratorMaintenancePage() {
                   Call to discuss a maintenance plan tailored to your generator and usage.
                 </p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                   </svg>
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -328,13 +328,13 @@ export default function GeneratorMaintenancePage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                 </svg>
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

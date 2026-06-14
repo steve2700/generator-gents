@@ -1,4 +1,4 @@
-const BASE_URL = 'https://www.generatorrepairservices.co.za'
+const BASE_URL = 'https://www.generatorgents.co.za'
 const BUSINESS_ID = `${BASE_URL}/#business`
 
 interface AreaSchemaProps {
@@ -15,11 +15,11 @@ export default function AreaSchema({ areaName, url, suburbs }: AreaSchemaProps) 
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': BUSINESS_ID,
-    name: 'Generator Repair Services',
+    name: 'Generator Gents',
     description: `Professional generator repair, servicing and maintenance in ${areaName}, Gauteng. Emergency callouts available — same-day response.`,
     url: BASE_URL,
-    telephone: '+27603160484',
-    email: 'info@generatorrepairservices.co.za',
+    telephone: '+27763473736',
+    email: 'info@generatorgents.co.za',
     priceRange: '$$',
     currenciesAccepted: 'ZAR',
     paymentAccepted: 'Cash, EFT',

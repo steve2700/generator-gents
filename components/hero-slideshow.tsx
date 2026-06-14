@@ -7,7 +7,7 @@ const heroImages = [
   { src: '/images/Industrial_Generator_Repair_Team.webp',               alt: 'Industrial generator repair team on-site in Gauteng' },
   { src: '/images/2026-06-11_Generator_Preventative_Maintenance.webp',  alt: 'Generator preventative maintenance Gauteng' },
   { src: '/images/generator-repair-technician-onsite-midrand.webp',     alt: 'Generator repair technician on-site in Midrand' },
-  { src: '/images/generator-repair-services-technicians.webp',          alt: 'Generator Repair Services technician team' },
+  { src: '/images/generator-repair-services-technicians.webp',          alt: 'Generator Gents technician team' },
   { src: '/images/Technician_Servicing_Generator.webp',                 alt: 'Technician servicing a generator' },
 ]
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'About Us | Generator Repair Services Gauteng — 15+ Years Experience',
+  title: 'About Us | Generator Gents Gauteng — 15+ Years Experience',
   description:
     "Gauteng's most trusted generator repair specialists since 2009. Factory-certified technicians, same-day emergency response, transparent pricing and a workmanship guarantee. Serving Johannesburg, Pretoria, Sandton & all of Gauteng.",
   keywords: [
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     'professional generator maintenance Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/about',
+    canonical: 'https://www.generatorgents.co.za/about',
   },
   openGraph: {
-    title: 'About Generator Repair Services | Gauteng\'s Trusted Specialists',
-    description: '15+ years repairing generators across Gauteng. Certified technicians, same-day callouts, workmanship guarantee. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/about',
+    title: 'About Generator Gents | Gauteng\'s Trusted Specialists',
+    description: '15+ years repairing generators across Gauteng. Certified technicians, same-day callouts, workmanship guarantee. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/about',
     type: 'website',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
 const aboutSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  '@id': 'https://www.generatorrepairservices.co.za/about',
-  name: 'About Generator Repair Services',
-  url: 'https://www.generatorrepairservices.co.za/about',
+  '@id': 'https://www.generatorgents.co.za/about',
+  name: 'About Generator Gents',
+  url: 'https://www.generatorgents.co.za/about',
   mainEntity: {
     '@type': 'LocalBusiness',
-    '@id': 'https://www.generatorrepairservices.co.za/#business',
-    name: 'Generator Repair Services',
+    '@id': 'https://www.generatorgents.co.za/#business',
+    name: 'Generator Gents',
     foundingDate: '2009',
     description: 'Professional generator repair, servicing and maintenance across Gauteng.',
-    telephone: '+27603160484',
-    email: 'info@generatorrepairservices.co.za',
-    url: 'https://www.generatorrepairservices.co.za',
+    telephone: '+27763473736',
+    email: 'info@generatorgents.co.za',
+    url: 'https://www.generatorgents.co.za',
     areaServed: { '@type': 'State', name: 'Gauteng' },
   },
 }
@@ -138,7 +138,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero_generator_repair_services.png"
-            alt="Generator Repair Services team working on industrial generators across Gauteng"
+            alt="Generator Gents team working on industrial generators across Gauteng"
             fill
             priority
             className="object-cover object-center opacity-20"
@@ -154,9 +154,13 @@ export default function AboutPage() {
             Gauteng&apos;s Trusted Generator Repair Specialists
           </h1>
           <p className="text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl">
-            Founded in 2009, Generator Repair Services has spent 15+ years building a
+            Founded in 2009, Generator Gents has spent 15+ years building a
             reputation for fast, honest and expert generator repair and maintenance across
             all of Gauteng province.
+          </p>
+          <p className="mt-6 inline-flex items-center gap-3 text-[#c8a84b] text-sm font-bold tracking-[0.25em] uppercase">
+            <span className="h-px w-8 bg-[#c8a84b]" />
+            Power. Precision. Professionalism.
           </p>
         </div>
       </section>
@@ -187,7 +191,7 @@ export default function AboutPage() {
               <div className="w-10 h-0.5 bg-[#c8a84b] mb-6" />
               <div className="space-y-4 text-[#1a1a1a]/70 text-base leading-relaxed">
                 <p>
-                  Generator Repair Services was founded in 2009 with a straightforward
+                  Generator Gents was founded in 2009 with a straightforward
                   mission: give Gauteng businesses and homeowners a generator repair
                   partner they could genuinely rely on — not one that kept them waiting,
                   overcharged them, or sent unqualified technicians.
@@ -208,7 +212,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] overflow-hidden group">
               <Image
                 src="/images/generator-repair-technician.png"
-                alt="Generator Repair Services certified technician working on a diesel generator in Gauteng"
+                alt="Generator Gents certified technician working on a diesel generator in Gauteng"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -348,7 +352,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#0a0a0a] text-white" aria-label="Contact Generator Repair Services">
+      <section className="bg-[#0a0a0a] text-white" aria-label="Contact Generator Gents">
         <div className="max-w-6xl mx-auto px-6 py-14 md:py-18">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="max-w-xl">
@@ -362,13 +366,13 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                 </svg>
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

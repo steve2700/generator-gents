@@ -10,7 +10,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Johannesburg | Same-Day Service, All JHB Areas',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Johannesburg. CBD, northern suburbs, southern industrial zones — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Johannesburg. CBD, northern suburbs, southern industrial zones — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Johannesburg',
     'generator repair Johannesburg CBD',
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'generator installation Johannesburg',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-johannesburg',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-johannesburg',
   },
   openGraph: {
     title: 'Generator Repairs Johannesburg | Same-Day Service, All JHB Areas',
     description:
-      'Expert generator repairs and emergency callouts across all of Johannesburg. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-johannesburg',
+      'Expert generator repairs and emergency callouts across all of Johannesburg. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-johannesburg',
     type: 'website',
   },
 }
@@ -157,10 +157,10 @@ export default function JohannesburgPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -211,7 +211,7 @@ export default function JohannesburgPage() {
                   from generator failure. Businesses in the CBD and office parks across the
                   northern suburbs cannot afford extended downtime during loadshedding. Industrial
                   operations in the southern zones run on generators that must start every time.
-                  Generator Repair Services provides the full range of generator repair, servicing,
+                  Generator Gents provides the full range of generator repair, servicing,
                   and maintenance services across all of Johannesburg — with the response speed
                   the city demands.
                 </p>
@@ -279,10 +279,10 @@ export default function JohannesburgPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Johannesburg?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all JHB areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -326,10 +326,10 @@ export default function JohannesburgPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

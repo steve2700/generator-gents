@@ -6,7 +6,7 @@ import { FAQSchema } from '@/components/faq-schema'
 export const metadata: Metadata = {
   title: 'Generator Repair Cost South Africa 2026 | Gauteng Price Guide',
   description:
-    'Transparent generator repair pricing for Gauteng 2026. Minor repairs from R600 to full engine overhauls. Honest written quotes before any work starts. Call 060 316 0484.',
+    'Transparent generator repair pricing for Gauteng 2026. Minor repairs from R600 to full engine overhauls. Honest written quotes before any work starts. Call 076 347 3736.',
   keywords: [
     'generator repair cost South Africa 2026',
     'generator repair price Gauteng',
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     'generator repair rates Pretoria',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repair-cost',
+    canonical: 'https://www.generatorgents.co.za/generator-repair-cost',
   },
   openGraph: {
     title: 'Generator Repair Cost South Africa 2026 | Gauteng Price Guide',
     description:
-      'Transparent generator repair pricing for Gauteng 2026. Minor repairs to full overhauls. Honest written quotes. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repair-cost',
+      'Transparent generator repair pricing for Gauteng 2026. Minor repairs to full overhauls. Honest written quotes. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repair-cost',
     type: 'article',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
@@ -35,22 +35,22 @@ export const metadata: Metadata = {
 const costSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://www.generatorrepairservices.co.za/generator-repair-cost#article',
+  '@id': 'https://www.generatorgents.co.za/generator-repair-cost#article',
   headline: 'Generator Repair Cost South Africa 2026 — Gauteng Price Guide',
   description:
     'Transparent generator repair pricing guide for South Africa 2026.',
   dateModified: '2026-01-01',
   author: {
     '@type': 'Organization',
-    '@id': 'https://www.generatorrepairservices.co.za/#business',
-    name: 'Generator Repair Services',
+    '@id': 'https://www.generatorgents.co.za/#business',
+    name: 'Generator Gents',
   },
   publisher: {
     '@type': 'Organization',
-    '@id': 'https://www.generatorrepairservices.co.za/#business',
-    name: 'Generator Repair Services',
+    '@id': 'https://www.generatorgents.co.za/#business',
+    name: 'Generator Gents',
   },
-  mainEntityOfPage: 'https://www.generatorrepairservices.co.za/generator-repair-cost',
+  mainEntityOfPage: 'https://www.generatorgents.co.za/generator-repair-cost',
 }
 
 const pricingFaqs = [
@@ -191,7 +191,7 @@ export default function GeneratorRepairCostPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#b91c1c] text-white font-bold text-base hover:bg-red-800 transition-colors"
               >
                 {phoneIcon}
@@ -366,11 +366,11 @@ export default function GeneratorRepairCostPage() {
                   Free written assessment, no obligation.
                 </p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#b91c1c] text-white font-bold text-base hover:bg-red-800 transition-colors mb-3"
                 >
                   {phoneIcon}
-                  060 316 0484
+                  076 347 3736
                 </a>
                 <Link
                   href="/contact"
@@ -505,13 +505,13 @@ export default function GeneratorRepairCostPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                 </svg>
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://www.generatorrepairservices.co.za'
+const BASE_URL = 'https://www.generatorgents.co.za'
 const BUSINESS_ID = `${BASE_URL}/#business`
 
 interface ServiceSchemaProps {
@@ -28,9 +28,9 @@ export default function ServiceSchema({
     provider: {
       '@type': 'LocalBusiness',
       '@id': BUSINESS_ID,
-      name: 'Generator Repair Services',
-      telephone: '+27603160484',
-      email: 'info@generatorrepairservices.co.za',
+      name: 'Generator Gents',
+      telephone: '+27763473736',
+      email: 'info@generatorgents.co.za',
       url: BASE_URL,
     },
     areaServed: {
@@ -46,7 +46,7 @@ export default function ServiceSchema({
       '@type': 'ServiceChannel',
       servicePhone: {
         '@type': 'ContactPoint',
-        telephone: '+27603160484',
+        telephone: '+27763473736',
         contactType: 'customer service',
         areaServed: 'ZA',
         availableLanguage: 'English',

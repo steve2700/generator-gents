@@ -10,7 +10,7 @@ import ServiceSchema from '@/components/service-schema'
 export const metadata: Metadata = {
   title: 'Generator Servicing Gauteng | Oil Changes, Filters & Full Inspection',
   description:
-    'Professional generator servicing across Gauteng. Comprehensive oil and filter changes, coolant inspection, belt checks, battery testing and full load test. Keeps your generator reliable during loadshedding. Call 060 316 0484.',
+    'Professional generator servicing across Gauteng. Comprehensive oil and filter changes, coolant inspection, belt checks, battery testing and full load test. Keeps your generator reliable during loadshedding. Call 076 347 3736.',
   keywords: [
     'generator servicing Gauteng',
     'generator service Johannesburg',
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'generator battery test Gauteng',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-servicing',
+    canonical: 'https://www.generatorgents.co.za/generator-servicing',
   },
   openGraph: {
     title: 'Generator Servicing Gauteng | Oil Changes, Filters & Full Inspection',
     description:
-      'Comprehensive generator servicing across Gauteng. Oil & filter changes, coolant, belts, battery & load test. All brands. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-servicing',
+      'Comprehensive generator servicing across Gauteng. Oil & filter changes, coolant, belts, battery & load test. All brands. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-servicing',
     type: 'website',
   },
 }
@@ -156,7 +156,7 @@ export default function GeneratorServicingPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -252,13 +252,13 @@ export default function GeneratorServicingPage() {
                 <p className="text-white font-bold mb-1">When was your last service?</p>
                 <p className="text-white/50 text-sm mb-4">Book a service and keep your generator ready for the next outage.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center gap-2 w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                   </svg>
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
 
@@ -332,13 +332,13 @@ export default function GeneratorServicingPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                 </svg>
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

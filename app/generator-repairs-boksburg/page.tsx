@@ -7,7 +7,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Boksburg | Same-Day Service, Commercial & Industrial',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Boksburg. Bartlett, Sunward Park, Dawn Park, Cloverdene — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Boksburg. Bartlett, Sunward Park, Dawn Park, Cloverdene — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Boksburg',
     'generator repair Boksburg',
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'industrial generator repair Boksburg',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-boksburg',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-boksburg',
   },
   openGraph: {
     title: 'Generator Repairs Boksburg | Same-Day Service, Commercial & Industrial',
     description:
-      'Expert generator repairs and emergency callouts across Boksburg. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-boksburg',
+      'Expert generator repairs and emergency callouts across Boksburg. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-boksburg',
     type: 'website',
   },
 }
@@ -144,10 +144,10 @@ export default function BoksburgPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -194,7 +194,7 @@ export default function BoksburgPage() {
                   a key node on the East Rand with a concentration of manufacturing,
                   engineering, foundries, and heavy industry that has defined the area
                   for decades. These operations depend on large standby generators that
-                  run under demanding load conditions. Generator Repair Services provides
+                  run under demanding load conditions. Generator Gents provides
                   the technical depth and response capability these environments require,
                   covering all of Boksburg with fully equipped mobile technicians.
                 </p>
@@ -262,10 +262,10 @@ export default function BoksburgPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Boksburg?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Boksburg areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -307,10 +307,10 @@ export default function BoksburgPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"

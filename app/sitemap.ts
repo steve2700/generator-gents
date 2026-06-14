@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.generatorrepairservices.co.za'
+  const baseUrl = 'https://www.generatorgents.co.za'
   const currentDate = new Date().toISOString()
 
   const mainPages = [

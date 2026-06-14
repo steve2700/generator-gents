@@ -10,7 +10,7 @@ import AreaSchema from '@/components/area-schema'
 export const metadata: Metadata = {
   title: 'Generator Repairs Roodepoort | Same-Day Service, All Roodepoort Areas',
   description:
-    'Professional generator repairs, servicing and emergency callouts across Roodepoort. Florida, Honeydew, Little Falls, Strubensvalley — mobile technicians come to you. Call 060 316 0484.',
+    'Professional generator repairs, servicing and emergency callouts across Roodepoort. Florida, Honeydew, Little Falls, Strubensvalley — mobile technicians come to you. Call 076 347 3736.',
   keywords: [
     'generator repairs Roodepoort',
     'generator repair Roodepoort',
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'generator maintenance Roodepoort',
   ],
   alternates: {
-    canonical: 'https://www.generatorrepairservices.co.za/generator-repairs-roodepoort',
+    canonical: 'https://www.generatorgents.co.za/generator-repairs-roodepoort',
   },
   openGraph: {
     title: 'Generator Repairs Roodepoort | Same-Day Service, All Roodepoort Areas',
     description:
-      'Expert generator repairs and emergency callouts across Roodepoort. Mobile technicians, same-day response. Call 060 316 0484.',
-    url: 'https://www.generatorrepairservices.co.za/generator-repairs-roodepoort',
+      'Expert generator repairs and emergency callouts across Roodepoort. Mobile technicians, same-day response. Call 076 347 3736.',
+    url: 'https://www.generatorgents.co.za/generator-repairs-roodepoort',
     type: 'website',
   },
 }
@@ -155,10 +155,10 @@ export default function RoodepoortPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:0603160484"
+              href="tel:+27763473736"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#b91c1c] text-white font-black text-base hover:bg-red-800 transition-colors"
             >
-              Call 060 316 0484
+              Call 076 347 3736
             </a>
             <Link
               href="/contact"
@@ -209,7 +209,7 @@ export default function RoodepoortPage() {
                   suburbs with significant industrial and commercial infrastructure. Manufacturing
                   facilities, distribution centres, retail parks, and logistics operations all
                   require dependable backup power — and the consequences of generator failure
-                  during loadshedding are immediate and costly. Generator Repair Services provides
+                  during loadshedding are immediate and costly. Generator Gents provides
                   comprehensive generator repair, servicing, and maintenance throughout Roodepoort
                   and all surrounding areas.
                 </p>
@@ -276,10 +276,10 @@ export default function RoodepoortPage() {
                 <p className="text-white font-bold mb-1">Generator problem in Roodepoort?</p>
                 <p className="text-white/50 text-sm mb-4">Call now for same-day service across all Roodepoort areas.</p>
                 <a
-                  href="tel:0603160484"
+                  href="tel:+27763473736"
                   className="flex items-center justify-center w-full py-3 bg-[#b91c1c] text-white font-bold text-sm hover:bg-red-800 transition-colors"
                 >
-                  060 316 0484
+                  076 347 3736
                 </a>
               </div>
             </div>
@@ -323,10 +323,10 @@ export default function RoodepoortPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <a
-                href="tel:0603160484"
+                href="tel:+27763473736"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#b91c1c] text-white font-black text-lg hover:bg-red-800 transition-colors"
               >
-                060 316 0484
+                076 347 3736
               </a>
               <Link
                 href="/contact"
