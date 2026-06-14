@@ -172,8 +172,9 @@ export default function EmergencyGeneratorRepairPage() {
 
           <p className="text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
             When your generator fails during loadshedding or a critical outage, every minute of
-            downtime has a cost. We dispatch technicians fast — with diagnostic equipment and parts
-            on board — to get your power restored the same day.
+            downtime has a cost. Generator Gents dispatches technicians fast — with diagnostic
+            equipment and parts on board — to get your power restored the same day. Power.
+            Precision. Professionalism, when it matters most.
           </p>
 
           <div className="flex flex-wrap gap-x-6 gap-y-3 mb-10">
@@ -237,11 +238,12 @@ export default function EmergencyGeneratorRepairPage() {
               <div className="w-10 h-0.5 bg-[#c8a84b] mb-8" />
               <div className="space-y-5 text-base md:text-lg leading-relaxed text-[#1a1a1a]/70">
                 <p>
-                  A generator failure during loadshedding or a critical power outage is not a
-                  scheduled problem. Generator Gents provides emergency callout response
-                  across all of Gauteng, with technicians available to respond the same day in most
-                  cases. We understand that downtime is not just an inconvenience — for businesses,
-                  it carries a direct financial cost with every minute that passes.
+                  A generator failure during loadshedding or a critical power outage never arrives
+                  on schedule. Generator Gents provides rapid emergency callout response across all
+                  of Gauteng, with technicians available to respond the same day in most cases. We
+                  understand that downtime is not just an inconvenience — for a business, it carries
+                  a direct financial cost with every minute that passes. That is why our response is
+                  built around speed, precision, and getting it right the first time.
                 </p>
                 <p>
                   Our emergency technicians arrive equipped to handle the most common generator
