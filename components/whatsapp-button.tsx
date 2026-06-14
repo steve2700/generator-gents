@@ -6,9 +6,9 @@ import { cn } from '@/lib/utils'
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false)
   
-  // Phone number 060 316 0484 formatted for WhatsApp (South Africa country code 27, drop the leading 0)
-  const phoneNumber = '27603160484'
-  const message = encodeURIComponent("Hi Generator Repair Services! I'd like to enquire about your services.")
+  // Phone number 076 347 3736 formatted for WhatsApp (South Africa country code 27, drop the leading 0)
+  const phoneNumber = '27763473736'
+  const message = encodeURIComponent("Hi Generator Gents! I'd like to enquire about your services.")
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
