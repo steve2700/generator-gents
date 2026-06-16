@@ -68,6 +68,20 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
+// Repair cost ticker items — update prices as needed
+const tickerItems = [
+  '⚡ Generator Repairs from R450',
+  '🔧 Full Service & Oil Change from R850',
+  '🚨 Emergency Callouts — Same Day',
+  '⚙️ AVR / Voltage Repairs from R600',
+  '🛠️ Control Panel Repairs from R750',
+  '💧 Fuel System Repairs from R500',
+  '📋 Maintenance Plans from R1 200/yr',
+  '🔌 Load Bank Testing from R950',
+  '🏗️ Generator Installation — Free Quote',
+  '🔄 Alternator Rewinding from R1 800',
+]
+
 type DropdownKey = 'services' | 'areas' | null
 
 export default function SiteHeader() {
@@ -111,6 +125,9 @@ export default function SiteHeader() {
   const isAreaActive = (path: string) =>
     path === '/areas' || path.includes('generator-repairs-')
 
+  // Build the ticker string by repeating items for seamless loop
+  const tickerContent = [...tickerItems, ...tickerItems].join('   ·   ')
+
   return (
     <header
       ref={headerRef}
@@ -120,6 +137,31 @@ export default function SiteHeader() {
           : 'bg-[#0a0a0a]'
       }`}
     >
+      {/* ── Repair Cost Ticker ── */}
+      <div className="bg-[#111111] border-b border-[#c8a84b]/20 overflow-hidden h-8 flex items-center">
+        <div
+          className="whitespace-nowrap text-[11px] font-semibold tracking-wide text-white/60"
+          style={{
+            display: 'inline-block',
+            animation: 'ticker-scroll 45s linear infinite',
+          }}
+          aria-hidden="true"
+        >
+          {tickerContent}
+          &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+          {tickerContent}
+        </div>
+        <style>{`
+          @keyframes ticker-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            [style*="ticker-scroll"] { animation: none; }
+          }
+        `}</style>
+      </div>
+
       {/* ── Top bar ── */}
       <div className="hidden md:block border-b border-white/[0.07]">
         <div className="max-w-6xl mx-auto px-6 h-9 flex justify-between items-center">
@@ -139,9 +181,15 @@ export default function SiteHeader() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-[66px]">
 
-          {/* Logo */}
+          {/* Logo — SVG */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
-            <Image src="/logo_lite.png" alt="Generator Gents" width={36} height={36} className="object-contain" priority />
+            <img
+              src="/generator_gents_logo.svg"
+              alt="Generator Gents"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
             <div className="leading-none hidden sm:block">
               <span className="block text-white font-black text-[12px] tracking-[0.2em] uppercase group-hover:text-[#c8a84b] transition-colors">
                 Generator Gents
