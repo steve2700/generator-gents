@@ -1,151 +1,489 @@
-import { Analytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import './globals.css'
-import SiteHeader from '@/components/site-header'
-import SiteFooter from '@/components/site-footer'
-import WhatsAppButton from '@/components/whatsapp-button'
-import OrganizationSchema from '@/components/organization-schema'
+'use client'
+import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
-const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
-const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const services = [
+  { href: '/generator-repairs', label: 'Generator Repairs', desc: 'All faults, all brands' },
+  { href: '/generator-servicing', label: 'Generator Servicing', desc: 'Oil, filters, full inspection' },
+  { href: '/generator-maintenance', label: 'Maintenance Plans', desc: 'Scheduled service contracts' },
+  { href: '/emergency-generator-repair', label: 'Emergency Callouts', desc: 'Same-day response' },
+  { href: '/generator-installation', label: 'Generator Installation', desc: 'New unit setup & wiring' },
+  { href: '/load-bank-testing', label: 'Load Bank Testing', desc: 'Capacity verification' },
+  { href: '/avr-repairs', label: 'AVR & Voltage Repairs', desc: 'Stable power output' },
+  { href: '/control-panel-repairs', label: 'Control Panel Repairs', desc: 'Controllers & relays' },
+  { href: '/fuel-system-repairs', label: 'Fuel System Repairs', desc: 'Injectors & pumps' },
+  { href: '/generator-rewinding', label: 'Generator Rewinding', desc: 'Alternator rewinding' },
+]
 
-const BASE_URL = 'https://www.generatorgents.co.za'
-
-export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
-
-  title: {
-    default: 'Generator Gents Gauteng | Generator Repairs, Servicing & Maintenance',
-    template: '%s | Generator Gents',
-  },
-  description:
-    'Generator Gents — Power. Precision. Professionalism. Expert generator repair, servicing and maintenance across Gauteng. Same-day emergency callouts for all brands — diesel, petrol, industrial. Serving Johannesburg, Pretoria, Sandton & all Gauteng areas. Call 076 347 3736.',
-  keywords: [
-    'Generator Gents',
-    'generator repair Gauteng',
-    'generator repairs Johannesburg',
-    'generator servicing Pretoria',
-    'emergency generator repair Gauteng',
-    'diesel generator repairs',
-    'generator maintenance Gauteng',
-    'generator installation Gauteng',
-    'generator repair near me',
-    'industrial generator repairs Gauteng',
-    'generator repairs Sandton',
-  ],
-  authors: [{ name: 'Generator Gents', url: BASE_URL }],
-  creator: 'Generator Gents',
-  publisher: 'Generator Gents',
-
-  // ── Favicons & icons ──────────────────────────────────────────────
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon.ico', sizes: 'any' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'mask-icon', url: '/favicon.ico' },
+const areaRegions = [
+  {
+    region: 'Johannesburg & CBD',
+    areas: [
+      { slug: 'johannesburg', name: 'Johannesburg' },
+      { slug: 'soweto', name: 'Soweto' },
+      { slug: 'randburg', name: 'Randburg' },
+      { slug: 'roodepoort', name: 'Roodepoort' },
+      { slug: 'krugersdorp', name: 'Krugersdorp' },
+      { slug: 'fourways', name: 'Fourways' },
     ],
   },
-
-  // ── Web app manifest ──────────────────────────────────────────────
-  manifest: '/site.webmanifest',
-
-  // ── Open Graph ────────────────────────────────────────────────────
-  openGraph: {
-    type: 'website',
-    locale: 'en_ZA',
-    url: BASE_URL,
-    siteName: 'Generator Gents',
-    title: 'Generator Gents Gauteng | Power. Precision. Professionalism.',
-    description:
-      'Expert generator repair, servicing and maintenance across Gauteng. Same-day emergency callouts. All brands. Call 076 347 3736.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Generator Gents — Power. Precision. Professionalism. Gauteng generator specialists',
-        type: 'image/jpeg',
-      },
+  {
+    region: 'Pretoria & North',
+    areas: [
+      { slug: 'pretoria', name: 'Pretoria' },
+      { slug: 'centurion', name: 'Centurion' },
+      { slug: 'midrand', name: 'Midrand' },
+      { slug: 'sandton', name: 'Sandton' },
     ],
   },
-
-  // ── Twitter / X ───────────────────────────────────────────────────
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Generator Gents Gauteng | Power. Precision. Professionalism.',
-    description:
-      'Same-day emergency callouts. All brands. Diesel & petrol generators. Serving all of Gauteng. Call 076 347 3736.',
-    images: ['/og-image.jpg'],
+  {
+    region: 'East Rand',
+    areas: [
+      { slug: 'kempton-park', name: 'Kempton Park' },
+      { slug: 'boksburg', name: 'Boksburg' },
+      { slug: 'benoni', name: 'Benoni' },
+      { slug: 'germiston', name: 'Germiston' },
+      { slug: 'alberton', name: 'Alberton' },
+      { slug: 'edenvale', name: 'Edenvale' },
+      { slug: 'springs', name: 'Springs' },
+    ],
   },
-
-  // ── Robots ────────────────────────────────────────────────────────
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+  {
+    region: 'South Gauteng',
+    areas: [
+      { slug: 'vereeniging', name: 'Vereeniging' },
+    ],
   },
+]
 
-  // ── Canonical ─────────────────────────────────────────────────────
-  alternates: {
-    canonical: BASE_URL,
-  },
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services', dropdown: 'services' },
+  { href: '/areas', label: 'Areas', dropdown: 'areas' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/contact', label: 'Contact' },
+]
 
-  // ── Misc ──────────────────────────────────────────────────────────
-  category: 'Generator Repairs & Servicing',
-  formatDetection: {
-    telephone: true,
-    email: true,
-    address: true,
-  },
-}
+// Repair cost ticker items — update prices as needed
+const tickerItems = [
+  '⚡ Generator Repairs from R450',
+  '🔧 Full Service & Oil Change from R850',
+  '🚨 Emergency Callouts — Same Day',
+  '⚙️ AVR / Voltage Repairs from R600',
+  '🛠️ Control Panel Repairs from R750',
+  '💧 Fuel System Repairs from R500',
+  '📋 Maintenance Plans from R1 200/yr',
+  '🔌 Load Bank Testing from R950',
+  '🏗️ Generator Installation — Free Quote',
+  '🔄 Alternator Rewinding from R1 800',
+]
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#1a1a1a' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
-  ],
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-}
+type DropdownKey = 'services' | 'areas' | null
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function SiteHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const headerRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+    setOpenDropdown(null)
+    setMobileServicesOpen(false)
+    setMobileAreasOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  const isServiceActive = (path: string) =>
+    path.includes('repair') || path.includes('service') || path.includes('maintenance') ||
+    path.includes('installation') || path.includes('testing') || path.includes('avr') ||
+    path.includes('control') || path.includes('fuel') || path.includes('rewinding') ||
+    path.includes('emergency') || path === '/services'
+
+  const isAreaActive = (path: string) =>
+    path === '/areas' || path.includes('generator-repairs-')
+
+  // Build the ticker string by repeating items for seamless loop
+  const tickerContent = [...tickerItems, ...tickerItems].join('   ·   ')
+
   return (
-    <html lang="en-ZA" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <head>
-        <OrganizationSchema />
-        {/* MS Tile */}
-        <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
-        <meta name="msapplication-TileColor" content="#1a1a1a" />
-        <meta name="msapplication-config" content="none" />
-      </head>
-      <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
-        <SiteHeader />
-        <main className="flex-1" id="main-content">
-          {children}
-        </main>
-        <SiteFooter />
-        <WhatsAppButton />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-        <SpeedInsights />
-      </body>
-    </html>
+    <header
+      ref={headerRef}
+      className={`sticky top-0 z-40 transition-all duration-300 ${
+        scrolled
+          ? 'bg-[#0a0a0a]/96 backdrop-blur-md shadow-[0_1px_0_rgba(200,168,75,0.18)]'
+          : 'bg-[#0a0a0a]'
+      }`}
+    >
+      {/* ── Repair Cost Ticker ── */}
+      <div className="bg-[#111111] border-b border-[#c8a84b]/20 overflow-hidden h-8 flex items-center">
+        <div
+          className="whitespace-nowrap text-[11px] font-semibold tracking-wide text-white/60"
+          style={{
+            display: 'inline-block',
+            animation: 'ticker-scroll 45s linear infinite',
+          }}
+          aria-hidden="true"
+        >
+          {tickerContent}
+          &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+          {tickerContent}
+        </div>
+        <style>{`
+          @keyframes ticker-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            [style*="ticker-scroll"] { animation: none; }
+          }
+        `}</style>
+      </div>
+
+      {/* ── Top bar ── */}
+      <div className="hidden md:block border-b border-white/[0.07]">
+        <div className="max-w-6xl mx-auto px-6 h-9 flex justify-between items-center">
+          <p className="text-white/40 text-xs tracking-wide">
+            Power. Precision. Professionalism. — Serving all of Gauteng
+          </p>
+          <a
+            href="tel:+27763473736"
+            className="text-[#c8a84b] hover:text-white transition-colors text-xs font-semibold tracking-widest"
+          >
+            076 347 3736
+          </a>
+        </div>
+      </div>
+
+      {/* ── Main nav ── */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16 md:h-[66px]">
+
+          {/* Logo — SVG */}
+          <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
+            <img
+              src="/generator_gents_logo.svg"
+              alt="Generator Gents"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
+            <div className="leading-none hidden sm:block">
+              <span className="block text-white font-black text-[12px] tracking-[0.2em] uppercase group-hover:text-[#c8a84b] transition-colors">
+                Generator Gents
+              </span>
+              <span className="flex items-center gap-1 mt-[3px]">
+                <span className="block h-px w-2.5 bg-[#c8a84b]" />
+                <span className="text-[#c8a84b] text-[8px] font-bold tracking-[0.3em] uppercase">Power · Precision · Pro</span>
+                <span className="block h-px w-2.5 bg-[#c8a84b]" />
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-0.5" aria-label="Main navigation">
+            {navLinks.map((link) => {
+              const hasDropdown = !!link.dropdown
+              const isActive =
+                link.dropdown === 'services' ? isServiceActive(pathname) :
+                link.dropdown === 'areas' ? isAreaActive(pathname) :
+                pathname === link.href
+              const isOpen = openDropdown === link.dropdown
+
+              if (hasDropdown) {
+                return (
+                  <div key={link.href} className="relative">
+                    <button
+                      onMouseEnter={() => setOpenDropdown(link.dropdown as DropdownKey)}
+                      onClick={() => setOpenDropdown(isOpen ? null : link.dropdown as DropdownKey)}
+                      className={`relative flex items-center gap-1 px-3 py-2 text-[13px] font-medium tracking-wide transition-colors ${
+                        isActive || isOpen ? 'text-[#c8a84b]' : 'text-white/65 hover:text-white'
+                      }`}
+                      aria-expanded={isOpen}
+                      aria-haspopup="true"
+                    >
+                      {link.label}
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                        className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                        aria-hidden="true"
+                      >
+                        <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                      {isActive && !isOpen && (
+                        <span className="absolute inset-x-3 bottom-0 h-[2px] bg-[#c8a84b] rounded-full" />
+                      )}
+                    </button>
+
+                    {/* ── Services dropdown ── */}
+                    {link.dropdown === 'services' && isOpen && (
+                      <div
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[540px] bg-[#111111] border border-white/[0.08] shadow-2xl"
+                        onMouseLeave={() => setOpenDropdown(null)}
+                      >
+                        <div className="h-[2px] bg-gradient-to-r from-transparent via-[#c8a84b] to-transparent" />
+                        <div className="p-5">
+                          <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">All Services</p>
+                          <ul className="grid grid-cols-2 gap-x-6 gap-y-0.5">
+                            {services.map((s) => (
+                              <li key={s.href}>
+                                <Link
+                                  href={s.href}
+                                  className="flex flex-col py-2.5 border-b border-white/[0.05] group/item"
+                                >
+                                  <span className={`text-[13px] font-semibold transition-colors ${pathname === s.href ? 'text-[#c8a84b]' : 'text-white/80 group-hover/item:text-[#c8a84b]'}`}>
+                                    {s.label}
+                                  </span>
+                                  <span className="text-[11px] text-white/35 mt-0.5">{s.desc}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="mt-4 pt-4 border-t border-white/[0.06] flex justify-between items-center">
+                            <Link href="/services" className="text-[12px] text-[#c8a84b] hover:text-white font-semibold tracking-wide uppercase transition-colors">
+                              View all services
+                            </Link>
+                            <a href="tel:+27763473736" className="text-[12px] text-white/35 hover:text-white transition-colors">
+                              Emergency: 076 347 3736
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* ── Areas dropdown ── */}
+                    {link.dropdown === 'areas' && isOpen && (
+                      <div
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[560px] bg-[#111111] border border-white/[0.08] shadow-2xl"
+                        onMouseLeave={() => setOpenDropdown(null)}
+                      >
+                        <div className="h-[2px] bg-gradient-to-r from-transparent via-[#c8a84b] to-transparent" />
+                        <div className="p-5">
+                          <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-white/30 mb-4">
+                            Gauteng Service Areas
+                          </p>
+                          <div className="grid grid-cols-2 gap-x-6">
+                            {areaRegions.map((group) => (
+                              <div key={group.region} className="mb-4">
+                                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#c8a84b]/70 mb-2">
+                                  {group.region}
+                                </p>
+                                <ul className="space-y-0">
+                                  {group.areas.map((area) => (
+                                    <li key={area.slug}>
+                                      <Link
+                                        href={`/generator-repairs-${area.slug}`}
+                                        className={`block py-1.5 text-[13px] border-b border-white/[0.04] transition-colors ${
+                                          pathname === `/generator-repairs-${area.slug}`
+                                            ? 'text-[#c8a84b]'
+                                            : 'text-white/65 hover:text-white'
+                                        }`}
+                                      >
+                                        {area.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-2 pt-4 border-t border-white/[0.06] flex justify-between items-center">
+                            <Link href="/areas" className="text-[12px] text-[#c8a84b] hover:text-white font-semibold tracking-wide uppercase transition-colors">
+                              View all areas
+                            </Link>
+                            <span className="text-[11px] text-white/25">18 areas covered</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3 py-2 text-[13px] font-medium tracking-wide transition-colors ${
+                    isActive ? 'text-[#c8a84b]' : 'text-white/65 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute inset-x-3 bottom-0 h-[2px] bg-[#c8a84b] rounded-full" />
+                  )}
+                </Link>
+              )
+            })}
+          </nav>
+
+          {/* Desktop CTA */}
+          <a
+            href="tel:+27763473736"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[#b91c1c] text-white text-[13px] font-bold tracking-wide hover:bg-red-800 transition-colors shrink-0"
+          >
+            Call 076 347 3736
+          </a>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setIsMenuOpen((v) => !v)}
+            className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] text-white focus:outline-none focus:ring-2 focus:ring-[#c8a84b] focus:ring-offset-1 focus:ring-offset-[#0a0a0a]"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav"
+          >
+            <span className={`block w-5 h-[2px] bg-current origin-center transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+            <span className={`block w-5 h-[2px] bg-current transition-opacity duration-200 ${isMenuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-5 h-[2px] bg-current origin-center transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+          </button>
+        </div>
+      </div>
+
+      {/* ── Mobile drawer ── */}
+      <div
+        id="mobile-nav"
+        role="navigation"
+        aria-label="Mobile navigation"
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}
+      >
+        <div className="h-px bg-gradient-to-r from-transparent via-[#c8a84b]/40 to-transparent" />
+        <div className="bg-[#0d0d0d] px-6 pt-3 pb-6">
+          <ul className="space-y-0">
+            {navLinks.map((link) => {
+              const active = pathname === link.href
+
+              /* ── Mobile Services accordion ── */
+              if (link.dropdown === 'services') {
+                return (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => setMobileServicesOpen((v) => !v)}
+                      className="flex items-center justify-between w-full py-3.5 text-[15px] font-medium border-b border-white/[0.06] text-white/75 hover:text-white transition-colors"
+                      aria-expanded={mobileServicesOpen}
+                    >
+                      Services
+                      <svg width="12" height="12" viewBox="0 0 10 10" fill="none"
+                        className={`transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true">
+                        <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-[500px]' : 'max-h-0'}`}>
+                      <ul className="pl-4 py-2 space-y-0">
+                        {services.map((s) => (
+                          <li key={s.href}>
+                            <Link
+                              href={s.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className={`flex py-2.5 text-[13px] border-b border-white/[0.04] transition-colors ${pathname === s.href ? 'text-[#c8a84b]' : 'text-white/55 hover:text-white'}`}
+                            >
+                              {s.label}
+                            </Link>
+                          </li>
+                        ))}
+                        <li>
+                          <Link href="/services" onClick={() => setIsMenuOpen(false)} className="block pt-3 text-[12px] font-bold tracking-widest uppercase text-[#c8a84b]">
+                            All Services →
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                )
+              }
+
+              /* ── Mobile Areas accordion ── */
+              if (link.dropdown === 'areas') {
+                return (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => setMobileAreasOpen((v) => !v)}
+                      className="flex items-center justify-between w-full py-3.5 text-[15px] font-medium border-b border-white/[0.06] text-white/75 hover:text-white transition-colors"
+                      aria-expanded={mobileAreasOpen}
+                    >
+                      Areas
+                      <svg width="12" height="12" viewBox="0 0 10 10" fill="none"
+                        className={`transition-transform duration-200 ${mobileAreasOpen ? 'rotate-180' : ''}`} aria-hidden="true">
+                        <path d="M1 3l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                      </svg>
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${mobileAreasOpen ? 'max-h-[600px]' : 'max-h-0'}`}>
+                      <div className="pl-4 py-3 space-y-4">
+                        {areaRegions.map((group) => (
+                          <div key={group.region}>
+                            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#c8a84b]/70 mb-1.5">
+                              {group.region}
+                            </p>
+                            <ul className="space-y-0">
+                              {group.areas.map((area) => (
+                                <li key={area.slug}>
+                                  <Link
+                                    href={`/generator-repairs-${area.slug}`}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={`block py-2 text-[13px] border-b border-white/[0.04] transition-colors ${
+                                      pathname === `/generator-repairs-${area.slug}` ? 'text-[#c8a84b]' : 'text-white/55 hover:text-white'
+                                    }`}
+                                  >
+                                    {area.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                        <Link href="/areas" onClick={() => setIsMenuOpen(false)} className="block pt-1 text-[12px] font-bold tracking-widest uppercase text-[#c8a84b]">
+                          All Areas →
+                        </Link>
+                      </div>
+                    </div>
+                  </li>
+                )
+              }
+
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center justify-between w-full py-3.5 text-[15px] font-medium border-b border-white/[0.06] transition-colors ${active ? 'text-[#c8a84b]' : 'text-white/75 hover:text-white'}`}
+                  >
+                    {link.label}
+                    {active && <span className="w-1.5 h-1.5 rounded-full bg-[#c8a84b]" aria-hidden="true" />}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+
+          <a
+            href="tel:+27763473736"
+            className="mt-5 flex items-center justify-center gap-2.5 w-full py-4 bg-[#b91c1c] text-white font-bold text-[15px] tracking-wide hover:bg-red-800 transition-colors"
+          >
+            Call 076 347 3736
+          </a>
+        </div>
+      </div>
+    </header>
   )
 }
