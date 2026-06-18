@@ -179,13 +179,13 @@ export default function SiteHeader() {
 
       {/* ── Main nav ── */}
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16 md:h-[66px]">
+        <div className="flex items-center justify-between py-3 md:py-4">
 
           {/* Logo — SVG */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
-            <span className="relative block h-11 w-11 md:h-14 md:w-14 shrink-0">
+            <span className="relative block h-[132px] w-[132px] md:h-[168px] md:w-[168px] shrink-0">
               <img
-                src="/generator_gents_logo_transparent.svg"
+                src="/generator_gents_logo.svg"
                 alt="Generator Gents"
                 className="absolute inset-0 h-full w-full object-contain"
               />
