@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 const services = [
   { href: '/generator-repairs', label: 'Generator Repairs' },
@@ -43,7 +42,13 @@ export default function SiteFooter() {
           <div>
             {/* Logo */}
             <div className="flex items-center gap-2.5 mb-5">
-              <Image src="/logo_lite.png" alt="Generator Gents" width={36} height={36} className="object-contain" priority />
+              <span className="relative block h-12 w-12 md:h-14 md:w-14 shrink-0">
+                <img
+                  src="/generator_gents_logo.svg"
+                  alt="Generator Gents"
+                  className="absolute inset-0 h-full w-full object-contain"
+                />
+              </span>
               <div className="leading-none">
                 <span className="block text-white font-black text-[12px] tracking-[0.22em] uppercase">
                   Generator Gents
