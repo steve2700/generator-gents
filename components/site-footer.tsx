@@ -42,7 +42,7 @@ export default function SiteFooter() {
           <div>
             {/* Logo */}
             <div className="flex items-center gap-2.5 mb-5">
-              <span className="relative block h-12 w-12 md:h-14 md:w-14 shrink-0">
+              <span className="relative block h-36 w-36 md:h-[168px] md:w-[168px] shrink-0">
                 <img
                   src="/generator_gents_logo.svg"
                   alt="Generator Gents"
