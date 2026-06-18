@@ -67,6 +67,19 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
+const tickerItems = [
+  '⚡ Generator Repairs from R450',
+  '🔧 Full Service & Oil Change from R850',
+  '🚨 Emergency Callouts — Same Day',
+  '⚙️ AVR / Voltage Repairs from R600',
+  '🛠️ Control Panel Repairs from R750',
+  '💧 Fuel System Repairs from R500',
+  '📋 Maintenance Plans from R1 200/yr',
+  '🔌 Load Bank Testing from R950',
+  '🏗️ Generator Installation — Free Quote',
+  '🔄 Alternator Rewinding from R1 800',
+]
+
 type DropdownKey = 'services' | 'areas' | null
 
 export default function SiteHeader() {
@@ -110,6 +123,8 @@ export default function SiteHeader() {
   const isAreaActive = (path: string) =>
     path === '/areas' || path.includes('generator-repairs-')
 
+  const tickerContent = [...tickerItems, ...tickerItems].join('   ·   ')
+
   return (
     <header
       ref={headerRef}
@@ -119,6 +134,31 @@ export default function SiteHeader() {
           : 'bg-[#0a0a0a]'
       }`}
     >
+      {/* ── Repair Cost Ticker ── */}
+      <div className="bg-[#111111] border-b border-[#c8a84b]/20 overflow-hidden h-7 flex items-center">
+        <div
+          className="whitespace-nowrap text-[10px] font-semibold tracking-wide text-white/50"
+          style={{
+            display: 'inline-block',
+            animation: 'ticker-scroll 45s linear infinite',
+          }}
+          aria-hidden="true"
+        >
+          {tickerContent}
+          &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+          {tickerContent}
+        </div>
+        <style>{`
+          @keyframes ticker-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            [style*="ticker-scroll"] { animation: none; }
+          }
+        `}</style>
+      </div>
+
       {/* ── Main nav ── */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-14">
@@ -280,10 +320,13 @@ export default function SiteHeader() {
 
           {/* Desktop CTA + phone */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+27763473736" className="text-white/40 hover:text-[#c8a84b] transition-colors text-[11px] tracking-widest font-semibold">
+            <a
+              href="tel:+27763473736"
+              className="text-white/40 hover:text-[#c8a84b] transition-colors text-[11px] tracking-widest font-semibold"
+            >
               076 347 3736
             </a>
-            
+            <a
               href="tel:+27763473736"
               className="inline-flex items-center gap-2 px-4 py-2 bg-[#b91c1c] text-white text-[12px] font-bold tracking-wide hover:bg-red-800 transition-colors"
             >
@@ -319,6 +362,7 @@ export default function SiteHeader() {
             {navLinks.map((link) => {
               const active = pathname === link.href
 
+              {/* ── Mobile Services accordion ── */}
               if (link.dropdown === 'services') {
                 return (
                   <li key={link.href}>
@@ -357,6 +401,7 @@ export default function SiteHeader() {
                 )
               }
 
+              {/* ── Mobile Areas accordion ── */}
               if (link.dropdown === 'areas') {
                 return (
                   <li key={link.href}>
@@ -419,7 +464,7 @@ export default function SiteHeader() {
             })}
           </ul>
 
-          
+          <a
             href="tel:+27763473736"
             className="mt-5 flex items-center justify-center gap-2.5 w-full py-4 bg-[#b91c1c] text-white font-bold text-[15px] tracking-wide hover:bg-red-800 transition-colors"
           >
