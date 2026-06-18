@@ -185,7 +185,7 @@ export default function SiteHeader() {
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
             <span className="relative block h-11 w-11 md:h-14 md:w-14 shrink-0">
               <img
-                src="/generator_gents_logo.svg"
+                src="/generator_gents_logo_transparent.svg"
                 alt="Generator Gents"
                 className="absolute inset-0 h-full w-full object-contain"
               />
