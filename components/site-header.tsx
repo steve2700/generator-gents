@@ -183,13 +183,13 @@ export default function SiteHeader() {
 
           {/* Logo — SVG */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
-            <img
-              src="/generator_gents_logo.svg"
-              alt="Generator Gents"
-              width={36}
-              height={36}
-              className="object-contain"
-            />
+            <span className="relative block h-11 w-11 md:h-14 md:w-14 shrink-0">
+              <img
+                src="/generator_gents_logo.svg"
+                alt="Generator Gents"
+                className="absolute inset-0 h-full w-full object-contain"
+              />
+            </span>
             <div className="leading-none hidden sm:block">
               <span className="block text-white font-black text-[12px] tracking-[0.2em] uppercase group-hover:text-[#c8a84b] transition-colors">
                 Generator Gents
