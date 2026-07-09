@@ -68,18 +68,20 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
-// Repair cost ticker items — update prices as needed
+// Ticker items — services & trust signals
 const tickerItems = [
-  '⚡ Generator Repairs from R450',
-  '🔧 Full Service & Oil Change from R850',
-  '🚨 Emergency Callouts — Same Day',
-  '⚙️ AVR / Voltage Repairs from R600',
-  '🛠️ Control Panel Repairs from R750',
-  '💧 Fuel System Repairs from R500',
-  '📋 Maintenance Plans from R1 200/yr',
-  '🔌 Load Bank Testing from R950',
+  '⚡ Generator Repairs — All Brands & Models',
+  '🔧 Full Service & Oil Change — Book Today',
+  '🚨 Emergency Callouts — Same-Day Response Across Gauteng',
+  '⚙️ AVR & Voltage Regulator Repairs',
+  '🛠️ Control Panel & Relay Repairs',
+  '💧 Fuel System Repairs — Injectors & Pumps',
+  '📋 Scheduled Maintenance Plans Available',
+  '🔌 Load Bank Testing & Capacity Verification',
   '🏗️ Generator Installation — Free Quote',
-  '🔄 Alternator Rewinding from R1 800',
+  '🔄 Alternator Rewinding — All Sizes',
+  '✅ Transparent Pricing — No Hidden Costs',
+  '📞 Call 076 347 3736 for a Free Quote',
 ]
 
 type DropdownKey = 'services' | 'areas' | null
@@ -183,13 +185,13 @@ export default function SiteHeader() {
 
           {/* Logo — SVG */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
-            <span className="relative block h-11 w-11 md:h-14 md:w-14 shrink-0">
-              <img
-                src="/generator_gents_logo.svg"
-                alt="Generator Gents"
-                className="absolute inset-0 h-full w-full object-contain"
-              />
-            </span>
+            <img
+              src="/generator_gents_logo.svg"
+              alt="Generator Gents"
+              width={36}
+              height={36}
+              className="object-contain"
+            />
             <div className="leading-none hidden sm:block">
               <span className="block text-white font-black text-[12px] tracking-[0.2em] uppercase group-hover:text-[#c8a84b] transition-colors">
                 Generator Gents
