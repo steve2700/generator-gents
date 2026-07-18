@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
         <div className="absolute top-full right-6 border-8 border-transparent border-t-[#1a1a1a]" />
       </div>
 
-      
+      <a
         href={`https://wa.me/${phoneNumber}?text=${message}`}
         target="_blank"
         rel="noopener noreferrer"
