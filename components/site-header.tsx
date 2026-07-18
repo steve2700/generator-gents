@@ -181,16 +181,16 @@ export default function SiteHeader() {
 
       {/* Main nav */}
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-[76px] md:h-[92px]">
+        <div className="flex items-center justify-between h-[92px] md:h-[116px]">
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
             <img
               src="/generator_gents_logo.svg"
               alt="Generator Gents"
-              width={72}
-              height={72}
-              className="h-14 w-14 md:h-[72px] md:w-[72px] object-contain"
+              width={88}
+              height={88}
+              className="h-16 w-16 md:h-[88px] md:w-[88px] object-contain"
             />
             <div className="leading-none hidden sm:block">
               <span className="block text-white font-black text-[12px] tracking-[0.2em] uppercase group-hover:text-[#c8a84b] transition-colors">
