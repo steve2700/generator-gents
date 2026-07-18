@@ -68,7 +68,7 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
-// Ticker items — services & trust signals
+// Ticker items and trust signals
 const tickerItems = [
   '⚡ Generator Repairs — All Brands & Models',
   '🔧 Full Service & Oil Change — Book Today',
@@ -139,7 +139,7 @@ export default function SiteHeader() {
           : 'bg-[#0a0a0a]'
       }`}
     >
-      {/* ── Repair Cost Ticker ── */}
+      {/* Repair cost ticker */}
       <div className="bg-[#111111] border-b border-[#c8a84b]/20 overflow-hidden h-8 flex items-center">
         <div
           className="whitespace-nowrap text-[11px] font-semibold tracking-wide text-white/60"
@@ -164,7 +164,7 @@ export default function SiteHeader() {
         `}</style>
       </div>
 
-      {/* ── Top bar ── */}
+      {/* Top bar */}
       <div className="hidden md:block border-b border-white/[0.07]">
         <div className="max-w-6xl mx-auto px-6 h-9 flex justify-between items-center">
           <p className="text-white/40 text-xs tracking-wide">
@@ -179,18 +179,18 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      {/* ── Main nav ── */}
+      {/* Main nav */}
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16 md:h-[66px]">
+        <div className="flex items-center justify-between h-[76px] md:h-[92px]">
 
-          {/* Logo — SVG */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group" aria-label="Generator Gents — home">
             <img
               src="/generator_gents_logo.svg"
               alt="Generator Gents"
-              width={36}
-              height={36}
-              className="object-contain"
+              width={72}
+              height={72}
+              className="h-14 w-14 md:h-[72px] md:w-[72px] object-contain"
             />
             <div className="leading-none hidden sm:block">
               <span className="block text-white font-black text-[12px] tracking-[0.2em] uppercase group-hover:text-[#c8a84b] transition-colors">
@@ -238,7 +238,7 @@ export default function SiteHeader() {
                       )}
                     </button>
 
-                    {/* ── Services dropdown ── */}
+                    {/* Services dropdown */}
                     {link.dropdown === 'services' && isOpen && (
                       <div
                         className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[540px] bg-[#111111] border border-white/[0.08] shadow-2xl"
@@ -274,7 +274,7 @@ export default function SiteHeader() {
                       </div>
                     )}
 
-                    {/* ── Areas dropdown ── */}
+                    {/* Areas dropdown */}
                     {link.dropdown === 'areas' && isOpen && (
                       <div
                         className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[560px] bg-[#111111] border border-white/[0.08] shadow-2xl"
@@ -363,7 +363,7 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      {/* ── Mobile drawer ── */}
+      {/* Mobile drawer */}
       <div
         id="mobile-nav"
         role="navigation"
@@ -376,7 +376,7 @@ export default function SiteHeader() {
             {navLinks.map((link) => {
               const active = pathname === link.href
 
-              /* ── Mobile Services accordion ── */
+              /* Mobile Services accordion */
               if (link.dropdown === 'services') {
                 return (
                   <li key={link.href}>
@@ -415,7 +415,7 @@ export default function SiteHeader() {
                 )
               }
 
-              /* ── Mobile Areas accordion ── */
+              /* Mobile Areas accordion */
               if (link.dropdown === 'areas') {
                 return (
                   <li key={link.href}>
