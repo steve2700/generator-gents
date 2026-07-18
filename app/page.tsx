@@ -195,7 +195,7 @@ export default function HomePage() {
         <div className="relative z-10 flex-1 flex items-center">
           <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 w-full">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex flex-wrap items-center gap-4 mb-6">
                 <p className="text-[#c8a84b] text-xs font-bold tracking-[0.45em] uppercase">
                   Generator Gents Installation & Repairs, South Africa
                 </p>
@@ -206,16 +206,16 @@ export default function HomePage() {
                   Call {PHONE_DISPLAY} Now
                 </a>
               </div>
-              <div className="w-16 h-[3px] bg-[#c8a84b] mb-8" />
+              <div className="w-16 h-[3px] bg-[#c8a84b] mb-6" />
               <h1
-                className="font-black text-white tracking-tight leading-[0.95] mb-8"
-                style={{ fontSize: 'clamp(2.8rem, 7vw, 5.6rem)' }}
+                className="font-black text-white tracking-tight leading-[0.95] mb-6"
+                style={{ fontSize: 'clamp(2.1rem, 5vw, 4.2rem)' }}
               >
                 Power.<br />
                 <span className="text-[#c8a84b]">Precision.</span><br />
                 Professionalism.
               </h1>
-              <p className="text-white/65 text-lg md:text-xl leading-relaxed mb-10 max-w-xl text-pretty">
+              <p className="text-white/65 text-base md:text-lg leading-relaxed mb-8 max-w-xl text-pretty">
                 Expert generator repair, maintenance and diagnostics across Gauteng
                 and its outskirts, all brands, all sizes, fixed right the first time.
               </p>
