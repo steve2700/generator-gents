@@ -1,11 +1,9 @@
 'use client'
-
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false)
-
   // Phone number 076 347 3736 formatted for WhatsApp (South Africa country code 27, drop the leading 0)
   const phoneNumber = '27763473736'
   const message = encodeURIComponent("Hi Generator Gents! I'd like to enquire about your services.")
@@ -23,22 +21,21 @@ export default function WhatsAppButton() {
         <div className="absolute top-full right-6 border-8 border-transparent border-t-[#1a1a1a]" />
       </div>
 
-      {/* WhatsApp Button — official WhatsApp glyph in the brand black/gold palette */}
-      <a
+      {/* WhatsApp Button — official WhatsApp brand color */}
+      
         href={`https://wa.me/${phoneNumber}?text=${message}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center w-14 h-14 bg-[#1a1a1a] border border-[#c8a84b] shadow-lg rounded-full hover:bg-[#c8a84b] transition-all duration-300 hover:scale-105"
+        className="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] shadow-lg rounded-full hover:bg-[#1EBE57] transition-all duration-300 hover:scale-105"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Chat with us on WhatsApp"
       >
-        {/* Gold pulse ring */}
-        <span className="absolute inset-0 rounded-full bg-[#c8a84b] animate-ping opacity-20" />
-
-        {/* Official WhatsApp icon — gold, inverts to black on hover */}
+        {/* Pulse ring */}
+        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
+        {/* Official WhatsApp icon — white on green */}
         <svg
-          className="relative z-10 w-7 h-7 text-[#c8a84b] group-hover:text-[#1a1a1a] transition-colors duration-300"
+          className="relative z-10 w-7 h-7 text-white transition-colors duration-300"
           fill="currentColor"
           viewBox="0 0 24 24"
           aria-hidden="true"
