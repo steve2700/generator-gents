@@ -4,13 +4,12 @@ import { cn } from '@/lib/utils'
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false)
-  // Phone number 076 347 3736 formatted for WhatsApp (South Africa country code 27, drop the leading 0)
+  // Phone number 076 347 3736 formatted for WhatsApp (SA country code 27, drop leading 0)
   const phoneNumber = '27763473736'
   const message = encodeURIComponent("Hi Generator Gents! I'd like to enquire about your services.")
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Tooltip */}
       <div
         className={cn(
           'absolute bottom-full right-0 mb-3 whitespace-nowrap bg-[#1a1a1a] text-white px-4 py-2 text-sm shadow-lg transition-all duration-300',
@@ -21,7 +20,6 @@ export default function WhatsAppButton() {
         <div className="absolute top-full right-6 border-8 border-transparent border-t-[#1a1a1a]" />
       </div>
 
-      {/* WhatsApp Button — official WhatsApp brand color */}
       
         href={`https://wa.me/${phoneNumber}?text=${message}`}
         target="_blank"
@@ -31,9 +29,7 @@ export default function WhatsAppButton() {
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Chat with us on WhatsApp"
       >
-        {/* Pulse ring */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20" />
-        {/* Official WhatsApp icon — white on green */}
         <svg
           className="relative z-10 w-7 h-7 text-white transition-colors duration-300"
           fill="currentColor"
