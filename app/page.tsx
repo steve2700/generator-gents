@@ -174,7 +174,7 @@ export default function HomePage() {
           HERO - editorial, dark, heavy type
       =================================================================== */}
       <section
-        className="relative overflow-hidden bg-[#0a0a0a] min-h-[92vh] flex flex-col"
+        className="relative overflow-hidden bg-[#0a0a0a] min-h-[74vh] flex flex-col"
         aria-label="Generator Gents, generator repair specialists in Gauteng"
       >
         <div className="absolute inset-0 z-0">
@@ -193,11 +193,19 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 flex-1 flex items-center">
-          <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 w-full">
+          <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 w-full">
             <div className="max-w-3xl">
-              <p className="text-[#c8a84b] text-xs font-bold tracking-[0.45em] uppercase mb-8">
-                Generator Gents Installation & Repairs, South Africa
-              </p>
+              <div className="flex flex-wrap items-center gap-4 mb-8">
+                <p className="text-[#c8a84b] text-xs font-bold tracking-[0.45em] uppercase">
+                  Generator Gents Installation & Repairs, South Africa
+                </p>
+                <a
+                  href={`tel:${PHONE_TEL}`}
+                  className="inline-flex items-center gap-1.5 text-white/50 hover:text-[#c8a84b] text-xs font-semibold tracking-wide transition-colors"
+                >
+                  Call {PHONE_DISPLAY} Now
+                </a>
+              </div>
               <div className="w-16 h-[3px] bg-[#c8a84b] mb-8" />
               <h1
                 className="font-black text-white tracking-tight leading-[0.95] mb-8"
@@ -208,8 +216,8 @@ export default function HomePage() {
                 Professionalism.
               </h1>
               <p className="text-white/65 text-lg md:text-xl leading-relaxed mb-10 max-w-xl text-pretty">
-                Expert generator repair, maintenance and diagnostics across Gauteng,
-                all brands, all sizes, fixed right the first time.
+                Expert generator repair, maintenance and diagnostics across Gauteng
+                and its outskirts, all brands, all sizes, fixed right the first time.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
