@@ -6,7 +6,7 @@ import FAQSchema from '@/components/faq-schema'
 export const metadata: Metadata = {
   title: 'Generator Gents Gauteng | Generator Repairs, Servicing & Maintenance',
   description:
-    "Generator Gents — Power. Precision. Professionalism. Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Serving Johannesburg, Pretoria, Sandton, Centurion & all Gauteng areas. Call 076 347 3736.",
+    "Generator Gents: Power. Precision. Professionalism. Gauteng's trusted generator repair specialists. Same-day emergency callouts, all brands, diesel & petrol. Serving Johannesburg, Pretoria, Sandton, Centurion & all Gauteng areas. Call 076 347 3736.",
   keywords: [
     'Generator Gents',
     'generator repair Gauteng',
@@ -98,7 +98,7 @@ const homepageFAQs = [
   },
   {
     question: 'What areas in Gauteng do you cover?',
-    answer: 'We cover the entire Gauteng province — Johannesburg, Pretoria, Sandton, Midrand, Centurion, Randburg, Roodepoort, Kempton Park, Boksburg, Benoni, Germiston, Alberton, Edenvale, Krugersdorp, Springs, Soweto, Fourways and Vereeniging.',
+    answer: 'We cover the entire Gauteng province: Johannesburg, Pretoria, Sandton, Midrand, Centurion, Randburg, Roodepoort, Kempton Park, Boksburg, Benoni, Germiston, Alberton, Edenvale, Krugersdorp, Springs, Soweto, Fourways and Vereeniging.',
   },
 ]
 
@@ -106,17 +106,17 @@ const whyReasons = [
   {
     num: '01',
     title: 'Certified Across All Major Brands',
-    body: 'Factory certifications for Cummins, Perkins, Caterpillar, Deutz, Volvo and more. When we open your generator, we know it — no learning on your time and your budget.',
+    body: 'Factory certifications for Cummins, Perkins, Caterpillar, Deutz, Volvo and more. When we open your generator, we know it, with no learning on your time and your budget.',
   },
   {
     num: '02',
     title: 'Same-Day Emergency Response',
-    body: 'Generator down during loadshedding? We deploy province-wide. Most Gauteng callouts receive an on-site technician within 2–4 hours. Same-day service is standard — not a premium.',
+    body: 'Generator down during loadshedding? We deploy province-wide. Most Gauteng callouts receive an on-site technician within 2–4 hours. Same-day service is standard, not a premium.',
   },
   {
     num: '03',
     title: 'First-Visit Resolution',
-    body: 'Our vehicles carry diagnostic equipment and a comprehensive stock of common parts. We arrive prepared and we complete the work — no second appointment needed.',
+    body: 'Our vehicles carry diagnostic equipment and a comprehensive stock of common parts. We arrive prepared and we complete the work. No second appointment needed.',
   },
   {
     num: '04',
@@ -126,7 +126,7 @@ const whyReasons = [
   {
     num: '05',
     title: 'Workmanship Guarantee',
-    body: 'Every repair is backed by a workmanship guarantee. If something we fixed fails again within the warranty period, we return and resolve it — no arguments, no charge.',
+    body: 'Every repair is backed by a workmanship guarantee. If something we fixed fails again within the warranty period, we return and resolve it. No arguments, no charge.',
   },
 ]
 
@@ -138,7 +138,7 @@ const localBusinessSchema = {
       '@id': 'https://www.generatorgents.co.za/#business',
       name: 'Generator Gents',
       slogan: 'Power. Precision. Professionalism.',
-      description: 'Generator Gents — expert generator repair, servicing and maintenance across Gauteng.',
+      description: 'Generator Gents: expert generator repair, servicing and maintenance across Gauteng.',
       url: 'https://www.generatorgents.co.za',
       telephone: '+27763473736',
       email: 'info@generatorgents.co.za',
@@ -170,12 +170,12 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <FAQSchema faqs={homepageFAQs} />
 
-      {/* ═══════════════════════════════════════════════════════════════
-          HERO — editorial, dark, heavy type
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          HERO - editorial, dark, heavy type
+      =================================================================== */}
       <section
         className="relative overflow-hidden bg-[#0a0a0a] min-h-[92vh] flex flex-col"
-        aria-label="Generator Gents — generator repair specialists in Gauteng"
+        aria-label="Generator Gents, generator repair specialists in Gauteng"
       >
         <div className="absolute inset-0 z-0">
           <Image
@@ -196,7 +196,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 w-full">
             <div className="max-w-3xl">
               <p className="text-[#c8a84b] text-xs font-bold tracking-[0.45em] uppercase mb-8">
-                Generator Gents — Gauteng
+                Generator Gents Installation & Repairs, South Africa
               </p>
               <div className="w-16 h-[3px] bg-[#c8a84b] mb-8" />
               <h1
@@ -208,7 +208,7 @@ export default function HomePage() {
                 Professionalism.
               </h1>
               <p className="text-white/65 text-lg md:text-xl leading-relaxed mb-10 max-w-xl text-pretty">
-                Expert generator repair, maintenance and diagnostics across Gauteng —
+                Expert generator repair, maintenance and diagnostics across Gauteng,
                 all brands, all sizes, fixed right the first time.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -230,7 +230,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Trust pillars — text only */}
+        {/* Trust pillars - text only */}
         <div className="relative z-10 border-t border-[#c8a84b]/15 bg-black/60 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-6 py-7 md:py-9">
             <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
@@ -245,9 +245,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          SERVICES — clean text-only grid
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          SERVICES - clean text-only grid
+      =================================================================== */}
       <section className="py-24 md:py-32 bg-white" aria-labelledby="services-heading">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -267,7 +267,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Service tile grid — text only */}
+          {/* Service tile grid - text only */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-px bg-[#1a1a1a]/10">
             {services.map((service, i) => (
               <Link
@@ -292,14 +292,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          WHY CHOOSE US — dark, numbered reasons + image
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          WHY CHOOSE US - dark, numbered reasons + image
+      =================================================================== */}
       <section className="bg-[#0a0a0a]" aria-labelledby="why-us-heading">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-0">
 
-            {/* Left: image — full height (image 2 of 2) */}
+            {/* Left: image - full height (image 2 of 2) */}
             <div className="relative min-h-[460px] lg:min-h-full overflow-hidden">
               <Image
                 src="/images/generator-gents-technician.png"
@@ -309,7 +309,7 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0a0a]/70" />
-              {/* Stats overlay — text only */}
+              {/* Stats overlay - text only */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="grid grid-cols-2 gap-4">
                   {[
@@ -370,9 +370,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          AREAS — region columns, text only
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          AREAS - region columns, text only
+      =================================================================== */}
       <section className="py-24 md:py-32 bg-[#f5f4f0]" aria-labelledby="areas-heading">
         <div className="max-w-6xl mx-auto px-6">
 
@@ -436,16 +436,16 @@ export default function HomePage() {
           </div>
 
           <p className="text-[#1a1a1a]/45 text-base max-w-2xl leading-relaxed">
-            Our mobile technicians travel to your site across all of Gauteng —
+            Our mobile technicians travel to your site across all of Gauteng,
             no drop-off required. From Sandton corporate parks to Vereeniging
             industrial zones and everywhere in between.
           </p>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          EMERGENCY CTA — full-width red impact
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          EMERGENCY CTA - full-width red impact
+      =================================================================== */}
       <section className="relative bg-[#b91c1c] text-white overflow-hidden" aria-label="Emergency generator repair callout">
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -461,7 +461,7 @@ export default function HomePage() {
               </h2>
               <p className="text-white/75 text-lg leading-relaxed">
                 Same-day emergency callouts across all of Gauteng. Most areas receive
-                a technician within 2–4 hours — stocked vehicle, ready to repair.
+                a technician within 2–4 hours, arriving in a fully stocked vehicle ready to repair.
               </p>
             </div>
             <div className="flex flex-col items-start md:items-end gap-3 shrink-0">
@@ -482,9 +482,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          COST TEASER — text only
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          COST TEASER - text only
+      =================================================================== */}
       <section className="py-24 md:py-32 bg-white" aria-labelledby="cost-heading">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
@@ -503,7 +503,7 @@ export default function HomePage() {
               </p>
               <p className="text-lg leading-relaxed text-[#1a1a1a]/65 mb-8">
                 We provide honest written quotes before starting. A proper assessment,
-                a clear number, then you decide — no surprise charges when the invoice arrives.
+                a clear number, then you decide. No surprise charges when the invoice arrives.
               </p>
               <Link
                 href="/generator-repair-cost"
@@ -516,9 +516,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          FAQ — accordion + sticky left
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* ===================================================================
+          FAQ - accordion + sticky left
+      =================================================================== */}
       <section className="py-24 md:py-32 bg-[#f5f4f0]" aria-labelledby="faq-heading">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-[380px_1fr] gap-12 lg:gap-20 items-start">
@@ -532,7 +532,7 @@ export default function HomePage() {
               <div className="w-12 h-[3px] bg-[#c8a84b] mb-6" />
               <p className="text-[#1a1a1a]/50 text-base leading-relaxed mb-8 max-w-xs">
                 Everything you need to know about generator repairs, costs and maintenance
-                in Gauteng — answered by our technicians.
+                in Gauteng, answered by our technicians.
               </p>
               <Link
                 href="/faq"
@@ -564,9 +564,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
+      {/* ===================================================================
           FINAL CTA STRIP
-      ═══════════════════════════════════════════════════════════════ */}
+      =================================================================== */}
       <section className="bg-[#0a0a0a]" aria-label="Final call to action">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-10 border-b border-white/[0.07]">
@@ -575,7 +575,7 @@ export default function HomePage() {
                 Ready to Get Your Generator Fixed?
               </h2>
               <p className="text-white/40 text-base">
-                Emergency or planned — same-day callouts across all of Gauteng.
+                Emergency or planned. Same-day callouts across all of Gauteng.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
